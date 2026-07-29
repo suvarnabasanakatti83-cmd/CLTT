@@ -1,0 +1,4 @@
+POST http://localhost:5002/api/compounds/bulk?source=file
+Content-Type: application/json
+
+{}

@@ -1,0 +1,1561 @@
+{
+  "generatedAt": "2026-05-04T14:21:05.209Z",
+  "baseDatabase": "mongodb://127.0.0.1:27017/chemistry_lab_security_audit_1777904464483",
+  "validations": {
+    "registerValid": {
+      "status": 201,
+      "durationMs": 483.57,
+      "body": {
+        "message": "Registration successful. Complete payment to activate your account.",
+        "user": {
+          "id": "69f8ab527054a1ad26b72220",
+          "name": "Audit User",
+          "email": "scientist.audit@example.com",
+          "role": "user",
+          "payment_status": "unpaid",
+          "paymentStatus": "unpaid",
+          "paymentGateway": "pending",
+          "paymentVerifiedAt": null,
+          "createdAt": "2026-05-04T14:21:06.493Z",
+          "hasPaidAccess": false
+        },
+        "paymentRequired": true,
+        "payment": {
+          "amount": 49900,
+          "displayAmount": 499,
+          "currency": "INR",
+          "adminEmail": "suvarnabasanakatti83@gmail.com",
+          "gateway": "demo",
+          "paymentOptions": [
+            {
+              "id": "upi",
+              "label": "UPI"
+            },
+            {
+              "id": "googlepay",
+              "label": "Google Pay"
+            },
+            {
+              "id": "phonepe",
+              "label": "PhonePe"
+            },
+            {
+              "id": "qrcode",
+              "label": "QR Code"
+            }
+          ]
+        },
+        "redirectTo": "/payment"
+      }
+    },
+    "registerAdmin": {
+      "status": 201,
+      "durationMs": 408.51,
+      "body": {
+        "message": "Admin account created successfully. Please log in.",
+        "user": {
+          "id": "69f8ab527054a1ad26b72223",
+          "name": "Audit Admin",
+          "email": "admin.audit@example.com",
+          "role": "admin",
+          "payment_status": "paid",
+          "paymentStatus": "paid",
+          "paymentGateway": "waived",
+          "paymentVerifiedAt": "2026-05-04T14:21:06.920Z",
+          "createdAt": "2026-05-04T14:21:06.921Z",
+          "hasPaidAccess": true
+        },
+        "redirectTo": "/login?registered=success"
+      }
+    },
+    "registerPaymentUser": {
+      "status": 201,
+      "durationMs": 441.56,
+      "body": {
+        "message": "Registration successful. Complete payment to activate your account.",
+        "user": {
+          "id": "69f8ab537054a1ad26b72226",
+          "name": "Payment User",
+          "email": "payment.audit@example.com",
+          "role": "user",
+          "payment_status": "unpaid",
+          "paymentStatus": "unpaid",
+          "paymentGateway": "pending",
+          "paymentVerifiedAt": null,
+          "createdAt": "2026-05-04T14:21:07.342Z",
+          "hasPaidAccess": false
+        },
+        "paymentRequired": true,
+        "payment": {
+          "amount": 49900,
+          "displayAmount": 499,
+          "currency": "INR",
+          "adminEmail": "suvarnabasanakatti83@gmail.com",
+          "gateway": "demo",
+          "paymentOptions": [
+            {
+              "id": "upi",
+              "label": "UPI"
+            },
+            {
+              "id": "googlepay",
+              "label": "Google Pay"
+            },
+            {
+              "id": "phonepe",
+              "label": "PhonePe"
+            },
+            {
+              "id": "qrcode",
+              "label": "QR Code"
+            }
+          ]
+        },
+        "redirectTo": "/payment"
+      }
+    },
+    "loginPaymentRequired": {
+      "status": 403,
+      "durationMs": 398.77,
+      "body": {
+        "message": "Please complete payment before accessing the lab.",
+        "paymentRequired": true,
+        "payment": {
+          "amount": 49900,
+          "displayAmount": 499,
+          "currency": "INR",
+          "adminEmail": "suvarnabasanakatti83@gmail.com",
+          "gateway": "demo",
+          "paymentOptions": [
+            {
+              "id": "upi",
+              "label": "UPI"
+            },
+            {
+              "id": "googlepay",
+              "label": "Google Pay"
+            },
+            {
+              "id": "phonepe",
+              "label": "PhonePe"
+            },
+            {
+              "id": "qrcode",
+              "label": "QR Code"
+            }
+          ]
+        },
+        "redirectTo": "/payment"
+      }
+    },
+    "loginValid": {
+      "status": 200,
+      "durationMs": 449.7,
+      "body": {
+        "message": "Login successful.",
+        "user": {
+          "id": "69f8ab537054a1ad26b72226",
+          "name": "Payment User",
+          "email": "payment.audit@example.com",
+          "role": "user",
+          "payment_status": "paid",
+          "paymentStatus": "paid",
+          "paymentGateway": "upi",
+          "paymentVerifiedAt": "2026-05-04T14:21:07.379Z",
+          "createdAt": "2026-05-04T14:21:07.342Z",
+          "hasPaidAccess": true
+        },
+        "redirectTo": "/dashboard"
+      }
+    },
+    "loginAdmin": {
+      "status": 200,
+      "durationMs": 410.53,
+      "body": {
+        "message": "Login successful.",
+        "user": {
+          "id": "69f8ab527054a1ad26b72223",
+          "name": "Audit Admin",
+          "email": "admin.audit@example.com",
+          "role": "admin",
+          "payment_status": "paid",
+          "paymentStatus": "paid",
+          "paymentGateway": "waived",
+          "paymentVerifiedAt": "2026-05-04T14:21:06.920Z",
+          "createdAt": "2026-05-04T14:21:06.921Z",
+          "hasPaidAccess": true
+        },
+        "redirectTo": "/dashboard"
+      }
+    },
+    "missingFieldRegister": {
+      "status": 400,
+      "durationMs": 2.22,
+      "body": {
+        "message": "password must be a string.",
+        "details": {}
+      }
+    },
+    "wrongTypeRegister": {
+      "status": 400,
+      "durationMs": 3.36,
+      "body": {
+        "message": "Unsafe field \"body.email.$ne\" is not allowed.",
+        "details": {}
+      }
+    },
+    "unexpectedFieldRegister": {
+      "status": 400,
+      "durationMs": 3.36,
+      "body": {
+        "message": "Unexpected field(s) in body: role.",
+        "details": {}
+      }
+    },
+    "malformedJson": {
+      "status": 400,
+      "durationMs": 3.23,
+      "body": {
+        "message": "Malformed JSON payload."
+      }
+    },
+    "oversizedPayload": {
+      "status": 413,
+      "durationMs": 2.99,
+      "body": {
+        "message": "Request payload is too large."
+      }
+    }
+  },
+  "methodMatrix": {
+    "/health": {
+      "GET": {
+        "status": 200,
+        "durationMs": 1.64,
+        "body": {
+          "status": "ok",
+          "uptime": 4.5918525,
+          "environment": "test",
+          "database": {
+            "state": 1,
+            "stateLabel": "connected",
+            "host": "127.0.0.1",
+            "name": "chemistry_lab_security_audit_1777904464483"
+          },
+          "memory": {
+            "rss": 152059904,
+            "heapTotal": 109293568,
+            "heapUsed": 31768120,
+            "external": 22349438,
+            "arrayBuffers": 18465454
+          }
+        }
+      },
+      "POST": {
+        "status": 404,
+        "durationMs": 1.67,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PUT": {
+        "status": 404,
+        "durationMs": 1.15,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PATCH": {
+        "status": 404,
+        "durationMs": 1.15,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "DELETE": {
+        "status": 404,
+        "durationMs": 0.98,
+        "body": {
+          "message": "Route not found."
+        }
+      }
+    },
+    "/api/auth/register/config": {
+      "GET": {
+        "status": 200,
+        "durationMs": 1.26,
+        "body": {
+          "amount": 49900,
+          "displayAmount": 499,
+          "currency": "INR",
+          "adminEmail": "suvarnabasanakatti83@gmail.com",
+          "gateway": "demo",
+          "paymentOptions": [
+            {
+              "id": "upi",
+              "label": "UPI"
+            },
+            {
+              "id": "googlepay",
+              "label": "Google Pay"
+            },
+            {
+              "id": "phonepe",
+              "label": "PhonePe"
+            },
+            {
+              "id": "qrcode",
+              "label": "QR Code"
+            }
+          ]
+        }
+      },
+      "POST": {
+        "status": 401,
+        "durationMs": 3.36,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "PUT": {
+        "status": 401,
+        "durationMs": 2.66,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "PATCH": {
+        "status": 401,
+        "durationMs": 3.05,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "DELETE": {
+        "status": 401,
+        "durationMs": 2.63,
+        "body": {
+          "message": "Authentication required."
+        }
+      }
+    },
+    "/api/auth/me": {
+      "GET": {
+        "status": 200,
+        "durationMs": 5.47,
+        "body": {
+          "user": {
+            "id": "69f8ab527054a1ad26b72223",
+            "name": "Audit Admin",
+            "email": "admin.audit@example.com",
+            "role": "admin",
+            "payment_status": "paid",
+            "paymentStatus": "paid",
+            "paymentGateway": "waived",
+            "paymentVerifiedAt": "2026-05-04T14:21:06.920Z",
+            "createdAt": "2026-05-04T14:21:06.921Z",
+            "hasPaidAccess": true
+          },
+          "sessionPurpose": "auth"
+        }
+      },
+      "POST": {
+        "status": 404,
+        "durationMs": 3.38,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PUT": {
+        "status": 404,
+        "durationMs": 3.22,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PATCH": {
+        "status": 404,
+        "durationMs": 3.23,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "DELETE": {
+        "status": 404,
+        "durationMs": 3.74,
+        "body": {
+          "message": "Route not found."
+        }
+      }
+    },
+    "/api/compounds": {
+      "GET": {
+        "status": 200,
+        "durationMs": 4.73,
+        "body": [
+          {
+            "_id": "69f8ab54b76acdac22171642",
+            "formula": "BULK1777904468664",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-04T14:21:08.819Z",
+            "inputs": [
+              "H",
+              "Cl"
+            ],
+            "name": "Bulk Compound",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-04T14:21:08.819Z"
+          }
+        ]
+      },
+      "POST": {
+        "status": 201,
+        "durationMs": 8.92,
+        "body": {
+          "status": "created",
+          "compound": {
+            "name": "Matrix Compound",
+            "formula": "M1777904469083",
+            "inputs": [
+              "H",
+              "O"
+            ],
+            "conditions": {},
+            "process": {
+              "steps": []
+            },
+            "_id": "69f8ab557054a1ad26b72268",
+            "createdAt": "2026-05-04T14:21:09.087Z",
+            "updatedAt": "2026-05-04T14:21:09.087Z",
+            "__v": 0
+          }
+        }
+      },
+      "PUT": {
+        "status": 404,
+        "durationMs": 4.44,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PATCH": {
+        "status": 404,
+        "durationMs": 3.4,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "DELETE": {
+        "status": 404,
+        "durationMs": 2.68,
+        "body": {
+          "message": "Route not found."
+        }
+      }
+    },
+    "/api/elements": {
+      "GET": {
+        "status": 200,
+        "durationMs": 5.02,
+        "body": [
+          {
+            "_id": "69f8ab54b76acdac22171643",
+            "symbol": "AUQ",
+            "__v": 0,
+            "atomicMass": 250,
+            "atomicNumber": 118,
+            "category": "unknown",
+            "createdAt": "2026-05-04T14:21:08.900Z",
+            "name": "Auditium",
+            "stateAtRoomTemp": "solid",
+            "updatedAt": "2026-05-04T14:21:08.900Z"
+          }
+        ]
+      },
+      "POST": {
+        "status": 404,
+        "durationMs": 4.17,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PUT": {
+        "status": 404,
+        "durationMs": 3.48,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PATCH": {
+        "status": 404,
+        "durationMs": 3.75,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "DELETE": {
+        "status": 404,
+        "durationMs": 3.95,
+        "body": {
+          "message": "Route not found."
+        }
+      }
+    },
+    "/api/save": {
+      "GET": {
+        "status": 404,
+        "durationMs": 5.62,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "POST": {
+        "status": 200,
+        "durationMs": 9.22,
+        "body": {
+          "status": "saved"
+        }
+      },
+      "PUT": {
+        "status": 404,
+        "durationMs": 3.93,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PATCH": {
+        "status": 404,
+        "durationMs": 3.34,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "DELETE": {
+        "status": 404,
+        "durationMs": 3.05,
+        "body": {
+          "message": "Route not found."
+        }
+      }
+    }
+  },
+  "auth": {
+    "payWithPaymentToken": {
+      "status": 200,
+      "durationMs": 14.44,
+      "body": {
+        "message": "UPI demo payment accepted. Please log in to continue.",
+        "user": {
+          "id": "69f8ab537054a1ad26b72226",
+          "name": "Payment User",
+          "email": "payment.audit@example.com",
+          "role": "user",
+          "payment_status": "paid",
+          "paymentStatus": "paid",
+          "paymentGateway": "upi",
+          "paymentVerifiedAt": "2026-05-04T14:21:07.379Z",
+          "createdAt": "2026-05-04T14:21:07.342Z",
+          "hasPaidAccess": true
+        },
+        "redirectTo": "/login?payment=success"
+      }
+    },
+    "me": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 3.57,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 4.44,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 3.47,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 5.46,
+        "body": {
+          "user": {
+            "id": "69f8ab537054a1ad26b72226",
+            "name": "Payment User",
+            "email": "payment.audit@example.com",
+            "role": "user",
+            "payment_status": "paid",
+            "paymentStatus": "paid",
+            "paymentGateway": "upi",
+            "paymentVerifiedAt": "2026-05-04T14:21:07.379Z",
+            "createdAt": "2026-05-04T14:21:07.342Z",
+            "hasPaidAccess": true
+          },
+          "sessionPurpose": "auth"
+        }
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 4.05,
+        "body": {
+          "user": {
+            "id": "69f8ab527054a1ad26b72223",
+            "name": "Audit Admin",
+            "email": "admin.audit@example.com",
+            "role": "admin",
+            "payment_status": "paid",
+            "paymentStatus": "paid",
+            "paymentGateway": "waived",
+            "paymentVerifiedAt": "2026-05-04T14:21:06.920Z",
+            "createdAt": "2026-05-04T14:21:06.921Z",
+            "hasPaidAccess": true
+          },
+          "sessionPurpose": "auth"
+        }
+      }
+    },
+    "getCompounds": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 3.55,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 3.52,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 3.2,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 17.59,
+        "body": [
+          {
+            "_id": "69f8ab51b76acdac2217155e",
+            "formula": "(NH4)2C2O4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-04T14:21:05.344Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "C",
+              "C",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Oxalate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-04T14:21:05.344Z"
+          },
+          {
+            "_id": "69f8ab51b76acdac22171511",
+            "formula": "(NH4)2CO3",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-04T14:21:05.344Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "C",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Carbonate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-04T14:21:05.344Z"
+          },
+          {
+            "_id": "69f8ab51b76acdac221715ac",
+            "formula": "(NH4)2Cr2O7",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-04T14:21:05.345Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "Cr",
+              "Cr",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Dichromate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-04T14:21:05.345Z"
+          },
+          {
+            "_id": "69f8ab51b76acdac221715ab",
+            "formula": "(NH4)2CrO4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-04T14:21:05.345Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "Cr",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Chromate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-04T14:21:05.345Z"
+          },
+          {
+            "_id": "69f8ab51b76acdac22171535",
+            "formula": "(NH4)2HPO4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-04T14:21:05.344Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "H",
+              "P",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Hydrogen Phosphate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-04T14:21:05.344Z"
+          }
+        ]
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 6.09,
+        "body": [
+          {
+            "_id": "69f8ab51b76acdac2217155e",
+            "formula": "(NH4)2C2O4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-04T14:21:05.344Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "C",
+              "C",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Oxalate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-04T14:21:05.344Z"
+          },
+          {
+            "_id": "69f8ab51b76acdac22171511",
+            "formula": "(NH4)2CO3",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-04T14:21:05.344Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "C",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Carbonate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-04T14:21:05.344Z"
+          },
+          {
+            "_id": "69f8ab51b76acdac221715ac",
+            "formula": "(NH4)2Cr2O7",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-04T14:21:05.345Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "Cr",
+              "Cr",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Dichromate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-04T14:21:05.345Z"
+          },
+          {
+            "_id": "69f8ab51b76acdac221715ab",
+            "formula": "(NH4)2CrO4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-04T14:21:05.345Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "Cr",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Chromate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-04T14:21:05.345Z"
+          },
+          {
+            "_id": "69f8ab51b76acdac22171535",
+            "formula": "(NH4)2HPO4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-04T14:21:05.344Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "H",
+              "P",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Hydrogen Phosphate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-04T14:21:05.344Z"
+          }
+        ]
+      }
+    },
+    "createCompound": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 3.31,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 3.76,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 3.44,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 403,
+        "durationMs": 3.82,
+        "body": {
+          "message": "You do not have permission to perform this action."
+        }
+      },
+      "adminToken": {
+        "status": 201,
+        "durationMs": 62.19,
+        "body": {
+          "status": "created",
+          "compound": {
+            "name": "Security Audit Compound",
+            "formula": "AUDIT1777904468664",
+            "inputs": [
+              "Na",
+              "Cl"
+            ],
+            "conditions": {},
+            "process": {
+              "steps": []
+            },
+            "_id": "69f8ab547054a1ad26b7223c",
+            "createdAt": "2026-05-04T14:21:08.740Z",
+            "updatedAt": "2026-05-04T14:21:08.740Z",
+            "__v": 0
+          }
+        }
+      }
+    },
+    "bulkCompoundSync": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 3.19,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 3.21,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 3.09,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 403,
+        "durationMs": 3.79,
+        "body": {
+          "message": "You do not have permission to perform this action."
+        }
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 31.55,
+        "body": {
+          "status": "bulk sync success",
+          "count": 1,
+          "removedDuplicateEntries": 0
+        }
+      }
+    },
+    "search": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 3.34,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 2.75,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 2.88,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 5.89,
+        "body": []
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 6.24,
+        "body": []
+      }
+    },
+    "getElements": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 2.82,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 2.8,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 3.12,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 5.67,
+        "body": []
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 5.59,
+        "body": []
+      }
+    },
+    "bulkElements": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 3.05,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 3.31,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 3.18,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 403,
+        "durationMs": 4.01,
+        "body": {
+          "message": "You do not have permission to perform this action."
+        }
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 10.59,
+        "body": {
+          "message": "Elements saved successfully",
+          "count": 1
+        }
+      }
+    },
+    "saveSheet": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 3.27,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 2.91,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 3.86,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 10,
+        "body": {
+          "status": "saved"
+        }
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 6.94,
+        "body": {
+          "status": "saved"
+        }
+      }
+    },
+    "loadSheet": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 2.49,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 2.67,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 2.9,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 5.4,
+        "body": {
+          "_id": "69f8ab54b76acdac22171644",
+          "userId": "69f8ab537054a1ad26b72226",
+          "name": "AuditSheet",
+          "__v": 0,
+          "createdAt": "2026-05-04T14:21:08.922Z",
+          "data": {
+            "sampleId": "SAMPLE-1",
+            "values": [
+              1,
+              2,
+              3
+            ]
+          },
+          "updatedAt": "2026-05-04T14:21:08.922Z"
+        }
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 9.9,
+        "body": {
+          "_id": "69f8ab54b76acdac22171645",
+          "name": "AuditSheet",
+          "userId": "69f8ab527054a1ad26b72223",
+          "__v": 0,
+          "createdAt": "2026-05-04T14:21:08.931Z",
+          "data": {
+            "sampleId": "SAMPLE-1",
+            "values": [
+              1,
+              2,
+              3
+            ]
+          },
+          "updatedAt": "2026-05-04T14:21:08.931Z"
+        }
+      }
+    },
+    "deleteSheet": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 3.31,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 3.85,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 4.45,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 11.92,
+        "body": {
+          "status": "deleted",
+          "deletedCount": 1
+        }
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 8.12,
+        "body": {
+          "status": "deleted",
+          "deletedCount": 1
+        }
+      }
+    },
+    "payRoute": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 3.21,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 3.64,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 3.97,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 403,
+        "durationMs": 4.67,
+        "body": {
+          "message": "Your session does not allow this action."
+        }
+      },
+      "adminToken": {
+        "status": 403,
+        "durationMs": 4.71,
+        "body": {
+          "message": "Your session does not allow this action."
+        }
+      }
+    },
+    "verifyPayRoute": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 3.67,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 3.41,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 3.13,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 403,
+        "durationMs": 4.16,
+        "body": {
+          "message": "Your session does not allow this action."
+        }
+      },
+      "adminToken": {
+        "status": 403,
+        "durationMs": 3.52,
+        "body": {
+          "message": "Your session does not allow this action."
+        }
+      }
+    }
+  },
+  "injection": {
+    "loginNoSql": {
+      "status": 400,
+      "durationMs": 1.48,
+      "body": {
+        "message": "Unsafe field \"body.email.$ne\" is not allowed.",
+        "details": {}
+      }
+    },
+    "searchQueryInjection": {
+      "status": 400,
+      "durationMs": 3.55,
+      "body": {
+        "message": "Unexpected field(s) in query: inputs[$ne].",
+        "details": {}
+      }
+    },
+    "sheetBodyInjection": {
+      "status": 400,
+      "durationMs": 2.55,
+      "body": {
+        "message": "Unsafe field \"body.data.$ne\" is not allowed.",
+        "details": {}
+      }
+    },
+    "compoundBodyInjection": {
+      "status": 400,
+      "durationMs": 2.15,
+      "body": {
+        "message": "Unsafe field \"body.process.steps[0].$gt\" is not allowed.",
+        "details": {}
+      }
+    }
+  },
+  "raceCondition": {
+    "createdStatuses": {
+      "201": 1,
+      "409": 19
+    },
+    "storedDocuments": 1
+  },
+  "loadTests": [
+    {
+      "concurrency": 10,
+      "totalReadRequests": 80,
+      "successfulReadRequests": 80,
+      "failedReadRequests": 0,
+      "averageResponseMs": 28.4,
+      "p95ResponseMs": 35.42,
+      "maxResponseMs": 36.83,
+      "throughputRps": 346.82,
+      "cpuPercent": 101.88,
+      "memoryStartMb": 144.62,
+      "memoryPeakMb": 145.68,
+      "memoryDeltaMb": 1.28,
+      "writeRequests": 10,
+      "successfulWrites": 10,
+      "failedWrites": 0,
+      "writeDurationMs": 35.09,
+      "storedWrites": 10
+    },
+    {
+      "concurrency": 50,
+      "totalReadRequests": 400,
+      "successfulReadRequests": 400,
+      "failedReadRequests": 0,
+      "averageResponseMs": 146.2,
+      "p95ResponseMs": 205.11,
+      "maxResponseMs": 225.46,
+      "throughputRps": 333.81,
+      "cpuPercent": 121.26,
+      "memoryStartMb": 145.9,
+      "memoryPeakMb": 168.21,
+      "memoryDeltaMb": 42.04,
+      "writeRequests": 50,
+      "successfulWrites": 50,
+      "failedWrites": 0,
+      "writeDurationMs": 158.95,
+      "storedWrites": 50
+    },
+    {
+      "concurrency": 100,
+      "totalReadRequests": 800,
+      "successfulReadRequests": 800,
+      "failedReadRequests": 0,
+      "averageResponseMs": 244.38,
+      "p95ResponseMs": 314.04,
+      "maxResponseMs": 352.02,
+      "throughputRps": 400.93,
+      "cpuPercent": 117.42,
+      "memoryStartMb": 187.95,
+      "memoryPeakMb": 239.69,
+      "memoryDeltaMb": 52.62,
+      "writeRequests": 100,
+      "successfulWrites": 100,
+      "failedWrites": 0,
+      "writeDurationMs": 223.48,
+      "storedWrites": 100
+    },
+    {
+      "concurrency": 500,
+      "totalReadRequests": 4000,
+      "successfulReadRequests": 3496,
+      "failedReadRequests": 504,
+      "averageResponseMs": 1073.97,
+      "p95ResponseMs": 1518.52,
+      "maxResponseMs": 1831.38,
+      "throughputRps": 451.29,
+      "cpuPercent": 110,
+      "memoryStartMb": 240.57,
+      "memoryPeakMb": 345.61,
+      "memoryDeltaMb": 132.37,
+      "writeRequests": 500,
+      "successfulWrites": 500,
+      "failedWrites": 0,
+      "writeDurationMs": 1327.58,
+      "storedWrites": 500
+    }
+  ],
+  "memoryLeak": {
+    "durationMs": 30000,
+    "concurrency": 50,
+    "completedRequests": 15092,
+    "failedRequests": 0,
+    "memorySamples": [
+      {
+        "at": "2026-05-04T14:21:28.330Z",
+        "rssMb": 400.7
+      },
+      {
+        "at": "2026-05-04T14:21:33.330Z",
+        "rssMb": 398.98
+      },
+      {
+        "at": "2026-05-04T14:21:38.331Z",
+        "rssMb": 396.13
+      },
+      {
+        "at": "2026-05-04T14:21:43.347Z",
+        "rssMb": 395.48
+      },
+      {
+        "at": "2026-05-04T14:21:48.352Z",
+        "rssMb": 407.06
+      }
+    ],
+    "growthMb": 6.36
+  },
+  "logging": {
+    "auditLogPath": "C:\\Users\\Suvarna\\OneDrive\\Desktop\\Demoproject\\Chemistry-Lab Testing Tool\\logs\\audit.log",
+    "auditLogExists": true,
+    "loginLogged": true,
+    "logoutLogged": true,
+    "createLogged": true,
+    "updateLogged": true,
+    "deleteLogged": true,
+    "failedAuthLogged": true
+  },
+  "backupRecovery": {
+    "backupScriptExitCode": null,
+    "backupScriptStdout": "",
+    "restoreScriptExitCode": null,
+    "restoreScriptStdout": "",
+    "restoreScriptStderr": "",
+    "backupPath": null,
+    "countBeforeBackup": 3,
+    "countAfterRestore": 3
+  },
+  "dependencyAudit": {
+    "exitCode": null,
+    "stderr": ""
+  },
+  "findings": {
+    "critical": [],
+    "medium": [
+      "Backup or restore automation failed during verification."
+    ],
+    "low": []
+  },
+  "notes": [
+    "npm audit could not complete in the current environment.",
+    "Memory leak testing was limited to a 30 second soak, not a multi-hour run."
+  ],
+  "scores": {
+    "performanceScore": 5,
+    "productionReadinessScore": 46,
+    "scalabilityScore": 0,
+    "securityScore": 90
+  }
+}

@@ -1,0 +1,30 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="uvVp73MO2wXmq29C4i3B" name="Page-1">
+    <mxGraphModel dx="1030" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xQnQIGEUnLlndA50ENH4-4" edge="1" parent="1" source="xQnQIGEUnLlndA50ENH4-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xQnQIGEUnLlndA50ENH4-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;textDirection=ltr;" value="&lt;div&gt;Element&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;name&lt;/div&gt;&lt;div&gt;symbol&lt;/div&gt;&lt;div&gt;atomicNumber&lt;/div&gt;&lt;div&gt;valency&lt;/div&gt;&lt;div&gt;type&lt;/div&gt;&lt;div&gt;group&lt;/div&gt;&lt;div&gt;period&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="160" x="80" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="xQnQIGEUnLlndA50ENH4-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" value="&lt;div&gt;Compound&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;name&lt;/div&gt;&lt;div&gt;formula&lt;/div&gt;&lt;div&gt;inputs[]&lt;/div&gt;&lt;div&gt;type&lt;/div&gt;&lt;div&gt;conditions&lt;/div&gt;&lt;div&gt;process&lt;/div&gt;&lt;div&gt;video&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="180" x="560" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="xQnQIGEUnLlndA50ENH4-25" edge="1" parent="1" source="xQnQIGEUnLlndA50ENH4-1" style="endArrow=classic;html=1;rounded=0;exitX=1.027;exitY=0.474;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="280" as="sourcePoint" />
+            <mxPoint x="560" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xQnQIGEUnLlndA50ENH4-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="used in many to many" vertex="1">
+          <mxGeometry height="50" width="60" x="340" y="230" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

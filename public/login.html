@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Chemistry Lab Testing Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="auth-client.js"></script>
+    <script defer src="login.js"></script>
+</head>
+<body>
+    <main class="auth-layout auth-shell-login">
+        <section class="auth-card auth-card-auth">
+            <div class="auth-card-head">
+                <div>
+                    <div class="eyebrow">Login</div>
+                    <h1 class="auth-title">Access your CLTT workspace.</h1>
+                </div>
+                <span class="security-pill">Registered users</span>
+            </div>
+            <p class="auth-copy">
+                Sign in with your registered email address or mobile number and password.
+            </p>
+
+            <form class="auth-form" id="login-form" novalidate>
+                <div class="field-cluster">
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email" placeholder="researcher@lab.com" autocomplete="email">
+                </div>
+                <div class="field-cluster">
+                    <label for="mobile">Mobile Number</label>
+                    <input id="mobile" name="mobile" type="tel" placeholder="+91 9876543210" autocomplete="tel">
+                </div>
+                <div class="field-cluster">
+                    <label for="password">Password</label>
+                    <div class="password-shell">
+                        <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+                        <button type="button" class="password-toggle" id="toggle-password" aria-label="Show password">Show</button>
+                    </div>
+                </div>
+
+                <div class="form-meta">
+                    <a class="auth-link" href="/forgot-password">Forgot Password?</a>
+                    <a class="auth-link" href="/register?new=1">Create a new account</a>
+                </div>
+
+                <button class="auth-button" id="login-submit" type="submit">Login</button>
+                <p id="form-message" class="auth-message"></p>
+            </form>
+        </section>
+
+        <aside class="auth-side">
+            <div class="eyebrow">Chemistry Lab Testing Tool</div>
+            <h2 class="panel-title">Continue where your laboratory work left off.</h2>
+            <p class="auth-copy">
+                Returning users go directly through login. New users can create one account and continue into the existing CLTT workspace.
+            </p>
+            <div class="feature-list">
+                <div class="feature-item">Registered account access with email or mobile number.</div>
+                <div class="feature-item">Authenticated users open the workspace immediately.</div>
+                <div class="feature-item">Password recovery verifies your registered email address before reset.</div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

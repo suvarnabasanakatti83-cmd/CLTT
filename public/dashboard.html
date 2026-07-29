@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Lab Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="auth-client.js"></script>
+    <script defer src="dashboard.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="popup">
+        <div class="popup-card">
+            <h2 id="pName"></h2>
+            <p id="pDesc"></p>
+            <ul id="pSteps"></ul>
+            <p id="pCond"></p>
+            <div class="toolbar-group">
+                <button type="button" onclick="openVideo()">Watch Video</button>
+                <button type="button" class="button-muted" onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="app-shell dashboard-shell">
+        <section class="welcome-panel" id="welcome-panel" aria-live="polite">
+            <div>
+                <h2>Welcome to CLTT (Chemistry Lab Testing Tool)</h2>
+                <p>
+                    CLTT helps students, researchers, and laboratory professionals identify chemical compounds, formulas, reaction processes, conditions, and required laboratory inputs efficiently.
+                </p>
+                <p class="welcome-user">Your workspace is ready.</p>
+            </div>
+            <button type="button" class="button-muted compact-button" id="dismiss-welcome-button">Dismiss</button>
+        </section>
+
+        <section class="dashboard-header compact-dashboard-header">
+            <div class="lab-hero">
+                <div class="eyebrow">User Workspace</div>
+                <h1 id="title">Chemistry Lab Testing Tool</h1>
+                <div class="hero-metrics">
+                    <span class="metric-pill">Chemistry Generator</span>
+                    <span class="metric-pill">Reports</span>
+                    <span class="metric-pill">Saved Formulas</span>
+                    <span class="metric-pill">Support</span>
+                </div>
+            </div>
+            <aside class="lab-status">
+                <div class="eyebrow">Workspace</div>
+                <div class="status-grid">
+                    <div class="status-card">
+                        <div class="status-label">Researcher</div>
+                        <div class="status-value" id="user-name">Researcher</div>
+                    </div>
+                    <div class="status-card">
+                        <div class="status-label">Access</div>
+                        <div class="status-value" id="workspace-status">Active</div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="toolbar">
+            <div class="toolbar-group">
+                <button type="button" onclick="addSheet()">+ Add Sheet</button>
+                <button type="button" class="button-muted" onclick="saveData()">Save</button>
+                <button type="button" class="button-muted" onclick="loadData()">Load</button>
+                <button type="button" class="button-muted" onclick="clearSheet()">Clear Sheet</button>
+                <button type="button" class="button-danger" onclick="deleteSheet()">Delete Sheet</button>
+            </div>
+            <div class="toolbar-group">
+                <select id="sheet-select" onchange="switchSheet()"></select>
+                <span id="current-sheet">Current Sheet: Sheet1</span>
+            </div>
+            <div class="toolbar-group">
+                <button type="button" class="button-muted" id="feedback-button">Feedback</button>
+                <button type="button" class="button-muted" id="quit-workspace-button">Quit Workspace</button>
+                <button type="button" class="button-muted" id="logout-button">Logout</button>
+            </div>
+        </section>
+
+        <p class="dashboard-message" id="dashboard-message" role="status" aria-live="polite"></p>
+
+        <section class="table-scroll-top" id="table-scroll-top" aria-label="Top horizontal scroll">
+            <div id="table-scroll-track"></div>
+        </section>
+
+        <section class="table-container" id="table-container">
+            <table id="main-table"></table>
+        </section>
+
+        <section class="feedback-modal" id="feedback-modal" hidden>
+            <form class="feedback-card" id="feedback-form">
+                <div class="feedback-card-head">
+                    <div>
+                        <div class="eyebrow">Feedback</div>
+                        <h2 id="feedback-title">Before You Leave</h2>
+                        <p id="feedback-intro" class="auth-note">Thank you for using CLTT. We would appreciate your feedback to improve the platform. Please answer the following questions.</p>
+                    </div>
+                    <button type="button" class="button-muted compact-button" id="close-feedback-button">Close</button>
+                </div>
+
+                <div class="feedback-grid">
+                    <label>How satisfied are you with your experience using CLTT today?
+                        <select name="overallExperience" required>
+                            <option value="">Select</option>
+                            <option>Excellent</option>
+                            <option>Good</option>
+                            <option>Average</option>
+                            <option>Poor</option>
+                        </select>
+                    </label>
+                    <label>How easy was it to use the Chemistry Lab Testing Tool?
+                        <select name="easeOfUse" required>
+                            <option value="">Select</option>
+                            <option>Very Easy</option>
+                            <option>Easy</option>
+                            <option>Neutral</option>
+                            <option>Difficult</option>
+                            <option>Very Difficult</option>
+                        </select>
+                    </label>
+                    <label>Were you able to find the chemistry information you were looking for?
+                        <select name="chemicalAccuracy" required>
+                            <option value="">Select</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                            <option>Not Sure</option>
+                        </select>
+                    </label>
+                    <label>How would you rate the platform speed during your session?
+                        <select name="speedRating" required>
+                            <option value="">Select</option>
+                            <option>Excellent</option>
+                            <option>Good</option>
+                            <option>Average</option>
+                            <option>Poor</option>
+                        </select>
+                    </label>
+                    <label>How useful was CLTT for your learning, research, or laboratory work?
+                        <select name="learningValue" required>
+                            <option value="">Select</option>
+                            <option>Strongly Agree</option>
+                            <option>Agree</option>
+                            <option>Neutral</option>
+                            <option>Disagree</option>
+                            <option>Strongly Disagree</option>
+                        </select>
+                    </label>
+                    <label>Would you use CLTT again for future chemistry tasks?
+                        <select name="futureUsage" required>
+                            <option value="">Select</option>
+                            <option>Definitely</option>
+                            <option>Maybe</option>
+                            <option>No</option>
+                        </select>
+                    </label>
+                    <label>Would you recommend CLTT to other students, researchers, or laboratory professionals?
+                        <select name="recommendation" required>
+                            <option value="">Select</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </label>
+                    <label class="full-span">Please share any additional comments or suggestions, including anything we can improve to make CLTT better.
+                        <textarea name="suggestions" rows="5" maxlength="2000" placeholder="Please share your suggestions to help improve CLTT."></textarea>
+                    </label>
+                </div>
+
+                <div class="feedback-actions">
+                    <p class="auth-message" id="feedback-status"></p>
+                    <button type="submit">Submit Feedback</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Chemistry Lab Testing Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="auth-client.js"></script>
+    <script defer src="register.js"></script>
+</head>
+<body>
+    <main class="auth-shell auth-shell-register">
+        <section class="auth-showcase">
+            <div class="molecule-field" aria-hidden="true">
+                <span class="molecule-node node-a"></span>
+                <span class="molecule-node node-b"></span>
+                <span class="molecule-node node-c"></span>
+                <span class="molecule-link link-a"></span>
+                <span class="molecule-link link-b"></span>
+            </div>
+            <div class="eyebrow">Chemistry SaaS Onboarding</div>
+            <h1 class="auth-title">Launch your laboratory workspace with intelligent profile onboarding.</h1>
+            <p class="auth-copy">
+                Create your account, complete laboratory profile details, select a profession path, and continue directly into workspace access.
+            </p>
+            <div class="hero-metrics">
+                <span class="metric-pill">Email required</span>
+                <span class="metric-pill">Profile completion</span>
+                <span class="metric-pill">Direct workspace access</span>
+            </div>
+            <div class="auth-stage-strip" aria-label="Onboarding flow">
+                <span class="stage-chip">1. Create account</span>
+                <span class="stage-chip">2. Complete profile</span>
+                <span class="stage-chip">3. Enter workspace</span>
+            </div>
+            <div class="showcase-grid">
+                <article class="feature-item">
+                    <strong>Step 1</strong>
+                    <span>Create your laboratory identity with the core account details needed for secure access.</span>
+                </article>
+                <article class="feature-item">
+                    <strong>Step 2</strong>
+                    <span>Complete scientific profile information with profession-specific fields and local draft recovery.</span>
+                </article>
+                <article class="feature-item">
+                    <strong>Step 3</strong>
+                    <span>Move straight into the CLTT workspace after mandatory profile completion.</span>
+                </article>
+            </div>
+            <div class="info-panel onboarding-panel">
+                <div class="info-row">
+                    <span>Workspace Access</span>
+                    <strong>Immediate after registration</strong>
+                </div>
+                <div class="info-row">
+                    <span>Next Stage</span>
+                    <strong>Chemical formula generation</strong>
+                </div>
+                <div class="info-row">
+                    <span>Registration Mode</span>
+                    <strong>Email, phone, password</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="auth-card auth-card-wide">
+            <div class="auth-card-head">
+                <div>
+                    <div class="eyebrow">Registration</div>
+                    <h2 class="panel-title">Create Laboratory Account</h2>
+                </div>
+                <span class="security-pill">Workspace onboarding</span>
+            </div>
+
+            <div class="onboarding-progress" aria-label="Profile completion">
+                <div class="progress-copy">
+                    <span>Profile completion</span>
+                    <strong id="profile-progress-copy">0%</strong>
+                </div>
+                <div class="progress-track">
+                    <span id="profile-progress-bar"></span>
+                </div>
+            </div>
+
+            <nav class="section-nav" aria-label="Registration sections">
+                <a href="#account-section">Account</a>
+                <a href="#profile-section">Profile</a>
+                <a href="#profession-section">Profession</a>
+                <a href="#summary-section">Summary</a>
+            </nav>
+
+            <form class="auth-form auth-form-wide" id="register-form" novalidate>
+                <div class="form-section" id="account-section">
+                    <div class="section-heading">Create Laboratory Account</div>
+                    <p class="auth-note">Full name, email address, phone number, password, and matching confirmation are required before profile onboarding opens.</p>
+                    <div class="form-grid two-column">
+                        <div class="field-cluster">
+                            <label for="fullName">Full Name</label>
+                            <input id="fullName" name="fullName" type="text" placeholder="Enter full name" autocomplete="name" required>
+                            <p class="field-message" data-error-for="fullName"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="email">Email Address</label>
+                            <input id="email" name="email" type="email" placeholder="researcher@lab.com" autocomplete="email" required>
+                            <p class="field-message" data-error-for="email"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="mobile">Phone Number</label>
+                            <input id="mobile" name="mobile" type="tel" placeholder="+91 9876543210" autocomplete="tel" required>
+                            <p class="field-message" data-error-for="mobile"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="password">Password</label>
+                            <div class="password-shell">
+                                <input id="password" name="password" type="password" placeholder="Minimum 8 characters" autocomplete="new-password" required>
+                                <button type="button" class="password-toggle" data-toggle-password="password" aria-label="Show password">Show</button>
+                            </div>
+                            <p class="field-message" data-error-for="password"></p>
+                        </div>
+                        <div class="field-cluster full-span">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <div class="password-shell">
+                                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter password" autocomplete="new-password" required>
+                                <button type="button" class="password-toggle" data-toggle-password="confirmPassword" aria-label="Show confirm password">Show</button>
+                            </div>
+                            <p class="field-message" data-error-for="confirmPassword"></p>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="button-muted" id="account-continue">Continue to Profile</button>
+                    </div>
+                </div>
+
+                <div class="form-section form-section-collapsible" id="profile-section" data-step-hidden="true">
+                    <div class="section-heading">Additional Profile Information</div>
+                    <p class="auth-note">Profile details are required before workspace access opens.</p>
+                    <div class="form-grid two-column">
+                        <div class="field-cluster">
+                            <label for="dateOfBirth">Date of Birth</label>
+                            <input id="dateOfBirth" name="dateOfBirth" type="date" required>
+                            <p class="field-message" data-error-for="dateOfBirth"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer_not_to_say">Prefer not to say</option>
+                            </select>
+                            <p class="field-message" data-error-for="gender"></p>
+                        </div>
+                        <div class="field-cluster full-span">
+                            <label for="profession">Profession</label>
+                            <select id="profession" name="profession" required>
+                                <option value="">Select profession</option>
+                                <option value="student">Student</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="lab_technician">Lab Technician</option>
+                                <option value="researcher">Researcher</option>
+                                <option value="chemist">Chemist</option>
+                                <option value="industry_professional">Industry Professional</option>
+                            </select>
+                            <p class="field-message" data-error-for="profession"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="country">Country</label>
+                            <input id="country" name="country" type="text" placeholder="Country" required>
+                            <p class="field-message" data-error-for="country"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="state">State</label>
+                            <input id="state" name="state" type="text" placeholder="State" required>
+                            <p class="field-message" data-error-for="state"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="district">District</label>
+                            <input id="district" name="district" type="text" placeholder="District" required>
+                            <p class="field-message" data-error-for="district"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="city">City</label>
+                            <input id="city" name="city" type="text" placeholder="City" required>
+                            <p class="field-message" data-error-for="city"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="villageTown">Village/Town</label>
+                            <input id="villageTown" name="villageTown" type="text" placeholder="Village or town" required>
+                            <p class="field-message" data-error-for="villageTown"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="pincode">Pincode</label>
+                            <input id="pincode" name="pincode" type="text" placeholder="Pincode" required>
+                            <p class="field-message" data-error-for="pincode"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section profession-section form-section-collapsible" id="profession-section" data-step-hidden="true">
+                    <div class="section-heading">Dynamic Profession Information</div>
+                    <p class="auth-note">Select a profession to generate the right scientific profile card.</p>
+                    <div id="profession-fields" class="profession-fields empty-profession">
+                        <div class="feature-item">
+                            <strong>Waiting for profession</strong>
+                            <span>Your profession card will expand here with laboratory-specific fields.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section form-section-summary" id="summary-section">
+                    <div class="info-panel">
+                        <div class="info-row">
+                            <span>Draft State</span>
+                            <strong id="draft-status">Autosave ready</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Workspace access</span>
+                            <strong>Immediate</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Next stage</span>
+                            <strong>CLTT workspace</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Formula tools</span>
+                            <strong>Available after profile completion</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-meta">
+                    <span class="auth-link">Workspace opens after profile completion</span>
+                    <button type="button" class="button-muted" id="save-draft-button">Save Draft</button>
+                </div>
+                <button class="auth-button" id="register-submit" type="submit">Complete Profile and Continue</button>
+                <p id="form-message" class="auth-message"></p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

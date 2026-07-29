@@ -1,0 +1,8709 @@
+{
+  "compounds": [
+    {
+      "inputs": [
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "H2O",
+      "name": "Water"
+    },
+    {
+      "inputs": [
+        "C",
+        "O",
+        "O"
+      ],
+      "formula": "CO2",
+      "name": "Carbon Dioxide"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "NH3",
+      "name": "Ammonia"
+    },
+    {
+      "inputs": [
+        "C",
+        "O"
+      ],
+      "formula": "CO",
+      "name": "Carbon Monoxide"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H"
+      ],
+      "formula": "NH2",
+      "name": "Amino Radical"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "NH4",
+      "name": "Ammonium"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Cl"
+      ],
+      "formula": "NaCl",
+      "name": "Sodium Chloride",
+      "type": "ionic",
+      "conditions": {
+        "temperature": "Room Temperature",
+        "pressure": "Normal"
+      },
+      "process": {
+        "description": "Sodium reacts vigorously with chlorine gas to form sodium chloride.",
+        "steps": [
+          "Take sodium metal",
+          "Expose it to chlorine gas",
+          "Reaction forms NaCl"
+        ]
+      },
+      "video": "https://www.youtube.com/results?search_query=sodium+chloride+preparation"
+    },
+    {
+      "inputs": [
+        "K",
+        "Cl"
+      ],
+      "formula": "KCl",
+      "name": "Potassium Chloride"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "O"
+      ],
+      "formula": "CaO",
+      "name": "Calcium Oxide"
+    },
+    {
+      "inputs": [
+        "H",
+        "Cl"
+      ],
+      "formula": "HCl",
+      "name": "Hydrochloric Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "H",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "H2SO4",
+      "name": "Sulfuric Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "HNO3",
+      "name": "Nitric Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "CH4",
+      "name": "Methane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C2H6",
+      "name": "Ethane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C2H4",
+      "name": "Ethene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "H",
+        "H"
+      ],
+      "formula": "C2H2",
+      "name": "Ethyne"
+    },
+    {
+      "inputs": [
+        "O",
+        "O"
+      ],
+      "formula": "O2",
+      "name": "Oxygen Gas"
+    },
+    {
+      "inputs": [
+        "N",
+        "N"
+      ],
+      "formula": "N2",
+      "name": "Nitrogen Gas"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "Fe",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Fe2O3",
+      "name": "Iron(III) Oxide"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "O"
+      ],
+      "formula": "MgO",
+      "name": "Magnesium Oxide"
+    },
+    {
+      "inputs": [
+        "Al",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Al2O3",
+      "name": "Aluminium Oxide"
+    },
+    {
+      "inputs": [
+        "Na",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NaHCO3",
+      "name": "Sodium Bicarbonate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CaCO3",
+      "name": "Calcium Carbonate"
+    },
+    {
+      "inputs": [
+        "C",
+        "H",
+        "O",
+        "O",
+        "H"
+      ],
+      "formula": "CH3COOH",
+      "name": "Acetic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "C6H12O6",
+      "name": "Glucose"
+    },
+    {
+      "inputs": [
+        "P",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "P2O5",
+      "name": "Phosphorus Pentoxide"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Br"
+      ],
+      "formula": "NaBr",
+      "name": "Sodium Bromide"
+    },
+    {
+      "inputs": [
+        "Na",
+        "I"
+      ],
+      "formula": "NaI",
+      "name": "Sodium Iodide"
+    },
+    {
+      "inputs": [
+        "K",
+        "Br"
+      ],
+      "formula": "KBr",
+      "name": "Potassium Bromide"
+    },
+    {
+      "inputs": [
+        "K",
+        "I"
+      ],
+      "formula": "KI",
+      "name": "Potassium Iodide"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "CaCl2",
+      "name": "Calcium Chloride"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "MgCl2",
+      "name": "Magnesium Chloride"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "ZnCl2",
+      "name": "Zinc Chloride"
+    },
+    {
+      "inputs": [
+        "Na",
+        "O",
+        "H"
+      ],
+      "formula": "NaOH",
+      "name": "Sodium Hydroxide"
+    },
+    {
+      "inputs": [
+        "K",
+        "O",
+        "H"
+      ],
+      "formula": "KOH",
+      "name": "Potassium Hydroxide"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Na",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Na2CO3",
+      "name": "Sodium Carbonate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "NO3"
+      ],
+      "formula": "NaNO3",
+      "name": "Sodium Nitrate"
+    },
+    {
+      "inputs": [
+        "K",
+        "NO3"
+      ],
+      "formula": "KNO3",
+      "name": "Potassium Nitrate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "SO4"
+      ],
+      "formula": "Na2SO4",
+      "name": "Sodium Sulfate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "SO4"
+      ],
+      "formula": "CaSO4",
+      "name": "Calcium Sulfate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "SO4"
+      ],
+      "formula": "MgSO4",
+      "name": "Magnesium Sulfate"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "SO4"
+      ],
+      "formula": "CuSO4",
+      "name": "Copper Sulfate"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "FeCl2",
+      "name": "Iron(II) Chloride"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "Cl",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "FeCl3",
+      "name": "Iron(III) Chloride"
+    },
+    {
+      "inputs": [
+        "Al",
+        "Cl",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "AlCl3",
+      "name": "Aluminium Chloride"
+    },
+    {
+      "inputs": [
+        "NH4",
+        "Cl"
+      ],
+      "formula": "NH4Cl",
+      "name": "Ammonium Chloride"
+    },
+    {
+      "inputs": [
+        "NH4",
+        "NO3"
+      ],
+      "formula": "NH4NO3",
+      "name": "Ammonium Nitrate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "S"
+      ],
+      "formula": "CaS",
+      "name": "Calcium Sulfide"
+    },
+    {
+      "inputs": [
+        "Na",
+        "S"
+      ],
+      "formula": "Na2S",
+      "name": "Sodium Sulfide"
+    },
+    {
+      "inputs": [
+        "K",
+        "S"
+      ],
+      "formula": "K2S",
+      "name": "Potassium Sulfide"
+    },
+    {
+      "inputs": [
+        "Na",
+        "F"
+      ],
+      "formula": "NaF",
+      "name": "Sodium Fluoride"
+    },
+    {
+      "inputs": [
+        "K",
+        "F"
+      ],
+      "formula": "KF",
+      "name": "Potassium Fluoride"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "F",
+        "F"
+      ],
+      "formula": "CaF2",
+      "name": "Calcium Fluoride"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Cl",
+        "O"
+      ],
+      "formula": "NaClO",
+      "name": "Sodium Hypochlorite"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Cl",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NaClO3",
+      "name": "Sodium Chlorate"
+    },
+    {
+      "inputs": [
+        "K",
+        "Cl",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "KClO3",
+      "name": "Potassium Chlorate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Ca(OH)2",
+      "name": "Calcium Hydroxide"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C3H8",
+      "name": "Propane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C4H10",
+      "name": "Butane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C3H6",
+      "name": "Propene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C3H4",
+      "name": "Propyne"
+    },
+    {
+      "inputs": [
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "H2O2",
+      "name": "Hydrogen Peroxide"
+    },
+    {
+      "inputs": [
+        "N",
+        "O"
+      ],
+      "formula": "NO",
+      "name": "Nitric Oxide"
+    },
+    {
+      "inputs": [
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "NO2",
+      "name": "Nitrogen Dioxide"
+    },
+    {
+      "inputs": [
+        "S",
+        "O",
+        "O"
+      ],
+      "formula": "SO2",
+      "name": "Sulfur Dioxide"
+    },
+    {
+      "inputs": [
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "SO3",
+      "name": "Sulfur Trioxide"
+    },
+    {
+      "inputs": [
+        "P",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "PH3",
+      "name": "Phosphine"
+    },
+    {
+      "inputs": [
+        "Si",
+        "O",
+        "O"
+      ],
+      "formula": "SiO2",
+      "name": "Silicon Dioxide"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Ca",
+        "Ca",
+        "P",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ca3(PO4)2",
+      "name": "Calcium Phosphate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Na",
+        "Na",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Na3PO4",
+      "name": "Sodium Phosphate"
+    },
+    {
+      "inputs": [
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NO3",
+      "name": "Nitrate"
+    },
+    {
+      "inputs": [
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "PO4",
+      "name": "Phosphate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "F"
+      ],
+      "formula": "LiF",
+      "name": "Lithium Fluoride"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Cl"
+      ],
+      "formula": "LiCl",
+      "name": "Lithium Chloride"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Br"
+      ],
+      "formula": "LiBr",
+      "name": "Lithium Bromide"
+    },
+    {
+      "inputs": [
+        "Li",
+        "I"
+      ],
+      "formula": "LiI",
+      "name": "Lithium Iodide"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "F"
+      ],
+      "formula": "RbF",
+      "name": "Rubidium Fluoride"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Cl"
+      ],
+      "formula": "RbCl",
+      "name": "Rubidium Chloride"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Br"
+      ],
+      "formula": "RbBr",
+      "name": "Rubidium Bromide"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "I"
+      ],
+      "formula": "RbI",
+      "name": "Rubidium Iodide"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "F"
+      ],
+      "formula": "CsF",
+      "name": "Cesium Fluoride"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cl"
+      ],
+      "formula": "CsCl",
+      "name": "Cesium Chloride"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Br"
+      ],
+      "formula": "CsBr",
+      "name": "Cesium Bromide"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "I"
+      ],
+      "formula": "CsI",
+      "name": "Cesium Iodide"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "F"
+      ],
+      "formula": "NH4F",
+      "name": "Ammonium Fluoride"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "Br"
+      ],
+      "formula": "NH4Br",
+      "name": "Ammonium Bromide"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "I"
+      ],
+      "formula": "NH4I",
+      "name": "Ammonium Iodide"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "F"
+      ],
+      "formula": "AgF",
+      "name": "Silver Fluoride"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "Cl"
+      ],
+      "formula": "AgCl",
+      "name": "Silver Chloride"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "Br"
+      ],
+      "formula": "AgBr",
+      "name": "Silver Bromide"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "I"
+      ],
+      "formula": "AgI",
+      "name": "Silver Iodide"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "F"
+      ],
+      "formula": "CuF",
+      "name": "Copper(I) Fluoride"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "Cl"
+      ],
+      "formula": "CuCl",
+      "name": "Copper(I) Chloride"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "Br"
+      ],
+      "formula": "CuBr",
+      "name": "Copper(I) Bromide"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "I"
+      ],
+      "formula": "CuI",
+      "name": "Copper(I) Iodide"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "F",
+        "F"
+      ],
+      "formula": "MgF2",
+      "name": "Magnesium Fluoride"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "Br",
+        "Br"
+      ],
+      "formula": "MgBr2",
+      "name": "Magnesium Bromide"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "I",
+        "I"
+      ],
+      "formula": "MgI2",
+      "name": "Magnesium Iodide"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Br",
+        "Br"
+      ],
+      "formula": "CaBr2",
+      "name": "Calcium Bromide"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "I",
+        "I"
+      ],
+      "formula": "CaI2",
+      "name": "Calcium Iodide"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "F",
+        "F"
+      ],
+      "formula": "SrF2",
+      "name": "Strontium Fluoride"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "SrCl2",
+      "name": "Strontium Chloride"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "Br",
+        "Br"
+      ],
+      "formula": "SrBr2",
+      "name": "Strontium Bromide"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "I",
+        "I"
+      ],
+      "formula": "SrI2",
+      "name": "Strontium Iodide"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "F",
+        "F"
+      ],
+      "formula": "BaF2",
+      "name": "Barium Fluoride"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "BaCl2",
+      "name": "Barium Chloride"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "Br",
+        "Br"
+      ],
+      "formula": "BaBr2",
+      "name": "Barium Bromide"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "I",
+        "I"
+      ],
+      "formula": "BaI2",
+      "name": "Barium Iodide"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "F",
+        "F"
+      ],
+      "formula": "ZnF2",
+      "name": "Zinc Fluoride"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "Br",
+        "Br"
+      ],
+      "formula": "ZnBr2",
+      "name": "Zinc Bromide"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "I",
+        "I"
+      ],
+      "formula": "ZnI2",
+      "name": "Zinc Iodide"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "F",
+        "F"
+      ],
+      "formula": "CdF2",
+      "name": "Cadmium Fluoride"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "CdCl2",
+      "name": "Cadmium Chloride"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "Br",
+        "Br"
+      ],
+      "formula": "CdBr2",
+      "name": "Cadmium Bromide"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "I",
+        "I"
+      ],
+      "formula": "CdI2",
+      "name": "Cadmium Iodide"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "F",
+        "F"
+      ],
+      "formula": "FeF2",
+      "name": "Iron(II) Fluoride"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "Br",
+        "Br"
+      ],
+      "formula": "FeBr2",
+      "name": "Iron(II) Bromide"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "I",
+        "I"
+      ],
+      "formula": "FeI2",
+      "name": "Iron(II) Iodide"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "F",
+        "F"
+      ],
+      "formula": "CuF2",
+      "name": "Copper(II) Fluoride"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "CuCl2",
+      "name": "Copper(II) Chloride"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "Br",
+        "Br"
+      ],
+      "formula": "CuBr2",
+      "name": "Copper(II) Bromide"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "I",
+        "I"
+      ],
+      "formula": "CuI2",
+      "name": "Copper(II) Iodide"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "F",
+        "F"
+      ],
+      "formula": "NiF2",
+      "name": "Nickel(II) Fluoride"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "NiCl2",
+      "name": "Nickel(II) Chloride"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "Br",
+        "Br"
+      ],
+      "formula": "NiBr2",
+      "name": "Nickel(II) Bromide"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "I",
+        "I"
+      ],
+      "formula": "NiI2",
+      "name": "Nickel(II) Iodide"
+    },
+    {
+      "inputs": [
+        "Co",
+        "F",
+        "F"
+      ],
+      "formula": "CoF2",
+      "name": "Cobalt(II) Fluoride"
+    },
+    {
+      "inputs": [
+        "Co",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "CoCl2",
+      "name": "Cobalt(II) Chloride"
+    },
+    {
+      "inputs": [
+        "Co",
+        "Br",
+        "Br"
+      ],
+      "formula": "CoBr2",
+      "name": "Cobalt(II) Bromide"
+    },
+    {
+      "inputs": [
+        "Co",
+        "I",
+        "I"
+      ],
+      "formula": "CoI2",
+      "name": "Cobalt(II) Iodide"
+    },
+    {
+      "inputs": [
+        "Sn",
+        "F",
+        "F"
+      ],
+      "formula": "SnF2",
+      "name": "Tin(II) Fluoride"
+    },
+    {
+      "inputs": [
+        "Sn",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "SnCl2",
+      "name": "Tin(II) Chloride"
+    },
+    {
+      "inputs": [
+        "Sn",
+        "Br",
+        "Br"
+      ],
+      "formula": "SnBr2",
+      "name": "Tin(II) Bromide"
+    },
+    {
+      "inputs": [
+        "Sn",
+        "I",
+        "I"
+      ],
+      "formula": "SnI2",
+      "name": "Tin(II) Iodide"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "F",
+        "F"
+      ],
+      "formula": "PbF2",
+      "name": "Lead(II) Fluoride"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "PbCl2",
+      "name": "Lead(II) Chloride"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "Br",
+        "Br"
+      ],
+      "formula": "PbBr2",
+      "name": "Lead(II) Bromide"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "I",
+        "I"
+      ],
+      "formula": "PbI2",
+      "name": "Lead(II) Iodide"
+    },
+    {
+      "inputs": [
+        "Hg",
+        "F",
+        "F"
+      ],
+      "formula": "HgF2",
+      "name": "Mercury(II) Fluoride"
+    },
+    {
+      "inputs": [
+        "Hg",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "HgCl2",
+      "name": "Mercury(II) Chloride"
+    },
+    {
+      "inputs": [
+        "Hg",
+        "Br",
+        "Br"
+      ],
+      "formula": "HgBr2",
+      "name": "Mercury(II) Bromide"
+    },
+    {
+      "inputs": [
+        "Hg",
+        "I",
+        "I"
+      ],
+      "formula": "HgI2",
+      "name": "Mercury(II) Iodide"
+    },
+    {
+      "inputs": [
+        "Al",
+        "F",
+        "F",
+        "F"
+      ],
+      "formula": "AlF3",
+      "name": "Aluminium Fluoride"
+    },
+    {
+      "inputs": [
+        "Al",
+        "Br",
+        "Br",
+        "Br"
+      ],
+      "formula": "AlBr3",
+      "name": "Aluminium Bromide"
+    },
+    {
+      "inputs": [
+        "Al",
+        "I",
+        "I",
+        "I"
+      ],
+      "formula": "AlI3",
+      "name": "Aluminium Iodide"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "F",
+        "F",
+        "F"
+      ],
+      "formula": "FeF3",
+      "name": "Iron(III) Fluoride"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "Br",
+        "Br",
+        "Br"
+      ],
+      "formula": "FeBr3",
+      "name": "Iron(III) Bromide"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "I",
+        "I",
+        "I"
+      ],
+      "formula": "FeI3",
+      "name": "Iron(III) Iodide"
+    },
+    {
+      "inputs": [
+        "Cr",
+        "F",
+        "F",
+        "F"
+      ],
+      "formula": "CrF3",
+      "name": "Chromium(III) Fluoride"
+    },
+    {
+      "inputs": [
+        "Cr",
+        "Cl",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "CrCl3",
+      "name": "Chromium(III) Chloride"
+    },
+    {
+      "inputs": [
+        "Cr",
+        "Br",
+        "Br",
+        "Br"
+      ],
+      "formula": "CrBr3",
+      "name": "Chromium(III) Bromide"
+    },
+    {
+      "inputs": [
+        "Cr",
+        "I",
+        "I",
+        "I"
+      ],
+      "formula": "CrI3",
+      "name": "Chromium(III) Iodide"
+    },
+    {
+      "inputs": [
+        "Bi",
+        "F",
+        "F",
+        "F"
+      ],
+      "formula": "BiF3",
+      "name": "Bismuth(III) Fluoride"
+    },
+    {
+      "inputs": [
+        "Bi",
+        "Cl",
+        "Cl",
+        "Cl"
+      ],
+      "formula": "BiCl3",
+      "name": "Bismuth(III) Chloride"
+    },
+    {
+      "inputs": [
+        "Bi",
+        "Br",
+        "Br",
+        "Br"
+      ],
+      "formula": "BiBr3",
+      "name": "Bismuth(III) Bromide"
+    },
+    {
+      "inputs": [
+        "Bi",
+        "I",
+        "I",
+        "I"
+      ],
+      "formula": "BiI3",
+      "name": "Bismuth(III) Iodide"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "O"
+      ],
+      "formula": "Li2O",
+      "name": "Lithium Oxide"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Na",
+        "O"
+      ],
+      "formula": "Na2O",
+      "name": "Sodium Oxide"
+    },
+    {
+      "inputs": [
+        "K",
+        "K",
+        "O"
+      ],
+      "formula": "K2O",
+      "name": "Potassium Oxide"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Rb",
+        "O"
+      ],
+      "formula": "Rb2O",
+      "name": "Rubidium Oxide"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cs",
+        "O"
+      ],
+      "formula": "Cs2O",
+      "name": "Cesium Oxide"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "Ag",
+        "O"
+      ],
+      "formula": "Ag2O",
+      "name": "Silver Oxide"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "O"
+      ],
+      "formula": "SrO",
+      "name": "Strontium Oxide"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "O"
+      ],
+      "formula": "BaO",
+      "name": "Barium Oxide"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "O"
+      ],
+      "formula": "ZnO",
+      "name": "Zinc Oxide"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "O"
+      ],
+      "formula": "CdO",
+      "name": "Cadmium Oxide"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "O"
+      ],
+      "formula": "FeO",
+      "name": "Iron(II) Oxide"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "O"
+      ],
+      "formula": "CuO",
+      "name": "Copper(II) Oxide"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "O"
+      ],
+      "formula": "NiO",
+      "name": "Nickel(II) Oxide"
+    },
+    {
+      "inputs": [
+        "Co",
+        "O"
+      ],
+      "formula": "CoO",
+      "name": "Cobalt(II) Oxide"
+    },
+    {
+      "inputs": [
+        "Sn",
+        "O"
+      ],
+      "formula": "SnO",
+      "name": "Tin(II) Oxide"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "O"
+      ],
+      "formula": "PbO",
+      "name": "Lead(II) Oxide"
+    },
+    {
+      "inputs": [
+        "Hg",
+        "O"
+      ],
+      "formula": "HgO",
+      "name": "Mercury(II) Oxide"
+    },
+    {
+      "inputs": [
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cr2O3",
+      "name": "Chromium(III) Oxide"
+    },
+    {
+      "inputs": [
+        "Bi",
+        "Bi",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Bi2O3",
+      "name": "Bismuth(III) Oxide"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "S"
+      ],
+      "formula": "Li2S",
+      "name": "Lithium Sulfide"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Rb",
+        "S"
+      ],
+      "formula": "Rb2S",
+      "name": "Rubidium Sulfide"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cs",
+        "S"
+      ],
+      "formula": "Cs2S",
+      "name": "Cesium Sulfide"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "Ag",
+        "S"
+      ],
+      "formula": "Ag2S",
+      "name": "Silver Sulfide"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "S"
+      ],
+      "formula": "MgS",
+      "name": "Magnesium Sulfide"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "S"
+      ],
+      "formula": "SrS",
+      "name": "Strontium Sulfide"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "S"
+      ],
+      "formula": "BaS",
+      "name": "Barium Sulfide"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "S"
+      ],
+      "formula": "ZnS",
+      "name": "Zinc Sulfide"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "S"
+      ],
+      "formula": "CdS",
+      "name": "Cadmium Sulfide"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "S"
+      ],
+      "formula": "FeS",
+      "name": "Iron(II) Sulfide"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "S"
+      ],
+      "formula": "CuS",
+      "name": "Copper(II) Sulfide"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "S"
+      ],
+      "formula": "NiS",
+      "name": "Nickel(II) Sulfide"
+    },
+    {
+      "inputs": [
+        "Co",
+        "S"
+      ],
+      "formula": "CoS",
+      "name": "Cobalt(II) Sulfide"
+    },
+    {
+      "inputs": [
+        "Sn",
+        "S"
+      ],
+      "formula": "SnS",
+      "name": "Tin(II) Sulfide"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "S"
+      ],
+      "formula": "PbS",
+      "name": "Lead(II) Sulfide"
+    },
+    {
+      "inputs": [
+        "Hg",
+        "S"
+      ],
+      "formula": "HgS",
+      "name": "Mercury(II) Sulfide"
+    },
+    {
+      "inputs": [
+        "Al",
+        "Al",
+        "S",
+        "S",
+        "S"
+      ],
+      "formula": "Al2S3",
+      "name": "Aluminium Sulfide"
+    },
+    {
+      "inputs": [
+        "Li",
+        "O",
+        "H"
+      ],
+      "formula": "LiOH",
+      "name": "Lithium Hydroxide"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "O",
+        "H"
+      ],
+      "formula": "RbOH",
+      "name": "Rubidium Hydroxide"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "O",
+        "H"
+      ],
+      "formula": "CsOH",
+      "name": "Cesium Hydroxide"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "NH4OH",
+      "name": "Ammonium Hydroxide"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Mg(OH)2",
+      "name": "Magnesium Hydroxide"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Sr(OH)2",
+      "name": "Strontium Hydroxide"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Ba(OH)2",
+      "name": "Barium Hydroxide"
+    },
+    {
+      "inputs": [
+        "Al",
+        "O",
+        "H",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Al(OH)3",
+      "name": "Aluminium Hydroxide"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Zn(OH)2",
+      "name": "Zinc Hydroxide"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Fe(OH)2",
+      "name": "Iron(II) Hydroxide"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "O",
+        "H",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Fe(OH)3",
+      "name": "Iron(III) Hydroxide"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Cu(OH)2",
+      "name": "Copper(II) Hydroxide"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Ni(OH)2",
+      "name": "Nickel(II) Hydroxide"
+    },
+    {
+      "inputs": [
+        "Co",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Co(OH)2",
+      "name": "Cobalt(II) Hydroxide"
+    },
+    {
+      "inputs": [
+        "Cr",
+        "O",
+        "H",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Cr(OH)3",
+      "name": "Chromium(III) Hydroxide"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "O",
+        "H",
+        "O",
+        "H"
+      ],
+      "formula": "Pb(OH)2",
+      "name": "Lead(II) Hydroxide"
+    },
+    {
+      "inputs": [
+        "Li",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "LiNO3",
+      "name": "Lithium Nitrate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "RbNO3",
+      "name": "Rubidium Nitrate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CsNO3",
+      "name": "Cesium Nitrate"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "AgNO3",
+      "name": "Silver Nitrate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Mg(NO3)2",
+      "name": "Magnesium Nitrate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ca(NO3)2",
+      "name": "Calcium Nitrate"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Sr(NO3)2",
+      "name": "Strontium Nitrate"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ba(NO3)2",
+      "name": "Barium Nitrate"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Zn(NO3)2",
+      "name": "Zinc Nitrate"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cd(NO3)2",
+      "name": "Cadmium Nitrate"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Fe(NO3)2",
+      "name": "Iron(II) Nitrate"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cu(NO3)2",
+      "name": "Copper(II) Nitrate"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ni(NO3)2",
+      "name": "Nickel(II) Nitrate"
+    },
+    {
+      "inputs": [
+        "Co",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Co(NO3)2",
+      "name": "Cobalt(II) Nitrate"
+    },
+    {
+      "inputs": [
+        "Sn",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Sn(NO3)2",
+      "name": "Tin(II) Nitrate"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Pb(NO3)2",
+      "name": "Lead(II) Nitrate"
+    },
+    {
+      "inputs": [
+        "Al",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Al(NO3)3",
+      "name": "Aluminium Nitrate"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Fe(NO3)3",
+      "name": "Iron(III) Nitrate"
+    },
+    {
+      "inputs": [
+        "Cr",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cr(NO3)3",
+      "name": "Chromium(III) Nitrate"
+    },
+    {
+      "inputs": [
+        "Bi",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Bi(NO3)3",
+      "name": "Bismuth(III) Nitrate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "LiNO2",
+      "name": "Lithium Nitrite"
+    },
+    {
+      "inputs": [
+        "Na",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "NaNO2",
+      "name": "Sodium Nitrite"
+    },
+    {
+      "inputs": [
+        "K",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "KNO2",
+      "name": "Potassium Nitrite"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "RbNO2",
+      "name": "Rubidium Nitrite"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "CsNO2",
+      "name": "Cesium Nitrite"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "NH4NO2",
+      "name": "Ammonium Nitrite"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "AgNO2",
+      "name": "Silver Nitrite"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "N",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "Mg(NO2)2",
+      "name": "Magnesium Nitrite"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "N",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "Ca(NO2)2",
+      "name": "Calcium Nitrite"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "N",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "Sr(NO2)2",
+      "name": "Strontium Nitrite"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "N",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "Ba(NO2)2",
+      "name": "Barium Nitrite"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "N",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "Zn(NO2)2",
+      "name": "Zinc Nitrite"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "N",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "Cd(NO2)2",
+      "name": "Cadmium Nitrite"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "N",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "Fe(NO2)2",
+      "name": "Iron(II) Nitrite"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "N",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "Cu(NO2)2",
+      "name": "Copper(II) Nitrite"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "N",
+        "O",
+        "O",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "Pb(NO2)2",
+      "name": "Lead(II) Nitrite"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Li2SO4",
+      "name": "Lithium Sulfate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Li2SO3",
+      "name": "Lithium Sulfite"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Na",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Na2SO3",
+      "name": "Sodium Sulfite"
+    },
+    {
+      "inputs": [
+        "K",
+        "K",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "K2SO4",
+      "name": "Potassium Sulfate"
+    },
+    {
+      "inputs": [
+        "K",
+        "K",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "K2SO3",
+      "name": "Potassium Sulfite"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Rb",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Rb2SO4",
+      "name": "Rubidium Sulfate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Rb",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Rb2SO3",
+      "name": "Rubidium Sulfite"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cs",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cs2SO4",
+      "name": "Cesium Sulfate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cs",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cs2SO3",
+      "name": "Cesium Sulfite"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "(NH4)2SO4",
+      "name": "Ammonium Sulfate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "(NH4)2SO3",
+      "name": "Ammonium Sulfite"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "Ag",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ag2SO4",
+      "name": "Silver Sulfate"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "Ag",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ag2SO3",
+      "name": "Silver Sulfite"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "MgSO3",
+      "name": "Magnesium Sulfite"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CaSO3",
+      "name": "Calcium Sulfite"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "SrSO4",
+      "name": "Strontium Sulfate"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "SrSO3",
+      "name": "Strontium Sulfite"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "BaSO4",
+      "name": "Barium Sulfate"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "BaSO3",
+      "name": "Barium Sulfite"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "ZnSO4",
+      "name": "Zinc Sulfate"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "ZnSO3",
+      "name": "Zinc Sulfite"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CdSO4",
+      "name": "Cadmium Sulfate"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CdSO3",
+      "name": "Cadmium Sulfite"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "FeSO4",
+      "name": "Iron(II) Sulfate"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "FeSO3",
+      "name": "Iron(II) Sulfite"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CuSO3",
+      "name": "Copper(II) Sulfite"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NiSO4",
+      "name": "Nickel(II) Sulfate"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NiSO3",
+      "name": "Nickel(II) Sulfite"
+    },
+    {
+      "inputs": [
+        "Co",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CoSO4",
+      "name": "Cobalt(II) Sulfate"
+    },
+    {
+      "inputs": [
+        "Co",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CoSO3",
+      "name": "Cobalt(II) Sulfite"
+    },
+    {
+      "inputs": [
+        "Sn",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "SnSO4",
+      "name": "Tin(II) Sulfate"
+    },
+    {
+      "inputs": [
+        "Sn",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "SnSO3",
+      "name": "Tin(II) Sulfite"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "PbSO4",
+      "name": "Lead(II) Sulfate"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "PbSO3",
+      "name": "Lead(II) Sulfite"
+    },
+    {
+      "inputs": [
+        "Al",
+        "Al",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Al2(SO4)3",
+      "name": "Aluminium Sulfate"
+    },
+    {
+      "inputs": [
+        "Al",
+        "Al",
+        "S",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Al2(SO3)3",
+      "name": "Aluminium Sulfite"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "Fe",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Fe2(SO4)3",
+      "name": "Iron(III) Sulfate"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "Fe",
+        "S",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Fe2(SO3)3",
+      "name": "Iron(III) Sulfite"
+    },
+    {
+      "inputs": [
+        "Cr",
+        "Cr",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cr2(SO4)3",
+      "name": "Chromium(III) Sulfate"
+    },
+    {
+      "inputs": [
+        "Cr",
+        "Cr",
+        "S",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cr2(SO3)3",
+      "name": "Chromium(III) Sulfite"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Li2CO3",
+      "name": "Lithium Carbonate"
+    },
+    {
+      "inputs": [
+        "K",
+        "K",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "K2CO3",
+      "name": "Potassium Carbonate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Rb",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Rb2CO3",
+      "name": "Rubidium Carbonate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cs",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cs2CO3",
+      "name": "Cesium Carbonate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "(NH4)2CO3",
+      "name": "Ammonium Carbonate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "MgCO3",
+      "name": "Magnesium Carbonate"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "SrCO3",
+      "name": "Strontium Carbonate"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "BaCO3",
+      "name": "Barium Carbonate"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "ZnCO3",
+      "name": "Zinc Carbonate"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CdCO3",
+      "name": "Cadmium Carbonate"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "FeCO3",
+      "name": "Iron(II) Carbonate"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CuCO3",
+      "name": "Copper(II) Carbonate"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NiCO3",
+      "name": "Nickel(II) Carbonate"
+    },
+    {
+      "inputs": [
+        "Co",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CoCO3",
+      "name": "Cobalt(II) Carbonate"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "PbCO3",
+      "name": "Lead(II) Carbonate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "LiHCO3",
+      "name": "Lithium Bicarbonate"
+    },
+    {
+      "inputs": [
+        "K",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "KHCO3",
+      "name": "Potassium Bicarbonate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "RbHCO3",
+      "name": "Rubidium Bicarbonate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CsHCO3",
+      "name": "Cesium Bicarbonate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NH4HCO3",
+      "name": "Ammonium Bicarbonate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Mg(HCO3)2",
+      "name": "Magnesium Bicarbonate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ca(HCO3)2",
+      "name": "Calcium Bicarbonate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "Li",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Li3PO4",
+      "name": "Lithium Phosphate"
+    },
+    {
+      "inputs": [
+        "K",
+        "K",
+        "K",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "K3PO4",
+      "name": "Potassium Phosphate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Rb",
+        "Rb",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Rb3PO4",
+      "name": "Rubidium Phosphate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cs",
+        "Cs",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cs3PO4",
+      "name": "Cesium Phosphate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "(NH4)3PO4",
+      "name": "Ammonium Phosphate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "Mg",
+        "Mg",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Mg3(PO4)2",
+      "name": "Magnesium Phosphate"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "Sr",
+        "Sr",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Sr3(PO4)2",
+      "name": "Strontium Phosphate"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "Ba",
+        "Ba",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ba3(PO4)2",
+      "name": "Barium Phosphate"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "Zn",
+        "Zn",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Zn3(PO4)2",
+      "name": "Zinc Phosphate"
+    },
+    {
+      "inputs": [
+        "Al",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "AlPO4",
+      "name": "Aluminium Phosphate"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "Fe",
+        "Fe",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Fe3(PO4)2",
+      "name": "Iron(II) Phosphate"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "FePO4",
+      "name": "Iron(III) Phosphate"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "Cu",
+        "Cu",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cu3(PO4)2",
+      "name": "Copper(II) Phosphate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Li2HPO4",
+      "name": "Lithium Hydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Na",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Na2HPO4",
+      "name": "Sodium Hydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "K",
+        "K",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "K2HPO4",
+      "name": "Potassium Hydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Rb",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Rb2HPO4",
+      "name": "Rubidium Hydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cs",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cs2HPO4",
+      "name": "Cesium Hydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "(NH4)2HPO4",
+      "name": "Ammonium Hydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "MgHPO4",
+      "name": "Magnesium Hydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CaHPO4",
+      "name": "Calcium Hydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "ZnHPO4",
+      "name": "Zinc Hydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "LiH2PO4",
+      "name": "Lithium Dihydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NaH2PO4",
+      "name": "Sodium Dihydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "K",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "KH2PO4",
+      "name": "Potassium Dihydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "RbH2PO4",
+      "name": "Rubidium Dihydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CsH2PO4",
+      "name": "Cesium Dihydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NH4H2PO4",
+      "name": "Ammonium Dihydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Mg(H2PO4)2",
+      "name": "Magnesium Dihydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ca(H2PO4)2",
+      "name": "Calcium Dihydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Zn(H2PO4)2",
+      "name": "Zinc Dihydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Al",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Al(H2PO4)3",
+      "name": "Aluminium Dihydrogen Phosphate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "LiC2H3O2",
+      "name": "Lithium Acetate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "NaC2H3O2",
+      "name": "Sodium Acetate"
+    },
+    {
+      "inputs": [
+        "K",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "KC2H3O2",
+      "name": "Potassium Acetate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "RbC2H3O2",
+      "name": "Rubidium Acetate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "CsC2H3O2",
+      "name": "Cesium Acetate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "NH4C2H3O2",
+      "name": "Ammonium Acetate"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "AgC2H3O2",
+      "name": "Silver Acetate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Mg(C2H3O2)2",
+      "name": "Magnesium Acetate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Ca(C2H3O2)2",
+      "name": "Calcium Acetate"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Sr(C2H3O2)2",
+      "name": "Strontium Acetate"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Ba(C2H3O2)2",
+      "name": "Barium Acetate"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Zn(C2H3O2)2",
+      "name": "Zinc Acetate"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Cd(C2H3O2)2",
+      "name": "Cadmium Acetate"
+    },
+    {
+      "inputs": [
+        "Al",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Al(C2H3O2)3",
+      "name": "Aluminium Acetate"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Fe(C2H3O2)2",
+      "name": "Iron(II) Acetate"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Fe(C2H3O2)3",
+      "name": "Iron(III) Acetate"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Cu(C2H3O2)2",
+      "name": "Copper(II) Acetate"
+    },
+    {
+      "inputs": [
+        "Ni",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Ni(C2H3O2)2",
+      "name": "Nickel(II) Acetate"
+    },
+    {
+      "inputs": [
+        "Co",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Co(C2H3O2)2",
+      "name": "Cobalt(II) Acetate"
+    },
+    {
+      "inputs": [
+        "Cr",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Cr(C2H3O2)3",
+      "name": "Chromium(III) Acetate"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Pb(C2H3O2)2",
+      "name": "Lead(II) Acetate"
+    },
+    {
+      "inputs": [
+        "Sn",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "Sn(C2H3O2)2",
+      "name": "Tin(II) Acetate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Li2C2O4",
+      "name": "Lithium Oxalate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Na",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Na2C2O4",
+      "name": "Sodium Oxalate"
+    },
+    {
+      "inputs": [
+        "K",
+        "K",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "K2C2O4",
+      "name": "Potassium Oxalate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Rb",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Rb2C2O4",
+      "name": "Rubidium Oxalate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cs",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cs2C2O4",
+      "name": "Cesium Oxalate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "(NH4)2C2O4",
+      "name": "Ammonium Oxalate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "MgC2O4",
+      "name": "Magnesium Oxalate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CaC2O4",
+      "name": "Calcium Oxalate"
+    },
+    {
+      "inputs": [
+        "Sr",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "SrC2O4",
+      "name": "Strontium Oxalate"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "BaC2O4",
+      "name": "Barium Oxalate"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "ZnC2O4",
+      "name": "Zinc Oxalate"
+    },
+    {
+      "inputs": [
+        "Fe",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "FeC2O4",
+      "name": "Iron(II) Oxalate"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CuC2O4",
+      "name": "Copper(II) Oxalate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Cl",
+        "O"
+      ],
+      "formula": "LiClO",
+      "name": "Lithium Hypochlorite"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Cl",
+        "O",
+        "O"
+      ],
+      "formula": "LiClO2",
+      "name": "Lithium Chlorite"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Cl",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "LiClO3",
+      "name": "Lithium Chlorate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "LiClO4",
+      "name": "Lithium Perchlorate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Br",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "LiBrO3",
+      "name": "Lithium Bromate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "I",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "LiIO3",
+      "name": "Lithium Iodate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Cl",
+        "O",
+        "O"
+      ],
+      "formula": "NaClO2",
+      "name": "Sodium Chlorite"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NaClO4",
+      "name": "Sodium Perchlorate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Br",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NaBrO3",
+      "name": "Sodium Bromate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "I",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NaIO3",
+      "name": "Sodium Iodate"
+    },
+    {
+      "inputs": [
+        "K",
+        "Cl",
+        "O"
+      ],
+      "formula": "KClO",
+      "name": "Potassium Hypochlorite"
+    },
+    {
+      "inputs": [
+        "K",
+        "Cl",
+        "O",
+        "O"
+      ],
+      "formula": "KClO2",
+      "name": "Potassium Chlorite"
+    },
+    {
+      "inputs": [
+        "K",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "KClO4",
+      "name": "Potassium Perchlorate"
+    },
+    {
+      "inputs": [
+        "K",
+        "Br",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "KBrO3",
+      "name": "Potassium Bromate"
+    },
+    {
+      "inputs": [
+        "K",
+        "I",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "KIO3",
+      "name": "Potassium Iodate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Cl",
+        "O"
+      ],
+      "formula": "RbClO",
+      "name": "Rubidium Hypochlorite"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Cl",
+        "O",
+        "O"
+      ],
+      "formula": "RbClO2",
+      "name": "Rubidium Chlorite"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Cl",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "RbClO3",
+      "name": "Rubidium Chlorate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "RbClO4",
+      "name": "Rubidium Perchlorate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Br",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "RbBrO3",
+      "name": "Rubidium Bromate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "I",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "RbIO3",
+      "name": "Rubidium Iodate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cl",
+        "O"
+      ],
+      "formula": "CsClO",
+      "name": "Cesium Hypochlorite"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cl",
+        "O",
+        "O"
+      ],
+      "formula": "CsClO2",
+      "name": "Cesium Chlorite"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cl",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CsClO3",
+      "name": "Cesium Chlorate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CsClO4",
+      "name": "Cesium Perchlorate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Br",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CsBrO3",
+      "name": "Cesium Bromate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "I",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CsIO3",
+      "name": "Cesium Iodate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "Cl",
+        "O"
+      ],
+      "formula": "NH4ClO",
+      "name": "Ammonium Hypochlorite"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "Cl",
+        "O",
+        "O"
+      ],
+      "formula": "NH4ClO2",
+      "name": "Ammonium Chlorite"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "Cl",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NH4ClO3",
+      "name": "Ammonium Chlorate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NH4ClO4",
+      "name": "Ammonium Perchlorate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "Br",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NH4BrO3",
+      "name": "Ammonium Bromate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "I",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NH4IO3",
+      "name": "Ammonium Iodate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Cl",
+        "O",
+        "Cl",
+        "O"
+      ],
+      "formula": "Ca(ClO)2",
+      "name": "Calcium Hypochlorite"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Cl",
+        "O",
+        "O",
+        "Cl",
+        "O",
+        "O"
+      ],
+      "formula": "Ca(ClO2)2",
+      "name": "Calcium Chlorite"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "Cl",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ca(ClO3)2",
+      "name": "Calcium Chlorate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ca(ClO4)2",
+      "name": "Calcium Perchlorate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Br",
+        "O",
+        "O",
+        "O",
+        "Br",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ca(BrO3)2",
+      "name": "Calcium Bromate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "I",
+        "O",
+        "O",
+        "O",
+        "I",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ca(IO3)2",
+      "name": "Calcium Iodate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "Cl",
+        "O",
+        "Cl",
+        "O"
+      ],
+      "formula": "Mg(ClO)2",
+      "name": "Magnesium Hypochlorite"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "Cl",
+        "O",
+        "O",
+        "Cl",
+        "O",
+        "O"
+      ],
+      "formula": "Mg(ClO2)2",
+      "name": "Magnesium Chlorite"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "Cl",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Mg(ClO3)2",
+      "name": "Magnesium Chlorate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Mg(ClO4)2",
+      "name": "Magnesium Perchlorate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "Br",
+        "O",
+        "O",
+        "O",
+        "Br",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Mg(BrO3)2",
+      "name": "Magnesium Bromate"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "I",
+        "O",
+        "O",
+        "O",
+        "I",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Mg(IO3)2",
+      "name": "Magnesium Iodate"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "Cl",
+        "O",
+        "Cl",
+        "O"
+      ],
+      "formula": "Ba(ClO)2",
+      "name": "Barium Hypochlorite"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "Cl",
+        "O",
+        "O",
+        "Cl",
+        "O",
+        "O"
+      ],
+      "formula": "Ba(ClO2)2",
+      "name": "Barium Chlorite"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "Cl",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ba(ClO3)2",
+      "name": "Barium Chlorate"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ba(ClO4)2",
+      "name": "Barium Perchlorate"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "Br",
+        "O",
+        "O",
+        "O",
+        "Br",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ba(BrO3)2",
+      "name": "Barium Bromate"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "I",
+        "O",
+        "O",
+        "O",
+        "I",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ba(IO3)2",
+      "name": "Barium Iodate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Mn",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "LiMnO4",
+      "name": "Lithium Permanganate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Mn",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NaMnO4",
+      "name": "Sodium Permanganate"
+    },
+    {
+      "inputs": [
+        "K",
+        "Mn",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "KMnO4",
+      "name": "Potassium Permanganate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Mn",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "RbMnO4",
+      "name": "Rubidium Permanganate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Mn",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CsMnO4",
+      "name": "Cesium Permanganate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "Mn",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "NH4MnO4",
+      "name": "Ammonium Permanganate"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "Mn",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "AgMnO4",
+      "name": "Silver Permanganate"
+    },
+    {
+      "inputs": [
+        "Ba",
+        "Mn",
+        "O",
+        "O",
+        "O",
+        "O",
+        "Mn",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ba(MnO4)2",
+      "name": "Barium Permanganate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Li2CrO4",
+      "name": "Lithium Chromate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Li2Cr2O7",
+      "name": "Lithium Dichromate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Na",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Na2CrO4",
+      "name": "Sodium Chromate"
+    },
+    {
+      "inputs": [
+        "Na",
+        "Na",
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Na2Cr2O7",
+      "name": "Sodium Dichromate"
+    },
+    {
+      "inputs": [
+        "K",
+        "K",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "K2CrO4",
+      "name": "Potassium Chromate"
+    },
+    {
+      "inputs": [
+        "K",
+        "K",
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "K2Cr2O7",
+      "name": "Potassium Dichromate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Rb",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Rb2CrO4",
+      "name": "Rubidium Chromate"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "Rb",
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Rb2Cr2O7",
+      "name": "Rubidium Dichromate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cs",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cs2CrO4",
+      "name": "Cesium Chromate"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "Cs",
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Cs2Cr2O7",
+      "name": "Cesium Dichromate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "(NH4)2CrO4",
+      "name": "Ammonium Chromate"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "(NH4)2Cr2O7",
+      "name": "Ammonium Dichromate"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "Ag",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ag2CrO4",
+      "name": "Silver Chromate"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "Ag",
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "Ag2Cr2O7",
+      "name": "Silver Dichromate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CaCrO4",
+      "name": "Calcium Chromate"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "CaCr2O7",
+      "name": "Calcium Dichromate"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "ZnCrO4",
+      "name": "Zinc Chromate"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "ZnCr2O7",
+      "name": "Zinc Dichromate"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "PbCrO4",
+      "name": "Lead(II) Chromate"
+    },
+    {
+      "inputs": [
+        "Pb",
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "PbCr2O7",
+      "name": "Lead(II) Dichromate"
+    },
+    {
+      "inputs": [
+        "Li",
+        "C",
+        "N"
+      ],
+      "formula": "LiCN",
+      "name": "Lithium Cyanide"
+    },
+    {
+      "inputs": [
+        "Na",
+        "C",
+        "N"
+      ],
+      "formula": "NaCN",
+      "name": "Sodium Cyanide"
+    },
+    {
+      "inputs": [
+        "K",
+        "C",
+        "N"
+      ],
+      "formula": "KCN",
+      "name": "Potassium Cyanide"
+    },
+    {
+      "inputs": [
+        "Rb",
+        "C",
+        "N"
+      ],
+      "formula": "RbCN",
+      "name": "Rubidium Cyanide"
+    },
+    {
+      "inputs": [
+        "Cs",
+        "C",
+        "N"
+      ],
+      "formula": "CsCN",
+      "name": "Cesium Cyanide"
+    },
+    {
+      "inputs": [
+        "N",
+        "H",
+        "H",
+        "H",
+        "H",
+        "C",
+        "N"
+      ],
+      "formula": "NH4CN",
+      "name": "Ammonium Cyanide"
+    },
+    {
+      "inputs": [
+        "Ag",
+        "C",
+        "N"
+      ],
+      "formula": "AgCN",
+      "name": "Silver Cyanide"
+    },
+    {
+      "inputs": [
+        "Cu",
+        "C",
+        "N"
+      ],
+      "formula": "CuCN",
+      "name": "Copper(I) Cyanide"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "C",
+        "N",
+        "C",
+        "N"
+      ],
+      "formula": "Zn(CN)2",
+      "name": "Zinc Cyanide"
+    },
+    {
+      "inputs": [
+        "Cd",
+        "C",
+        "N",
+        "C",
+        "N"
+      ],
+      "formula": "Cd(CN)2",
+      "name": "Cadmium Cyanide"
+    },
+    {
+      "inputs": [
+        "Hg",
+        "C",
+        "N",
+        "C",
+        "N"
+      ],
+      "formula": "Hg(CN)2",
+      "name": "Mercury(II) Cyanide"
+    },
+    {
+      "inputs": [
+        "Li",
+        "H"
+      ],
+      "formula": "LiH",
+      "name": "Lithium Hydride"
+    },
+    {
+      "inputs": [
+        "Na",
+        "H"
+      ],
+      "formula": "NaH",
+      "name": "Sodium Hydride"
+    },
+    {
+      "inputs": [
+        "K",
+        "H"
+      ],
+      "formula": "KH",
+      "name": "Potassium Hydride"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "H",
+        "H"
+      ],
+      "formula": "MgH2",
+      "name": "Magnesium Hydride"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "H",
+        "H"
+      ],
+      "formula": "CaH2",
+      "name": "Calcium Hydride"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "Li",
+        "N"
+      ],
+      "formula": "Li3N",
+      "name": "Lithium Nitride"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "Mg",
+        "Mg",
+        "N",
+        "N"
+      ],
+      "formula": "Mg3N2",
+      "name": "Magnesium Nitride"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Ca",
+        "Ca",
+        "N",
+        "N"
+      ],
+      "formula": "Ca3N2",
+      "name": "Calcium Nitride"
+    },
+    {
+      "inputs": [
+        "Al",
+        "N"
+      ],
+      "formula": "AlN",
+      "name": "Aluminium Nitride"
+    },
+    {
+      "inputs": [
+        "Li",
+        "Li",
+        "Li",
+        "P"
+      ],
+      "formula": "Li3P",
+      "name": "Lithium Phosphide"
+    },
+    {
+      "inputs": [
+        "Mg",
+        "Mg",
+        "Mg",
+        "P",
+        "P"
+      ],
+      "formula": "Mg3P2",
+      "name": "Magnesium Phosphide"
+    },
+    {
+      "inputs": [
+        "Ca",
+        "Ca",
+        "Ca",
+        "P",
+        "P"
+      ],
+      "formula": "Ca3P2",
+      "name": "Calcium Phosphide"
+    },
+    {
+      "inputs": [
+        "Al",
+        "P"
+      ],
+      "formula": "AlP",
+      "name": "Aluminium Phosphide"
+    },
+    {
+      "inputs": [
+        "Zn",
+        "Zn",
+        "Zn",
+        "P",
+        "P"
+      ],
+      "formula": "Zn3P2",
+      "name": "Zinc Phosphide"
+    },
+    {
+      "inputs": [
+        "H",
+        "F"
+      ],
+      "formula": "HF",
+      "name": "Hydrofluoric Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "Br"
+      ],
+      "formula": "HBr",
+      "name": "Hydrobromic Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "I"
+      ],
+      "formula": "HI",
+      "name": "Hydroiodic Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "H",
+        "S"
+      ],
+      "formula": "H2S",
+      "name": "Hydrosulfuric Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "HNO2",
+      "name": "Nitrous Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "H",
+        "S",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "H2SO3",
+      "name": "Sulfurous Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "H",
+        "C",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "H2CO3",
+      "name": "Carbonic Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "H3PO4",
+      "name": "Phosphoric Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "H",
+        "H",
+        "P",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "H3PO3",
+      "name": "Phosphorous Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "Cl",
+        "O"
+      ],
+      "formula": "HClO",
+      "name": "Hypochlorous Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "Cl",
+        "O",
+        "O"
+      ],
+      "formula": "HClO2",
+      "name": "Chlorous Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "Cl",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "HClO3",
+      "name": "Chloric Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "Cl",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "HClO4",
+      "name": "Perchloric Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "Br",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "HBrO3",
+      "name": "Bromic Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "I",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "HIO3",
+      "name": "Iodic Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "H",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "H2CrO4",
+      "name": "Chromic Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "H",
+        "Cr",
+        "Cr",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "H2Cr2O7",
+      "name": "Dichromic Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "Mn",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "HMnO4",
+      "name": "Permanganic Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "C",
+        "N"
+      ],
+      "formula": "HCN",
+      "name": "Hydrocyanic Acid"
+    },
+    {
+      "inputs": [
+        "H",
+        "H",
+        "C",
+        "C",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "H2C2O4",
+      "name": "Oxalic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "CH2O2",
+      "name": "Formic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "C3H6O2",
+      "name": "Propionic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "C4H8O2",
+      "name": "Butyric Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "C3H6O3",
+      "name": "Lactic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C5H12",
+      "name": "Pentane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C6H14",
+      "name": "Hexane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C7H16",
+      "name": "Heptane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C8H18",
+      "name": "Octane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C9H20",
+      "name": "Nonane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C10H22",
+      "name": "Decane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C11H24",
+      "name": "Undecane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C12H26",
+      "name": "Dodecane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C13H28",
+      "name": "Tridecane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C14H30",
+      "name": "Tetradecane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C15H32",
+      "name": "Pentadecane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C16H34",
+      "name": "Hexadecane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C17H36",
+      "name": "Heptadecane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C18H38",
+      "name": "Octadecane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C19H40",
+      "name": "Nonadecane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C20H42",
+      "name": "Eicosane"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C4H8",
+      "name": "Butene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C5H10",
+      "name": "Pentene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C6H12",
+      "name": "Hexene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C7H14",
+      "name": "Heptene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C8H16",
+      "name": "Octene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C9H18",
+      "name": "Nonene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C10H20",
+      "name": "Decene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C11H22",
+      "name": "Undecene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C12H24",
+      "name": "Dodecene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C13H26",
+      "name": "Tridecene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C14H28",
+      "name": "Tetradecene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C15H30",
+      "name": "Pentadecene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C16H32",
+      "name": "Hexadecene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C4H6",
+      "name": "Butyne"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C5H8",
+      "name": "Pentyne"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C6H10",
+      "name": "Hexyne"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C7H12",
+      "name": "Heptyne"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C8H14",
+      "name": "Octyne"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C9H16",
+      "name": "Nonyne"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C10H18",
+      "name": "Decyne"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C11H20",
+      "name": "Undecyne"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C12H22",
+      "name": "Dodecyne"
+    },
+    {
+      "inputs": [
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "CH4O",
+      "name": "Methanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C2H6O",
+      "name": "Ethanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C3H8O",
+      "name": "Propanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C4H10O",
+      "name": "Butanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C5H12O",
+      "name": "Pentanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C6H14O",
+      "name": "Hexanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C7H16O",
+      "name": "Heptanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C8H18O",
+      "name": "Octanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C9H20O",
+      "name": "Nonanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C10H22O",
+      "name": "Decanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C11H24O",
+      "name": "Undecanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C12H26O",
+      "name": "Dodecanol"
+    },
+    {
+      "inputs": [
+        "C",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "CH2O",
+      "name": "Methanal"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C2H4O",
+      "name": "Ethanal"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C3H6O",
+      "name": "Propanal"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C4H8O",
+      "name": "Butanal"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C5H10O",
+      "name": "Pentanal"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C6H12O",
+      "name": "Hexanal"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C7H14O",
+      "name": "Heptanal"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C8H16O",
+      "name": "Octanal"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C9H18O",
+      "name": "Nonanal"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C10H20O",
+      "name": "Decanal"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "C2H4O2",
+      "name": "Propanoic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "C5H10O2",
+      "name": "Hexanoic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "C6H12O2",
+      "name": "Heptanoic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "C7H14O2",
+      "name": "Octanoic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "C8H16O2",
+      "name": "Nonanoic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "C9H18O2",
+      "name": "Decanoic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N"
+      ],
+      "formula": "CH5N",
+      "name": "Methylamine"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N"
+      ],
+      "formula": "C2H7N",
+      "name": "Ethylamine"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N"
+      ],
+      "formula": "C3H9N",
+      "name": "Propylamine"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N"
+      ],
+      "formula": "C4H11N",
+      "name": "Butylamine"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N"
+      ],
+      "formula": "C5H13N",
+      "name": "Pentylamine"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N"
+      ],
+      "formula": "C6H7N",
+      "name": "Aniline"
+    },
+    {
+      "inputs": [
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "N",
+        "O"
+      ],
+      "formula": "CH4N2O",
+      "name": "Urea"
+    },
+    {
+      "inputs": [
+        "C",
+        "H",
+        "H",
+        "H",
+        "N",
+        "O"
+      ],
+      "formula": "CH3NO",
+      "name": "Formamide"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "O"
+      ],
+      "formula": "C2H5NO",
+      "name": "Acetamide"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C6H6",
+      "name": "Benzene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C7H8",
+      "name": "Toluene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C8H10",
+      "name": "Xylene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "formula": "C8H8",
+      "name": "Styrene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O"
+      ],
+      "formula": "C6H6O",
+      "name": "Phenol"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O"
+      ],
+      "formula": "C7H6O2",
+      "name": "Benzoic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "C6H5NO2",
+      "name": "Nitrobenzene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "Cl"
+      ],
+      "formula": "C6H5Cl",
+      "name": "Chlorobenzene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "Br"
+      ],
+      "formula": "C6H5Br",
+      "name": "Bromobenzene"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "C3H4O4",
+      "name": "Malonic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "C4H6O4",
+      "name": "Succinic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "C5H8O4",
+      "name": "Glutaric Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "O",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "C6H10O4",
+      "name": "Adipic Acid"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "C2H5NO2",
+      "name": "Glycine"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "O",
+        "O"
+      ],
+      "formula": "C3H7NO2",
+      "name": "Alanine"
+    },
+    {
+      "inputs": [
+        "C",
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "N",
+        "O",
+        "O",
+        "O"
+      ],
+      "formula": "C3H7NO3",
+      "name": "Serine"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Lab Testing Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="auth-client.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            if (!window.ChemLabAuth) {
+                return;
+            }
+
+            const user = await window.ChemLabAuth.hydrateSession();
+            if (user) {
+                window.location.replace(window.ChemLabAuth.getDefaultRoute(user));
+            }
+        });
+    </script>
+</head>
+<body>
+    <main class="home-shell">
+        <section class="home-hero">
+            <div class="molecule-field" aria-hidden="true">
+                <span class="molecule-node node-a"></span>
+                <span class="molecule-node node-b"></span>
+                <span class="molecule-node node-c"></span>
+                <span class="molecule-link link-a"></span>
+                <span class="molecule-link link-b"></span>
+            </div>
+            <div class="eyebrow">Chemistry Lab Testing Tool</div>
+            <h1 class="auth-title">A focused laboratory workspace for chemistry operations.</h1>
+            <p class="auth-copy">
+                Move from guided registration to profile completion and immediate workspace access in one polished chemistry platform designed for production-grade clarity.
+            </p>
+            <div class="hero-actions">
+                <a class="auth-button" href="/register">Start Registration</a>
+            </div>
+            <div class="hero-metrics">
+                <span class="metric-pill">Profile verification</span>
+                <span class="metric-pill">Direct workspace</span>
+                <span class="metric-pill">Email + password identity</span>
+                <span class="metric-pill">Chemistry workspace</span>
+            </div>
+        </section>
+
+        <section class="home-grid">
+            <article class="about-card">
+                <div class="eyebrow">Onboarding</div>
+                <h2>Verification-first registration</h2>
+                <p class="hero-copy">Email, password, phone, and profile validation stay visible so the user journey feels trustworthy and operationally clear.</p>
+            </article>
+            <article class="about-card">
+                <div class="eyebrow">Access</div>
+                <h2>Immediate workspace entry</h2>
+                <p class="hero-copy">Create an account and continue straight into the chemical formula generation system.</p>
+            </article>
+            <article class="about-card">
+                <div class="eyebrow">Workspace</div>
+                <h2>Laboratory-ready environment</h2>
+                <p class="hero-copy">The chemistry dashboard remains the operational destination for saved formulas, reports, and research workflows.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

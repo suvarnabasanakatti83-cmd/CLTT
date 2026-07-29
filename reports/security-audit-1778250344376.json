@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-05-08T14:25:41.231Z",
+  "findings": {
+    "critical": [],
+    "medium": [],
+    "low": []
+  },
+  "checks": {
+    "registerTrial": 201,
+    "registerAdmin": 201,
+    "loginTrial": 200,
+    "loginAdmin": 200,
+    "formulaResolve": {
+      "formula": "H2O",
+      "name": "Water",
+      "matched": true,
+      "inputs": [
+        "Hydrogen",
+        "Hydrogen",
+        "Oxygen"
+      ],
+      "resolvedSymbols": [
+        "H",
+        "H",
+        "O"
+      ],
+      "unresolvedInputs": [],
+      "compound": {
+        "formula": "H2O",
+        "name": "Water",
+        "type": null,
+        "conditions": {},
+        "process": {
+          "steps": []
+        },
+        "video": null
+      }
+    },
+    "loginInjectionStatus": 400,
+    "xssStatus": 400,
+    "adminOverviewStatus": 200,
+    "adminOverview": {
+      "activeUsers": 1,
+      "onlineUsers": 4,
+      "totalSearches": 1,
+      "failedApiRequests": 2,
+      "suspiciousLoginAttempts": 0,
+      "trialUsers": 1,
+      "paidUsers": 0,
+      "expiredUsers": 0,
+      "renewalUsers": 0,
+      "conversionRate": 0,
+      "revenue": {
+        "amount": 0,
+        "formatted": "INR 0"
+      },
+      "traffic": {
+        "totalRequests": 15,
+        "failedRequests": 2,
+        "averageDurationMs": 121.8
+      },
+      "userGrowth": [
+        {
+          "_id": "2026-05-08",
+          "users": 2
+        }
+      ]
+    }
+  },
+  "scores": {
+    "securityScore": 100,
+    "performanceScore": 80,
+    "scalabilityScore": 75,
+    "productionReadinessScore": 89
+  }
+}

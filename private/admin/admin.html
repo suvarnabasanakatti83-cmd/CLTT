@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Console | Chemistry Lab Testing Tool</title>
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="/auth-client.js"></script>
+    <script defer src="/admin/app.js"></script>
+</head>
+<body>
+    <main class="app-shell dashboard-shell">
+        <section class="dashboard-header">
+            <div class="lab-hero">
+                <div class="eyebrow">Admin Console</div>
+                <h1 id="title">Chemistry Lab live operations dashboard.</h1>
+                <p class="hero-copy">
+                    Monitor subscriptions, active sessions, suspicious activity, formula searches, and revenue-facing startup metrics from one protected console.
+                </p>
+                <div class="hero-metrics">
+                    <a class="auth-button hero-link-button" href="/membership.html?preview=admin">Preview Membership Flow</a>
+                    <a class="button-muted hero-link-button" href="/payment?preview=admin&plan=silver">Preview Payment Flow</a>
+                    <a class="button-muted hero-link-button" href="/index.html">Open Homepage</a>
+                </div>
+            </div>
+            <aside class="lab-status">
+                <div class="eyebrow">Session</div>
+                <div class="status-grid">
+                    <div class="status-card">
+                        <div class="status-label">Operator</div>
+                        <div class="status-value" id="admin-name">Admin</div>
+                    </div>
+                    <div class="status-card">
+                        <div class="status-label">Role</div>
+                        <div class="status-value" id="admin-role">admin</div>
+                    </div>
+                    <div class="status-card">
+                        <div class="status-label">Mode</div>
+                        <div class="status-value">Protected</div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="admin-grid" id="analytics-cards"></section>
+
+        <section class="toolbar">
+            <div class="toolbar-group">
+                <button type="button" class="button-muted" data-filter="all">All Users</button>
+                <button type="button" class="button-muted" data-filter="trial">Trial Users</button>
+                <button type="button" class="button-muted" data-filter="paid">Paid Users</button>
+                <button type="button" class="button-muted" data-filter="expired">Expired Users</button>
+                <button type="button" class="button-muted" data-filter="renewal">Renewal Users</button>
+            </div>
+            <div class="toolbar-group">
+                <button type="button" class="button-muted" id="admin-logout-button">Logout</button>
+            </div>
+        </section>
+
+        <section class="table-container admin-table-shell">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Plan</th>
+                        <th>Status</th>
+                        <th>Payment</th>
+                        <th>Device</th>
+                        <th>Last Login</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-users-body"></tbody>
+            </table>
+        </section>
+        <p id="admin-message" class="auth-message"></p>
+    </main>
+</body>
+</html>

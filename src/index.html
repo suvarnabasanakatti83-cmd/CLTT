@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLTT Firebase Setup</title>
+
+    <!--
+      This import map lets the browser understand package-style imports like
+      "firebase/app" without needing a bundler.
+      It still uses the Firebase modular SDK exactly as requested.
+    -->
+    <script type="importmap">
+      {
+        "imports": {
+          "firebase/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js",
+          "firebase/auth": "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js",
+          "firebase/firestore": "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js",
+          "firebase/storage": "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js",
+          "firebase/analytics": "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js"
+        }
+      }
+    </script>
+
+    <!-- Main project stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!--
+      The page is split into clear sections so beginners can understand
+      which UI belongs to which Firebase service.
+    -->
+    <div class="page-shell">
+      <header class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow">CLTT</p>
+          <h1>Chemistry Lab Testing Tool Firebase Workspace</h1>
+          <p class="hero-text">
+            A clean modular Firebase setup with Authentication, Firestore,
+            Storage, Analytics, and a Firebase Hosting-ready frontend structure.
+          </p>
+        </div>
+        <div class="hero-status-card">
+          <h2>Application Status</h2>
+          <p id="app-status" class="status-message info">Waiting for initialization...</p>
+          <p id="current-user" class="current-user-text">No user is currently signed in.</p>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <!-- Authentication Section -->
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Authentication</h2>
+            <p>Google sign in, email signup, login, and logout.</p>
+          </div>
+
+          <p id="auth-status" class="status-message info">Authentication status messages will appear here.</p>
+
+          <div class="form-grid">
+            <form id="signup-form" class="card-form">
+              <h3>Email Signup</h3>
+              <label for="signup-email">Email Address</label>
+              <input id="signup-email" type="email" placeholder="Enter your email" required />
+
+              <label for="signup-password">Password</label>
+              <input
+                id="signup-password"
+                type="password"
+                placeholder="Enter a password"
+                minlength="6"
+                required
+              />
+
+              <button type="submit" class="primary-button">Create Account</button>
+            </form>
+
+            <form id="login-form" class="card-form">
+              <h3>Email Login</h3>
+              <label for="login-email">Email Address</label>
+              <input id="login-email" type="email" placeholder="Enter your email" required />
+
+              <label for="login-password">Password</label>
+              <input
+                id="login-password"
+                type="password"
+                placeholder="Enter your password"
+                required
+              />
+
+              <button type="submit" class="primary-button">Login</button>
+            </form>
+          </div>
+
+          <div class="button-row">
+            <button id="google-sign-in-button" type="button" class="secondary-button">
+              Sign In With Google
+            </button>
+            <button id="logout-button" type="button" class="danger-button" disabled>
+              Logout
+            </button>
+          </div>
+        </section>
+
+        <!-- Firestore CRUD Section -->
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Cloud Firestore CRUD</h2>
+            <p>Add, read, update, and delete lab test records with async/await.</p>
+          </div>
+
+          <p id="firestore-status" class="status-message info">Firestore status messages will appear here.</p>
+
+          <form id="lab-test-form" class="card-form">
+            <h3>Lab Test Form</h3>
+
+            <!-- Hidden field used when updating an existing record -->
+            <input id="test-id" type="hidden" />
+
+            <label for="test-title">Test Title</label>
+            <input id="test-title" type="text" placeholder="Example: Water Purity Test" required />
+
+            <label for="sample-type">Sample Type</label>
+            <input id="sample-type" type="text" placeholder="Example: Liquid Sample" required />
+
+            <label for="test-result">Test Result</label>
+            <input id="test-result" type="text" placeholder="Example: Passed" required />
+
+            <label for="test-notes">Notes</label>
+            <textarea
+              id="test-notes"
+              rows="4"
+              placeholder="Add beginner-friendly notes about this lab test"
+            ></textarea>
+
+            <div class="button-row">
+              <button id="save-test-button" type="submit" class="primary-button">
+                Save Lab Test
+              </button>
+              <button id="cancel-edit-button" type="button" class="secondary-button" hidden>
+                Cancel Edit
+              </button>
+              <button id="refresh-tests-button" type="button" class="secondary-button">
+                Refresh Records
+              </button>
+            </div>
+          </form>
+
+          <div id="lab-test-list" class="data-list">
+            <div class="empty-state">
+              <p>Lab test records will appear here after login.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Storage Upload Section -->
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Firebase Storage Uploads</h2>
+            <p>Upload PDFs, upload images, and get download URLs.</p>
+          </div>
+
+          <p id="storage-status" class="status-message info">Storage status messages will appear here.</p>
+
+          <div class="form-grid">
+            <form id="pdf-upload-form" class="card-form">
+              <h3>Upload PDF</h3>
+              <label for="pdf-file">Choose PDF File</label>
+              <input id="pdf-file" type="file" accept=".pdf,application/pdf" required />
+              <button type="submit" class="primary-button">Upload PDF</button>
+              <div id="pdf-upload-result" class="upload-result"></div>
+            </form>
+
+            <form id="image-upload-form" class="card-form">
+              <h3>Upload Image</h3>
+              <label for="image-file">Choose Image File</label>
+              <input id="image-file" type="file" accept="image/*" required />
+              <button type="submit" class="primary-button">Upload Image</button>
+              <div id="image-upload-result" class="upload-result"></div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Main JavaScript entry point -->
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

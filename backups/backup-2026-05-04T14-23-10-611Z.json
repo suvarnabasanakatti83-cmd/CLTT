@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "createdAt": "2026-05-04T14:23:10.613Z",
+    "database": "chemistry_lab_backup_verify_1777904600"
+  },
+  "collections": {
+    "users": [],
+    "elements": [],
+    "compounds": [],
+    "reactions": [],
+    "experiments": [],
+    "sheets": []
+  }
+}

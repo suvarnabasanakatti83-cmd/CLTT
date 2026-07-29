@@ -1,0 +1,27 @@
+{
+  "name": "chemistry-lab",
+  "version": "1.0.0",
+  "description": "Chemistry Lab Testing Tool",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "migrate": "node scripts/migrate.js",
+    "sync:elements": "node scripts/syncElements.js",
+    "sync:compounds": "node utils/compoundSync.js",
+    "validate:chemistry": "node scripts/validateChemistryData.js",
+    "backup": "node scripts/backup.js",
+    "restore": "node scripts/restore.js",
+    "security:audit": "node scripts/securityAudit.js",
+    "audit:deps": "npm audit",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.6",
+    "express": "^4.22.1",
+    "firebase": "^12.13.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.23.0"
+  }
+}

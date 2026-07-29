@@ -1,0 +1,2947 @@
+{
+  "generatedAt": "2026-05-08T13:20:22.835Z",
+  "baseDatabase": "mongodb://127.0.0.1:27017/chemistry_lab_security_audit_1778246422204",
+  "validations": {
+    "registerValid": {
+      "status": 201,
+      "durationMs": 491.97,
+      "body": {
+        "message": "Registration successful. Complete payment to activate your account.",
+        "user": {
+          "id": "69fde318bdb093a11b1508d9",
+          "name": "Audit User",
+          "email": "scientist.audit@example.com",
+          "role": "user",
+          "payment_status": "unpaid",
+          "paymentStatus": "unpaid",
+          "paymentGateway": "pending",
+          "paymentVerifiedAt": null,
+          "createdAt": "2026-05-08T13:20:24.291Z",
+          "hasPaidAccess": false
+        },
+        "paymentRequired": true,
+        "payment": {
+          "amount": 49900,
+          "displayAmount": 499,
+          "currency": "INR",
+          "adminEmail": "suvarnabasanakatti83@gmail.com",
+          "gateway": "demo",
+          "paymentOptions": [
+            {
+              "id": "upi",
+              "label": "UPI"
+            },
+            {
+              "id": "googlepay",
+              "label": "Google Pay"
+            },
+            {
+              "id": "phonepe",
+              "label": "PhonePe"
+            },
+            {
+              "id": "qrcode",
+              "label": "QR Code"
+            }
+          ]
+        },
+        "redirectTo": "/payment"
+      }
+    },
+    "registerAdmin": {
+      "status": 201,
+      "durationMs": 430.61,
+      "body": {
+        "message": "Admin account created successfully. Please log in.",
+        "user": {
+          "id": "69fde318bdb093a11b1508e2",
+          "name": "Audit Admin",
+          "email": "admin.audit@example.com",
+          "role": "admin",
+          "payment_status": "paid",
+          "paymentStatus": "paid",
+          "paymentGateway": "waived",
+          "paymentVerifiedAt": "2026-05-08T13:20:24.742Z",
+          "createdAt": "2026-05-08T13:20:24.743Z",
+          "hasPaidAccess": true
+        },
+        "redirectTo": "/login?registered=success"
+      }
+    },
+    "registerPaymentUser": {
+      "status": 201,
+      "durationMs": 407.2,
+      "body": {
+        "message": "Registration successful. Complete payment to activate your account.",
+        "user": {
+          "id": "69fde319bdb093a11b1508e9",
+          "name": "Payment User",
+          "email": "payment.audit@example.com",
+          "role": "user",
+          "payment_status": "unpaid",
+          "paymentStatus": "unpaid",
+          "paymentGateway": "pending",
+          "paymentVerifiedAt": null,
+          "createdAt": "2026-05-08T13:20:25.151Z",
+          "hasPaidAccess": false
+        },
+        "paymentRequired": true,
+        "payment": {
+          "amount": 49900,
+          "displayAmount": 499,
+          "currency": "INR",
+          "adminEmail": "suvarnabasanakatti83@gmail.com",
+          "gateway": "demo",
+          "paymentOptions": [
+            {
+              "id": "upi",
+              "label": "UPI"
+            },
+            {
+              "id": "googlepay",
+              "label": "Google Pay"
+            },
+            {
+              "id": "phonepe",
+              "label": "PhonePe"
+            },
+            {
+              "id": "qrcode",
+              "label": "QR Code"
+            }
+          ]
+        },
+        "redirectTo": "/payment"
+      }
+    },
+    "loginPaymentRequired": {
+      "status": 403,
+      "durationMs": 397.12,
+      "body": {
+        "message": "Please complete payment before accessing the lab.",
+        "paymentRequired": true,
+        "payment": {
+          "amount": 49900,
+          "displayAmount": 499,
+          "currency": "INR",
+          "adminEmail": "suvarnabasanakatti83@gmail.com",
+          "gateway": "demo",
+          "paymentOptions": [
+            {
+              "id": "upi",
+              "label": "UPI"
+            },
+            {
+              "id": "googlepay",
+              "label": "Google Pay"
+            },
+            {
+              "id": "phonepe",
+              "label": "PhonePe"
+            },
+            {
+              "id": "qrcode",
+              "label": "QR Code"
+            }
+          ]
+        },
+        "redirectTo": "/payment"
+      }
+    },
+    "loginValid": {
+      "status": 200,
+      "durationMs": 400.25,
+      "body": {
+        "message": "Login successful.",
+        "user": {
+          "id": "69fde319bdb093a11b1508e9",
+          "name": "Payment User",
+          "email": "payment.audit@example.com",
+          "role": "user",
+          "payment_status": "paid",
+          "paymentStatus": "paid",
+          "paymentGateway": "upi",
+          "paymentVerifiedAt": "2026-05-08T13:20:25.173Z",
+          "createdAt": "2026-05-08T13:20:25.151Z",
+          "hasPaidAccess": true
+        },
+        "redirectTo": "/dashboard"
+      }
+    },
+    "loginAdmin": {
+      "status": 200,
+      "durationMs": 403.74,
+      "body": {
+        "message": "Login successful.",
+        "user": {
+          "id": "69fde318bdb093a11b1508e2",
+          "name": "Audit Admin",
+          "email": "admin.audit@example.com",
+          "role": "admin",
+          "payment_status": "paid",
+          "paymentStatus": "paid",
+          "paymentGateway": "waived",
+          "paymentVerifiedAt": "2026-05-08T13:20:24.742Z",
+          "createdAt": "2026-05-08T13:20:24.743Z",
+          "hasPaidAccess": true
+        },
+        "redirectTo": "/dashboard"
+      }
+    },
+    "missingFieldRegister": {
+      "status": 400,
+      "durationMs": 4.46,
+      "body": {
+        "message": "password must be a string.",
+        "details": {}
+      }
+    },
+    "wrongTypeRegister": {
+      "status": 400,
+      "durationMs": 6,
+      "body": {
+        "message": "Unsafe field \"body.email.$ne\" is not allowed.",
+        "details": {}
+      }
+    },
+    "unexpectedFieldRegister": {
+      "status": 400,
+      "durationMs": 5.62,
+      "body": {
+        "message": "Unexpected field(s) in body: role.",
+        "details": {}
+      }
+    },
+    "malformedJson": {
+      "status": 400,
+      "durationMs": 10.05,
+      "body": {
+        "message": "Malformed JSON payload."
+      }
+    },
+    "oversizedPayload": {
+      "status": 413,
+      "durationMs": 3.55,
+      "body": {
+        "message": "Request payload is too large."
+      }
+    }
+  },
+  "methodMatrix": {
+    "/health": {
+      "GET": {
+        "status": 200,
+        "durationMs": 3.62,
+        "body": {
+          "status": "ok",
+          "uptime": 4.7789655,
+          "environment": "test",
+          "database": {
+            "state": 1,
+            "stateLabel": "connected",
+            "host": "127.0.0.1",
+            "name": "chemistry_lab_security_audit_1778246422204"
+          },
+          "memory": {
+            "rss": 121982976,
+            "heapTotal": 67088384,
+            "heapUsed": 32011232,
+            "external": 22387169,
+            "arrayBuffers": 18501137
+          }
+        }
+      },
+      "POST": {
+        "status": 404,
+        "durationMs": 4.08,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PUT": {
+        "status": 404,
+        "durationMs": 4.05,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PATCH": {
+        "status": 404,
+        "durationMs": 4.02,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "DELETE": {
+        "status": 404,
+        "durationMs": 2.78,
+        "body": {
+          "message": "Route not found."
+        }
+      }
+    },
+    "/api/auth/register/config": {
+      "GET": {
+        "status": 200,
+        "durationMs": 3.42,
+        "body": {
+          "amount": 49900,
+          "displayAmount": 499,
+          "currency": "INR",
+          "adminEmail": "suvarnabasanakatti83@gmail.com",
+          "gateway": "demo",
+          "paymentOptions": [
+            {
+              "id": "upi",
+              "label": "UPI"
+            },
+            {
+              "id": "googlepay",
+              "label": "Google Pay"
+            },
+            {
+              "id": "phonepe",
+              "label": "PhonePe"
+            },
+            {
+              "id": "qrcode",
+              "label": "QR Code"
+            }
+          ]
+        }
+      },
+      "POST": {
+        "status": 401,
+        "durationMs": 5.04,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "PUT": {
+        "status": 401,
+        "durationMs": 4.39,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "PATCH": {
+        "status": 401,
+        "durationMs": 5.12,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "DELETE": {
+        "status": 401,
+        "durationMs": 5.23,
+        "body": {
+          "message": "Authentication required."
+        }
+      }
+    },
+    "/api/auth/me": {
+      "GET": {
+        "status": 200,
+        "durationMs": 6.68,
+        "body": {
+          "user": {
+            "id": "69fde318bdb093a11b1508e2",
+            "name": "Audit Admin",
+            "email": "admin.audit@example.com",
+            "role": "admin",
+            "payment_status": "paid",
+            "paymentStatus": "paid",
+            "paymentGateway": "waived",
+            "paymentVerifiedAt": "2026-05-08T13:20:24.742Z",
+            "createdAt": "2026-05-08T13:20:24.743Z",
+            "hasPaidAccess": true
+          },
+          "sessionPurpose": "auth"
+        }
+      },
+      "POST": {
+        "status": 404,
+        "durationMs": 5.27,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PUT": {
+        "status": 404,
+        "durationMs": 5.81,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PATCH": {
+        "status": 404,
+        "durationMs": 4.57,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "DELETE": {
+        "status": 404,
+        "durationMs": 4.19,
+        "body": {
+          "message": "Route not found."
+        }
+      }
+    },
+    "/api/compounds": {
+      "GET": {
+        "status": 200,
+        "durationMs": 7.46,
+        "body": [
+          {
+            "_id": "69fde31a9c378625e3a2f719",
+            "formula": "BULK1778246426416",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-08T13:20:26.603Z",
+            "inputs": [
+              "H",
+              "Cl"
+            ],
+            "name": "Bulk Compound",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-08T13:20:26.603Z"
+          }
+        ]
+      },
+      "POST": {
+        "status": 201,
+        "durationMs": 17.78,
+        "body": {
+          "status": "created",
+          "compound": {
+            "name": "Matrix Compound",
+            "formula": "M1778246427024",
+            "inputs": [
+              "H",
+              "O"
+            ],
+            "conditions": {},
+            "process": {
+              "steps": []
+            },
+            "_id": "69fde31bbdb093a11b150a54",
+            "normalizedName": "matrix compound",
+            "inputSignature": "H,O",
+            "createdAt": "2026-05-08T13:20:27.037Z",
+            "updatedAt": "2026-05-08T13:20:27.037Z",
+            "__v": 0
+          }
+        }
+      },
+      "PUT": {
+        "status": 404,
+        "durationMs": 4.42,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PATCH": {
+        "status": 404,
+        "durationMs": 5.23,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "DELETE": {
+        "status": 404,
+        "durationMs": 5.64,
+        "body": {
+          "message": "Route not found."
+        }
+      }
+    },
+    "/api/elements": {
+      "GET": {
+        "status": 200,
+        "durationMs": 13.74,
+        "body": [
+          {
+            "_id": "69fde3179c378625e3a2f453",
+            "aliases": [
+              "hydrogen"
+            ],
+            "category": "unknown",
+            "name": "Hydrogen",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "H"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f454",
+            "aliases": [
+              "helium"
+            ],
+            "category": "unknown",
+            "name": "Helium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "He"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f471",
+            "aliases": [
+              "lithium"
+            ],
+            "category": "unknown",
+            "name": "Lithium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Li"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f47c",
+            "aliases": [
+              "beryllium"
+            ],
+            "category": "unknown",
+            "name": "Beryllium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Be"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f487",
+            "aliases": [
+              "boron"
+            ],
+            "category": "unknown",
+            "name": "Boron",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "B"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f492",
+            "aliases": [
+              "carbon"
+            ],
+            "category": "unknown",
+            "name": "Carbon",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "C"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f49d",
+            "aliases": [
+              "nitrogen"
+            ],
+            "category": "unknown",
+            "name": "Nitrogen",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "N"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a8",
+            "aliases": [
+              "oxygen"
+            ],
+            "category": "unknown",
+            "name": "Oxygen",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "O"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b3",
+            "aliases": [
+              "fluorine"
+            ],
+            "category": "unknown",
+            "name": "Fluorine",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "F"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4be",
+            "aliases": [
+              "neon"
+            ],
+            "category": "unknown",
+            "name": "Neon",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ne"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f455",
+            "aliases": [
+              "natrium",
+              "sodium"
+            ],
+            "category": "unknown",
+            "name": "Sodium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Na"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f460",
+            "aliases": [
+              "magnesium"
+            ],
+            "category": "unknown",
+            "name": "Magnesium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Mg"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f469",
+            "aliases": [
+              "aluminium",
+              "aluminum"
+            ],
+            "category": "unknown",
+            "name": "Aluminum",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Al"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f46a",
+            "aliases": [
+              "silicon"
+            ],
+            "category": "unknown",
+            "name": "Silicon",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Si"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f46b",
+            "aliases": [
+              "phosphorus"
+            ],
+            "category": "unknown",
+            "name": "Phosphorus",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "P"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f46c",
+            "aliases": [
+              "sulfur",
+              "sulphur"
+            ],
+            "category": "unknown",
+            "name": "Sulfur",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "S"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f46d",
+            "aliases": [
+              "chlorine"
+            ],
+            "category": "unknown",
+            "name": "Chlorine",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Cl"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f46e",
+            "aliases": [
+              "argon"
+            ],
+            "category": "unknown",
+            "name": "Argon",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ar"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f46f",
+            "aliases": [
+              "kalium",
+              "potassium"
+            ],
+            "category": "unknown",
+            "name": "Potassium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "K"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f470",
+            "aliases": [
+              "calcium"
+            ],
+            "category": "unknown",
+            "name": "Calcium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ca"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f472",
+            "aliases": [
+              "scandium"
+            ],
+            "category": "unknown",
+            "name": "Scandium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Sc"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f473",
+            "aliases": [
+              "titanium"
+            ],
+            "category": "unknown",
+            "name": "Titanium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ti"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f474",
+            "aliases": [
+              "vanadium"
+            ],
+            "category": "unknown",
+            "name": "Vanadium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "V"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f475",
+            "aliases": [
+              "chromium"
+            ],
+            "category": "unknown",
+            "name": "Chromium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Cr"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f476",
+            "aliases": [
+              "manganese"
+            ],
+            "category": "unknown",
+            "name": "Manganese",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Mn"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f477",
+            "aliases": [
+              "ferrum",
+              "iron"
+            ],
+            "category": "unknown",
+            "name": "Iron",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Fe"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f478",
+            "aliases": [
+              "cobalt"
+            ],
+            "category": "unknown",
+            "name": "Cobalt",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Co"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f479",
+            "aliases": [
+              "nickel"
+            ],
+            "category": "unknown",
+            "name": "Nickel",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ni"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f47a",
+            "aliases": [
+              "copper",
+              "cuprum"
+            ],
+            "category": "unknown",
+            "name": "Copper",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Cu"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f47b",
+            "aliases": [
+              "zinc"
+            ],
+            "category": "unknown",
+            "name": "Zinc",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Zn"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f47d",
+            "aliases": [
+              "gallium"
+            ],
+            "category": "unknown",
+            "name": "Gallium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ga"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f47e",
+            "aliases": [
+              "germanium"
+            ],
+            "category": "unknown",
+            "name": "Germanium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ge"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f47f",
+            "aliases": [
+              "arsenic"
+            ],
+            "category": "unknown",
+            "name": "Arsenic",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "As"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f480",
+            "aliases": [
+              "selenium"
+            ],
+            "category": "unknown",
+            "name": "Selenium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Se"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f481",
+            "aliases": [
+              "bromine"
+            ],
+            "category": "unknown",
+            "name": "Bromine",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Br"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f482",
+            "aliases": [
+              "krypton"
+            ],
+            "category": "unknown",
+            "name": "Krypton",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Kr"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f483",
+            "aliases": [
+              "rubidium"
+            ],
+            "category": "unknown",
+            "name": "Rubidium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Rb"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f484",
+            "aliases": [
+              "strontium"
+            ],
+            "category": "unknown",
+            "name": "Strontium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Sr"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f485",
+            "aliases": [
+              "yttrium"
+            ],
+            "category": "unknown",
+            "name": "Yttrium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Y"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f486",
+            "aliases": [
+              "zirconium"
+            ],
+            "category": "unknown",
+            "name": "Zirconium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Zr"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f488",
+            "aliases": [
+              "niobium"
+            ],
+            "category": "unknown",
+            "name": "Niobium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Nb"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f489",
+            "aliases": [
+              "molybdenum"
+            ],
+            "category": "unknown",
+            "name": "Molybdenum",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Mo"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f48a",
+            "aliases": [
+              "technetium"
+            ],
+            "category": "unknown",
+            "name": "Technetium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Tc"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f48b",
+            "aliases": [
+              "ruthenium"
+            ],
+            "category": "unknown",
+            "name": "Ruthenium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ru"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f48c",
+            "aliases": [
+              "rhodium"
+            ],
+            "category": "unknown",
+            "name": "Rhodium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Rh"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f48d",
+            "aliases": [
+              "palladium"
+            ],
+            "category": "unknown",
+            "name": "Palladium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Pd"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f48e",
+            "aliases": [
+              "argentum",
+              "silver"
+            ],
+            "category": "unknown",
+            "name": "Silver",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ag"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f48f",
+            "aliases": [
+              "cadmium"
+            ],
+            "category": "unknown",
+            "name": "Cadmium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Cd"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f490",
+            "aliases": [
+              "indium"
+            ],
+            "category": "unknown",
+            "name": "Indium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "In"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f491",
+            "aliases": [
+              "stannum",
+              "tin"
+            ],
+            "category": "unknown",
+            "name": "Tin",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Sn"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f493",
+            "aliases": [
+              "antimony",
+              "stibium"
+            ],
+            "category": "unknown",
+            "name": "Antimony",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Sb"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f494",
+            "aliases": [
+              "tellurium"
+            ],
+            "category": "unknown",
+            "name": "Tellurium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Te"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f495",
+            "aliases": [
+              "iodine"
+            ],
+            "category": "unknown",
+            "name": "Iodine",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "I"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f496",
+            "aliases": [
+              "xenon"
+            ],
+            "category": "unknown",
+            "name": "Xenon",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Xe"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f497",
+            "aliases": [
+              "caesium",
+              "cesium"
+            ],
+            "category": "unknown",
+            "name": "Cesium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Cs"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f498",
+            "aliases": [
+              "barium"
+            ],
+            "category": "unknown",
+            "name": "Barium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ba"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f499",
+            "aliases": [
+              "lanthanum"
+            ],
+            "category": "unknown",
+            "name": "Lanthanum",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "La"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f49a",
+            "aliases": [
+              "cerium"
+            ],
+            "category": "unknown",
+            "name": "Cerium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ce"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f49b",
+            "aliases": [
+              "praseodymium"
+            ],
+            "category": "unknown",
+            "name": "Praseodymium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Pr"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f49c",
+            "aliases": [
+              "neodymium"
+            ],
+            "category": "unknown",
+            "name": "Neodymium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Nd"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f49e",
+            "aliases": [
+              "promethium"
+            ],
+            "category": "unknown",
+            "name": "Promethium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Pm"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f49f",
+            "aliases": [
+              "samarium"
+            ],
+            "category": "unknown",
+            "name": "Samarium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Sm"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a0",
+            "aliases": [
+              "europium"
+            ],
+            "category": "unknown",
+            "name": "Europium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Eu"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a1",
+            "aliases": [
+              "gadolinium"
+            ],
+            "category": "unknown",
+            "name": "Gadolinium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Gd"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a2",
+            "aliases": [
+              "terbium"
+            ],
+            "category": "unknown",
+            "name": "Terbium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Tb"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a3",
+            "aliases": [
+              "dysprosium"
+            ],
+            "category": "unknown",
+            "name": "Dysprosium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Dy"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a4",
+            "aliases": [
+              "holmium"
+            ],
+            "category": "unknown",
+            "name": "Holmium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ho"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a5",
+            "aliases": [
+              "erbium"
+            ],
+            "category": "unknown",
+            "name": "Erbium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Er"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a6",
+            "aliases": [
+              "thulium"
+            ],
+            "category": "unknown",
+            "name": "Thulium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Tm"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a7",
+            "aliases": [
+              "ytterbium"
+            ],
+            "category": "unknown",
+            "name": "Ytterbium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Yb"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a9",
+            "aliases": [
+              "lutetium"
+            ],
+            "category": "unknown",
+            "name": "Lutetium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Lu"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4aa",
+            "aliases": [
+              "hafnium"
+            ],
+            "category": "unknown",
+            "name": "Hafnium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Hf"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4ab",
+            "aliases": [
+              "tantalum"
+            ],
+            "category": "unknown",
+            "name": "Tantalum",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ta"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4ac",
+            "aliases": [
+              "tungsten",
+              "wolfram"
+            ],
+            "category": "unknown",
+            "name": "Tungsten",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "W"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4ad",
+            "aliases": [
+              "rhenium"
+            ],
+            "category": "unknown",
+            "name": "Rhenium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Re"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4ae",
+            "aliases": [
+              "osmium"
+            ],
+            "category": "unknown",
+            "name": "Osmium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Os"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4af",
+            "aliases": [
+              "iridium"
+            ],
+            "category": "unknown",
+            "name": "Iridium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ir"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b0",
+            "aliases": [
+              "platinum"
+            ],
+            "category": "unknown",
+            "name": "Platinum",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Pt"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b1",
+            "aliases": [
+              "aurum",
+              "gold"
+            ],
+            "category": "unknown",
+            "name": "Gold",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Au"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b2",
+            "aliases": [
+              "hydrargyrum",
+              "mercury"
+            ],
+            "category": "unknown",
+            "name": "Mercury",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Hg"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b4",
+            "aliases": [
+              "thallium"
+            ],
+            "category": "unknown",
+            "name": "Thallium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Tl"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b5",
+            "aliases": [
+              "lead",
+              "plumbum"
+            ],
+            "category": "unknown",
+            "name": "Lead",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Pb"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b6",
+            "aliases": [
+              "bismuth"
+            ],
+            "category": "unknown",
+            "name": "Bismuth",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Bi"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b7",
+            "aliases": [
+              "polonium"
+            ],
+            "category": "unknown",
+            "name": "Polonium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Po"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b8",
+            "aliases": [
+              "astatine"
+            ],
+            "category": "unknown",
+            "name": "Astatine",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "At"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b9",
+            "aliases": [
+              "radon"
+            ],
+            "category": "unknown",
+            "name": "Radon",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Rn"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4ba",
+            "aliases": [
+              "francium"
+            ],
+            "category": "unknown",
+            "name": "Francium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Fr"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4bb",
+            "aliases": [
+              "radium"
+            ],
+            "category": "unknown",
+            "name": "Radium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ra"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4bc",
+            "aliases": [
+              "actinium"
+            ],
+            "category": "unknown",
+            "name": "Actinium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ac"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4bd",
+            "aliases": [
+              "thorium"
+            ],
+            "category": "unknown",
+            "name": "Thorium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Th"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4bf",
+            "aliases": [
+              "protactinium"
+            ],
+            "category": "unknown",
+            "name": "Protactinium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Pa"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4c0",
+            "aliases": [
+              "uranium"
+            ],
+            "category": "unknown",
+            "name": "Uranium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "U"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4c1",
+            "aliases": [
+              "neptunium"
+            ],
+            "category": "unknown",
+            "name": "Neptunium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Np"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4c2",
+            "aliases": [
+              "plutonium"
+            ],
+            "category": "unknown",
+            "name": "Plutonium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Pu"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4c3",
+            "aliases": [
+              "americium"
+            ],
+            "category": "unknown",
+            "name": "Americium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Am"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4c4",
+            "aliases": [
+              "curium"
+            ],
+            "category": "unknown",
+            "name": "Curium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Cm"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4c5",
+            "aliases": [
+              "berkelium"
+            ],
+            "category": "unknown",
+            "name": "Berkelium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Bk"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4c6",
+            "aliases": [
+              "californium"
+            ],
+            "category": "unknown",
+            "name": "Californium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Cf"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4c7",
+            "aliases": [
+              "einsteinium"
+            ],
+            "category": "unknown",
+            "name": "Einsteinium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Es"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4c8",
+            "aliases": [
+              "fermium"
+            ],
+            "category": "unknown",
+            "name": "Fermium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Fm"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f456",
+            "aliases": [
+              "mendelevium"
+            ],
+            "category": "unknown",
+            "name": "Mendelevium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Md"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f457",
+            "aliases": [
+              "nobelium"
+            ],
+            "category": "unknown",
+            "name": "Nobelium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "No"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f458",
+            "aliases": [
+              "lawrencium"
+            ],
+            "category": "unknown",
+            "name": "Lawrencium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Lr"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f459",
+            "aliases": [
+              "rutherfordium"
+            ],
+            "category": "unknown",
+            "name": "Rutherfordium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Rf"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f45a",
+            "aliases": [
+              "dubnium"
+            ],
+            "category": "unknown",
+            "name": "Dubnium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Db"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f45b",
+            "aliases": [
+              "seaborgium"
+            ],
+            "category": "unknown",
+            "name": "Seaborgium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Sg"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f45c",
+            "aliases": [
+              "bohrium"
+            ],
+            "category": "unknown",
+            "name": "Bohrium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Bh"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f45d",
+            "aliases": [
+              "hassium"
+            ],
+            "category": "unknown",
+            "name": "Hassium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Hs"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f45e",
+            "aliases": [
+              "meitnerium"
+            ],
+            "category": "unknown",
+            "name": "Meitnerium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Mt"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f45f",
+            "aliases": [
+              "darmstadtium"
+            ],
+            "category": "unknown",
+            "name": "Darmstadtium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ds"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f461",
+            "aliases": [
+              "roentgenium"
+            ],
+            "category": "unknown",
+            "name": "Roentgenium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Rg"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f462",
+            "aliases": [
+              "copernicium"
+            ],
+            "category": "unknown",
+            "name": "Copernicium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Cn"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f463",
+            "aliases": [
+              "nihonium"
+            ],
+            "category": "unknown",
+            "name": "Nihonium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Nh"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f464",
+            "aliases": [
+              "flerovium"
+            ],
+            "category": "unknown",
+            "name": "Flerovium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Fl"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f465",
+            "aliases": [
+              "moscovium"
+            ],
+            "category": "unknown",
+            "name": "Moscovium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Mc"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f466",
+            "aliases": [
+              "livermorium"
+            ],
+            "category": "unknown",
+            "name": "Livermorium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Lv"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f467",
+            "aliases": [
+              "tennessine"
+            ],
+            "category": "unknown",
+            "name": "Tennessine",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ts"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f468",
+            "aliases": [
+              "oganesson"
+            ],
+            "category": "unknown",
+            "name": "Oganesson",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Og"
+          }
+        ]
+      },
+      "POST": {
+        "status": 404,
+        "durationMs": 5.19,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PUT": {
+        "status": 404,
+        "durationMs": 8.81,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PATCH": {
+        "status": 404,
+        "durationMs": 7.28,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "DELETE": {
+        "status": 404,
+        "durationMs": 6.47,
+        "body": {
+          "message": "Route not found."
+        }
+      }
+    },
+    "/api/save": {
+      "GET": {
+        "status": 404,
+        "durationMs": 8.59,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "POST": {
+        "status": 200,
+        "durationMs": 13.53,
+        "body": {
+          "status": "saved"
+        }
+      },
+      "PUT": {
+        "status": 404,
+        "durationMs": 7.22,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "PATCH": {
+        "status": 404,
+        "durationMs": 7.31,
+        "body": {
+          "message": "Route not found."
+        }
+      },
+      "DELETE": {
+        "status": 404,
+        "durationMs": 6.01,
+        "body": {
+          "message": "Route not found."
+        }
+      }
+    }
+  },
+  "auth": {
+    "payWithPaymentToken": {
+      "status": 200,
+      "durationMs": 16.11,
+      "body": {
+        "message": "UPI demo payment accepted. Please log in to continue.",
+        "user": {
+          "id": "69fde319bdb093a11b1508e9",
+          "name": "Payment User",
+          "email": "payment.audit@example.com",
+          "role": "user",
+          "payment_status": "paid",
+          "paymentStatus": "paid",
+          "paymentGateway": "upi",
+          "paymentVerifiedAt": "2026-05-08T13:20:25.173Z",
+          "createdAt": "2026-05-08T13:20:25.151Z",
+          "hasPaidAccess": true
+        },
+        "redirectTo": "/login?payment=success"
+      }
+    },
+    "me": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 7.55,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 8.13,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 7.54,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 7.8,
+        "body": {
+          "user": {
+            "id": "69fde319bdb093a11b1508e9",
+            "name": "Payment User",
+            "email": "payment.audit@example.com",
+            "role": "user",
+            "payment_status": "paid",
+            "paymentStatus": "paid",
+            "paymentGateway": "upi",
+            "paymentVerifiedAt": "2026-05-08T13:20:25.173Z",
+            "createdAt": "2026-05-08T13:20:25.151Z",
+            "hasPaidAccess": true
+          },
+          "sessionPurpose": "auth"
+        }
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 6.92,
+        "body": {
+          "user": {
+            "id": "69fde318bdb093a11b1508e2",
+            "name": "Audit Admin",
+            "email": "admin.audit@example.com",
+            "role": "admin",
+            "payment_status": "paid",
+            "paymentStatus": "paid",
+            "paymentGateway": "waived",
+            "paymentVerifiedAt": "2026-05-08T13:20:24.742Z",
+            "createdAt": "2026-05-08T13:20:24.743Z",
+            "hasPaidAccess": true
+          },
+          "sessionPurpose": "auth"
+        }
+      }
+    },
+    "getCompounds": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 6.29,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 7.36,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 6.78,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 27.63,
+        "body": [
+          {
+            "_id": "69fde3179c378625e3a2f5f1",
+            "formula": "(NH4)2C2O4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-08T13:20:23.544Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "C",
+              "C",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Oxalate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-08T13:20:23.544Z"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f59b",
+            "formula": "(NH4)2CO3",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-08T13:20:23.544Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "C",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Carbonate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-08T13:20:23.544Z"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f648",
+            "formula": "(NH4)2Cr2O7",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-08T13:20:23.544Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "Cr",
+              "Cr",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Dichromate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-08T13:20:23.544Z"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f647",
+            "formula": "(NH4)2CrO4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-08T13:20:23.544Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "Cr",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Chromate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-08T13:20:23.544Z"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f5c4",
+            "formula": "(NH4)2HPO4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-08T13:20:23.544Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "H",
+              "P",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Hydrogen Phosphate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-08T13:20:23.544Z"
+          }
+        ]
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 10.11,
+        "body": [
+          {
+            "_id": "69fde3179c378625e3a2f5f1",
+            "formula": "(NH4)2C2O4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-08T13:20:23.544Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "C",
+              "C",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Oxalate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-08T13:20:23.544Z"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f59b",
+            "formula": "(NH4)2CO3",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-08T13:20:23.544Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "C",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Carbonate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-08T13:20:23.544Z"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f648",
+            "formula": "(NH4)2Cr2O7",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-08T13:20:23.544Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "Cr",
+              "Cr",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Dichromate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-08T13:20:23.544Z"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f647",
+            "formula": "(NH4)2CrO4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-08T13:20:23.544Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "Cr",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Chromate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-08T13:20:23.544Z"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f5c4",
+            "formula": "(NH4)2HPO4",
+            "__v": 0,
+            "conditions": {},
+            "createdAt": "2026-05-08T13:20:23.544Z",
+            "inputs": [
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "N",
+              "H",
+              "H",
+              "H",
+              "H",
+              "H",
+              "P",
+              "O",
+              "O",
+              "O",
+              "O"
+            ],
+            "name": "Ammonium Hydrogen Phosphate",
+            "process": {
+              "steps": []
+            },
+            "updatedAt": "2026-05-08T13:20:23.544Z"
+          }
+        ]
+      }
+    },
+    "createCompound": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 6.86,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 7.1,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 7.39,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 403,
+        "durationMs": 7.17,
+        "body": {
+          "message": "You do not have permission to perform this action."
+        }
+      },
+      "adminToken": {
+        "status": 201,
+        "durationMs": 16.37,
+        "body": {
+          "status": "created",
+          "compound": {
+            "name": "Security Audit Compound",
+            "formula": "AUDIT1778246426416",
+            "inputs": [
+              "Na",
+              "Cl"
+            ],
+            "conditions": {},
+            "process": {
+              "steps": []
+            },
+            "_id": "69fde31abdb093a11b150952",
+            "normalizedName": "security audit compound",
+            "inputSignature": "Cl,Na",
+            "createdAt": "2026-05-08T13:20:26.551Z",
+            "updatedAt": "2026-05-08T13:20:26.551Z",
+            "__v": 0
+          }
+        }
+      }
+    },
+    "bulkCompoundSync": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 5.95,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 8.99,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 8.73,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 403,
+        "durationMs": 7.66,
+        "body": {
+          "message": "You do not have permission to perform this action."
+        }
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 45.96,
+        "body": {
+          "status": "bulk sync success",
+          "count": 1,
+          "removedDuplicateEntries": 0
+        }
+      }
+    },
+    "search": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 6.95,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 6.92,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 5.81,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 15.76,
+        "body": []
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 7.97,
+        "body": []
+      }
+    },
+    "getElements": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 5.02,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 6.3,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 7.43,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 10.32,
+        "body": [
+          {
+            "_id": "69fde3179c378625e3a2f453",
+            "aliases": [
+              "hydrogen"
+            ],
+            "category": "unknown",
+            "name": "Hydrogen",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "H"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f454",
+            "aliases": [
+              "helium"
+            ],
+            "category": "unknown",
+            "name": "Helium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "He"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f471",
+            "aliases": [
+              "lithium"
+            ],
+            "category": "unknown",
+            "name": "Lithium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Li"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f47c",
+            "aliases": [
+              "beryllium"
+            ],
+            "category": "unknown",
+            "name": "Beryllium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Be"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f487",
+            "aliases": [
+              "boron"
+            ],
+            "category": "unknown",
+            "name": "Boron",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "B"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f492",
+            "aliases": [
+              "carbon"
+            ],
+            "category": "unknown",
+            "name": "Carbon",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "C"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f49d",
+            "aliases": [
+              "nitrogen"
+            ],
+            "category": "unknown",
+            "name": "Nitrogen",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "N"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a8",
+            "aliases": [
+              "oxygen"
+            ],
+            "category": "unknown",
+            "name": "Oxygen",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "O"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b3",
+            "aliases": [
+              "fluorine"
+            ],
+            "category": "unknown",
+            "name": "Fluorine",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "F"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4be",
+            "aliases": [
+              "neon"
+            ],
+            "category": "unknown",
+            "name": "Neon",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ne"
+          }
+        ]
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 8.81,
+        "body": [
+          {
+            "_id": "69fde3179c378625e3a2f453",
+            "aliases": [
+              "hydrogen"
+            ],
+            "category": "unknown",
+            "name": "Hydrogen",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "H"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f454",
+            "aliases": [
+              "helium"
+            ],
+            "category": "unknown",
+            "name": "Helium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "He"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f471",
+            "aliases": [
+              "lithium"
+            ],
+            "category": "unknown",
+            "name": "Lithium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Li"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f47c",
+            "aliases": [
+              "beryllium"
+            ],
+            "category": "unknown",
+            "name": "Beryllium",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Be"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f487",
+            "aliases": [
+              "boron"
+            ],
+            "category": "unknown",
+            "name": "Boron",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "B"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f492",
+            "aliases": [
+              "carbon"
+            ],
+            "category": "unknown",
+            "name": "Carbon",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "C"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f49d",
+            "aliases": [
+              "nitrogen"
+            ],
+            "category": "unknown",
+            "name": "Nitrogen",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "N"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4a8",
+            "aliases": [
+              "oxygen"
+            ],
+            "category": "unknown",
+            "name": "Oxygen",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "O"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4b3",
+            "aliases": [
+              "fluorine"
+            ],
+            "category": "unknown",
+            "name": "Fluorine",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "F"
+          },
+          {
+            "_id": "69fde3179c378625e3a2f4be",
+            "aliases": [
+              "neon"
+            ],
+            "category": "unknown",
+            "name": "Neon",
+            "stateAtRoomTemp": "unknown",
+            "symbol": "Ne"
+          }
+        ]
+      }
+    },
+    "bulkElements": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 5.78,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 6.38,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 6.56,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 403,
+        "durationMs": 6.75,
+        "body": {
+          "message": "You do not have permission to perform this action."
+        }
+      },
+      "adminToken": {
+        "status": 400,
+        "durationMs": 7.18,
+        "body": {
+          "message": "element.aliases must contain at least 1 item(s).",
+          "details": {}
+        }
+      }
+    },
+    "saveSheet": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 8.4,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 6.45,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 6.48,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 13.79,
+        "body": {
+          "status": "saved"
+        }
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 12.06,
+        "body": {
+          "status": "saved"
+        }
+      }
+    },
+    "loadSheet": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 5.41,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 5.44,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 6.83,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 8.23,
+        "body": {
+          "_id": "69fde31a9c378625e3a2f71a",
+          "userId": "69fde319bdb093a11b1508e9",
+          "name": "AuditSheet",
+          "__v": 0,
+          "createdAt": "2026-05-08T13:20:26.777Z",
+          "data": {
+            "sampleId": "SAMPLE-1",
+            "values": [
+              1,
+              2,
+              3
+            ]
+          },
+          "updatedAt": "2026-05-08T13:20:26.777Z"
+        }
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 7.32,
+        "body": {
+          "_id": "69fde31a9c378625e3a2f71b",
+          "name": "AuditSheet",
+          "userId": "69fde318bdb093a11b1508e2",
+          "__v": 0,
+          "createdAt": "2026-05-08T13:20:26.791Z",
+          "data": {
+            "sampleId": "SAMPLE-1",
+            "values": [
+              1,
+              2,
+              3
+            ]
+          },
+          "updatedAt": "2026-05-08T13:20:26.791Z"
+        }
+      }
+    },
+    "deleteSheet": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 5.87,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 5.91,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 6.77,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 200,
+        "durationMs": 9.64,
+        "body": {
+          "status": "deleted",
+          "deletedCount": 1
+        }
+      },
+      "adminToken": {
+        "status": 200,
+        "durationMs": 9.37,
+        "body": {
+          "status": "deleted",
+          "deletedCount": 1
+        }
+      }
+    },
+    "payRoute": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 5.62,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 7.1,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 7.14,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 403,
+        "durationMs": 6.55,
+        "body": {
+          "message": "Your session does not allow this action."
+        }
+      },
+      "adminToken": {
+        "status": 403,
+        "durationMs": 5.61,
+        "body": {
+          "message": "Your session does not allow this action."
+        }
+      }
+    },
+    "verifyPayRoute": {
+      "noToken": {
+        "status": 401,
+        "durationMs": 5.65,
+        "body": {
+          "message": "Authentication required."
+        }
+      },
+      "expiredToken": {
+        "status": 401,
+        "durationMs": 6.2,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "fakeToken": {
+        "status": 401,
+        "durationMs": 6.47,
+        "body": {
+          "message": "Invalid or expired token."
+        }
+      },
+      "userToken": {
+        "status": 403,
+        "durationMs": 5.53,
+        "body": {
+          "message": "Your session does not allow this action."
+        }
+      },
+      "adminToken": {
+        "status": 403,
+        "durationMs": 5.31,
+        "body": {
+          "message": "Your session does not allow this action."
+        }
+      }
+    }
+  },
+  "injection": {
+    "loginNoSql": {
+      "status": 400,
+      "durationMs": 3.2,
+      "body": {
+        "message": "Unsafe field \"body.email.$ne\" is not allowed.",
+        "details": {}
+      }
+    },
+    "searchQueryInjection": {
+      "status": 400,
+      "durationMs": 4.42,
+      "body": {
+        "message": "Unexpected field(s) in query: inputs[$ne].",
+        "details": {}
+      }
+    },
+    "sheetBodyInjection": {
+      "status": 400,
+      "durationMs": 3.05,
+      "body": {
+        "message": "Unsafe field \"body.data.$ne\" is not allowed.",
+        "details": {}
+      }
+    },
+    "compoundBodyInjection": {
+      "status": 400,
+      "durationMs": 5.5,
+      "body": {
+        "message": "Unsafe field \"body.process.steps[0].$gt\" is not allowed.",
+        "details": {}
+      }
+    }
+  },
+  "raceCondition": {
+    "createdStatuses": {
+      "201": 1,
+      "409": 19
+    },
+    "storedDocuments": 1
+  },
+  "loadTests": [
+    {
+      "concurrency": 10,
+      "totalReadRequests": 80,
+      "successfulReadRequests": 80,
+      "failedReadRequests": 0,
+      "averageResponseMs": 52.33,
+      "p95ResponseMs": 68.84,
+      "maxResponseMs": 71.16,
+      "throughputRps": 187.62,
+      "cpuPercent": 139.31,
+      "memoryStartMb": 117.22,
+      "memoryPeakMb": 124.43,
+      "memoryDeltaMb": 12.63,
+      "writeRequests": 10,
+      "successfulWrites": 10,
+      "failedWrites": 0,
+      "writeDurationMs": 54.53,
+      "storedWrites": 10
+    },
+    {
+      "concurrency": 50,
+      "totalReadRequests": 400,
+      "successfulReadRequests": 400,
+      "failedReadRequests": 0,
+      "averageResponseMs": 248.5,
+      "p95ResponseMs": 346.73,
+      "maxResponseMs": 504.32,
+      "throughputRps": 196.59,
+      "cpuPercent": 132.16,
+      "memoryStartMb": 129.85,
+      "memoryPeakMb": 181.65,
+      "memoryDeltaMb": 67.97,
+      "writeRequests": 50,
+      "successfulWrites": 50,
+      "failedWrites": 0,
+      "writeDurationMs": 281.4,
+      "storedWrites": 50
+    },
+    {
+      "concurrency": 100,
+      "totalReadRequests": 800,
+      "successfulReadRequests": 800,
+      "failedReadRequests": 0,
+      "averageResponseMs": 391.59,
+      "p95ResponseMs": 512.75,
+      "maxResponseMs": 625.66,
+      "throughputRps": 247.7,
+      "cpuPercent": 120.94,
+      "memoryStartMb": 197.82,
+      "memoryPeakMb": 261.07,
+      "memoryDeltaMb": 78.05,
+      "writeRequests": 100,
+      "successfulWrites": 100,
+      "failedWrites": 0,
+      "writeDurationMs": 439.87,
+      "storedWrites": 100
+    },
+    {
+      "concurrency": 500,
+      "totalReadRequests": 4000,
+      "successfulReadRequests": 3575,
+      "failedReadRequests": 425,
+      "averageResponseMs": 1670.32,
+      "p95ResponseMs": 2323.76,
+      "maxResponseMs": 2916.25,
+      "throughputRps": 287.53,
+      "cpuPercent": 126.35,
+      "memoryStartMb": 275.87,
+      "memoryPeakMb": 440.37,
+      "memoryDeltaMb": 180.08,
+      "writeRequests": 500,
+      "successfulWrites": 500,
+      "failedWrites": 0,
+      "writeDurationMs": 1824.28,
+      "storedWrites": 500
+    }
+  ],
+  "memoryLeak": {
+    "durationMs": 30000,
+    "concurrency": 50,
+    "completedRequests": 7961,
+    "failedRequests": 0,
+    "memorySamples": [
+      {
+        "at": "2026-05-08T13:20:54.584Z",
+        "rssMb": 452.59
+      },
+      {
+        "at": "2026-05-08T13:20:59.606Z",
+        "rssMb": 444.89
+      },
+      {
+        "at": "2026-05-08T13:21:04.646Z",
+        "rssMb": 456.2
+      },
+      {
+        "at": "2026-05-08T13:21:09.669Z",
+        "rssMb": 450.78
+      },
+      {
+        "at": "2026-05-08T13:21:14.706Z",
+        "rssMb": 445.15
+      }
+    ],
+    "growthMb": -7.44
+  },
+  "logging": {
+    "auditLogPath": "C:\\Users\\Suvarna\\OneDrive\\Desktop\\Demoproject\\CLTT\\logs\\audit.log",
+    "auditLogExists": true,
+    "loginLogged": true,
+    "logoutLogged": true,
+    "createLogged": true,
+    "updateLogged": true,
+    "deleteLogged": true,
+    "failedAuthLogged": true
+  },
+  "backupRecovery": {
+    "backupScriptExitCode": 0,
+    "backupScriptStdout": "Backup written to C:\\Users\\Suvarna\\OneDrive\\Desktop\\Demoproject\\CLTT\\backups\\backup-2026-05-08T13-21-19-714Z.json",
+    "restoreScriptExitCode": 0,
+    "restoreScriptStdout": "Restore completed from C:\\Users\\Suvarna\\OneDrive\\Desktop\\Demoproject\\CLTT\\backups\\backup-2026-05-08T13-21-19-714Z.json",
+    "restoreScriptStderr": "",
+    "backupPath": "C:\\Users\\Suvarna\\OneDrive\\Desktop\\Demoproject\\CLTT\\backups\\backup-2026-05-08T13-21-19-714Z.json",
+    "countBeforeBackup": 3,
+    "countAfterRestore": 3
+  },
+  "dependencyAudit": {
+    "exitCode": null,
+    "note": "Run `npm audit --json` from the terminal to perform a live dependency advisory check."
+  },
+  "findings": {
+    "critical": [],
+    "medium": [],
+    "low": []
+  },
+  "notes": [
+    "Dependency audit in the automated harness is environment-dependent; run npm audit separately for live advisories.",
+    "Memory leak testing was limited to a 30 second soak, not a multi-hour run."
+  ],
+  "scores": {
+    "performanceScore": 0,
+    "productionReadinessScore": 50,
+    "scalabilityScore": 0,
+    "securityScore": 100
+  }
+}

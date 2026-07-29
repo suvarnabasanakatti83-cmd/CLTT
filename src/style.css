@@ -1,0 +1,358 @@
+/* =========================
+   CLTT Global Color System
+   ========================= */
+
+:root {
+  --page-background: linear-gradient(135deg, #eef4ff 0%, #f8fbff 45%, #eef8f4 100%);
+  --panel-background: rgba(255, 255, 255, 0.94);
+  --panel-border: rgba(20, 54, 95, 0.12);
+  --primary-color: #0f5d7a;
+  --primary-color-dark: #0a4055;
+  --secondary-color: #d97a1f;
+  --danger-color: #c63d2f;
+  --success-color: #1f8a5b;
+  --info-color: #1f4d8f;
+  --text-main: #17324d;
+  --text-soft: #4e647b;
+  --shadow-soft: 0 18px 45px rgba(17, 49, 81, 0.12);
+  --radius-large: 22px;
+  --radius-medium: 14px;
+  --radius-small: 10px;
+}
+
+/* =========================
+   Base Page Styling
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--text-main);
+  background: var(--page-background);
+}
+
+a {
+  color: var(--primary-color);
+  word-break: break-word;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* =========================
+   Main Layout
+   ========================= */
+
+.page-shell {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.hero-copy,
+.hero-status-card,
+.panel {
+  background: var(--panel-background);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-copy {
+  padding: 36px;
+  background:
+    radial-gradient(circle at top right, rgba(217, 122, 31, 0.16), transparent 32%),
+    linear-gradient(160deg, rgba(15, 93, 122, 0.08), rgba(255, 255, 255, 0.96));
+}
+
+.hero-status-card {
+  padding: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--secondary-color);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1,
+.hero-status-card h2,
+.panel-header h2 {
+  margin-top: 0;
+}
+
+.hero-copy h1 {
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+}
+
+.hero-text,
+.panel-header p,
+.current-user-text {
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.main-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.panel {
+  padding: 28px;
+}
+
+.panel-header {
+  margin-bottom: 18px;
+}
+
+/* =========================
+   Form Styling
+   ========================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card-form {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid rgba(15, 93, 122, 0.12);
+  border-radius: var(--radius-medium);
+  background: rgba(247, 250, 254, 0.92);
+}
+
+.card-form h3 {
+  margin: 0 0 4px;
+}
+
+label {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(23, 50, 77, 0.16);
+  border-radius: var(--radius-small);
+  background: #ffffff;
+  color: var(--text-main);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(15, 93, 122, 0.12);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* =========================
+   Button Styling
+   ========================= */
+
+.button-row,
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.primary-button,
+.secondary-button,
+.danger-button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.danger-button:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled,
+.secondary-button:disabled,
+.danger-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.primary-button {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-color-dark));
+  box-shadow: 0 12px 24px rgba(15, 93, 122, 0.22);
+}
+
+.secondary-button {
+  color: #ffffff;
+  background: linear-gradient(135deg, #cb7a28, #9f5411);
+  box-shadow: 0 12px 24px rgba(203, 122, 40, 0.2);
+}
+
+.danger-button {
+  color: #ffffff;
+  background: linear-gradient(135deg, #d24f3d, #a33024);
+  box-shadow: 0 12px 24px rgba(198, 61, 47, 0.2);
+}
+
+/* =========================
+   Status Message Styling
+   ========================= */
+
+.status-message {
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border-radius: var(--radius-small);
+  border: 1px solid transparent;
+  line-height: 1.5;
+}
+
+.status-message.info {
+  color: var(--info-color);
+  background: rgba(31, 77, 143, 0.08);
+  border-color: rgba(31, 77, 143, 0.14);
+}
+
+.status-message.success {
+  color: var(--success-color);
+  background: rgba(31, 138, 91, 0.08);
+  border-color: rgba(31, 138, 91, 0.14);
+}
+
+.status-message.error {
+  color: var(--danger-color);
+  background: rgba(198, 61, 47, 0.08);
+  border-color: rgba(198, 61, 47, 0.14);
+}
+
+/* =========================
+   Firestore Data Cards
+   ========================= */
+
+.data-list {
+  margin-top: 22px;
+  display: grid;
+  gap: 16px;
+}
+
+.data-card,
+.empty-state {
+  padding: 18px;
+  border-radius: var(--radius-medium);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(23, 50, 77, 0.1);
+}
+
+.data-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.data-card h3 {
+  margin: 0;
+}
+
+.data-card p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.data-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15, 93, 122, 0.1);
+  color: var(--primary-color);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+/* =========================
+   Upload Result Styling
+   ========================= */
+
+.upload-result {
+  display: grid;
+  gap: 10px;
+}
+
+.upload-preview {
+  width: min(100%, 280px);
+  border-radius: var(--radius-small);
+  border: 1px solid rgba(23, 50, 77, 0.1);
+}
+
+/* =========================
+   Responsive Layout
+   ========================= */
+
+@media (max-width: 900px) {
+  .hero-section,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell {
+    width: min(100% - 20px, 1200px);
+    padding-top: 20px;
+  }
+
+  .hero-copy,
+  .hero-status-card,
+  .panel {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 540px) {
+  .button-row,
+  .card-actions,
+  .data-card-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .danger-button {
+    width: 100%;
+  }
+}
