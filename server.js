@@ -25,6 +25,11 @@ const {
     compressionMiddleware,
     corsMiddleware
 } = require("./middleware/securityMiddleware");
+console.log("NODE_ENV =", process.env.NODE_ENV);
+console.log("JWT_SECRET =", process.env.JWT_SECRET);
+console.log("MONGODB_URI =", process.env.MONGODB_URI);
+console.log("CORS_ORIGINS =", process.env.CORS_ORIGINS);
+
 const { assertSecureJwtConfig } = require("./config/auth");
 
 const REQUEST_SIZE_LIMIT = process.env.REQUEST_SIZE_LIMIT || "50kb";
