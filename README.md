@@ -79,7 +79,7 @@ CLTT/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/CLTT.git
+git clone https://github.com/suvarnabasanakatti83-cmd/CLTT.git
 ```
 
 ### Move into Project
@@ -99,25 +99,19 @@ npm install
 Create a `.env` file in the project root.
 
 ```env
-PORT=5000
+NODE_ENV=development
+PORT=5002
+MONGODB_URI=mongodb://cltt_db_admin:Mh4F%40Stc5.s3FEq@ac-upgjaj6-shard-00-00.apgeegv.mongodb.net:27017,ac-upgjaj6-shard-00-01.apgeegv.mongodb.net:27017,ac-upgjaj6-shard-00-02.apgeegv.mongodb.net:27017/?ssl=true&replicaSet=atlas-2d2rth-shard-0&authSource=admin&retryWrites=true&w=majority&appName=CLTT
 
-MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=CLTT2026SuperSecretKey987654321
 
-JWT_SECRET=your_jwt_secret
-
-CORS_ORIGINS=http://localhost:3000
+CORS_ORIGINS=https://cltt-production-105b.up.railway.app
 ```
 
 ### Start the Server
 
 ```bash
-npm start
-```
-
-or
-
-```bash
-npm run dev
+node server.js
 ```
 
 ---
@@ -195,7 +189,7 @@ This project is intended for educational and learning purposes.
 
 Developed by **Suvarna Basanakatti**
 
-Third Year Engineering Student
+B.Tech Computer Science Engineering Student
 
 Aspiring Full Stack Developer
 
