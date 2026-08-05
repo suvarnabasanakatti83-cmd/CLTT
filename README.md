@@ -181,7 +181,11 @@ The project is deployed using Railway.
 
 ## License
 
-This project is intended for educational and learning purposes.
+Copyright © 2026 Suvarna Basanakatti. All rights reserved.
+
+This project is provided for educational, learning, and portfolio purposes only.
+
+No part of this project may be copied, modified, distributed, or used for commercial purposes without the prior written permission of the author.
 
 ---
 
