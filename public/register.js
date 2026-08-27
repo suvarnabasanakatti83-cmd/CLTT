@@ -165,8 +165,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const professionFields = document.getElementById("profession-fields");
 
     let autosaveTimer = null;
-    let accountCompleted = false;
-    let profileCompleted = false;
 
     function setMessage(target, message, type = "") {
         if (!target) {
@@ -216,6 +214,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function isStrongPassword(value) {
         return /[A-Z]/.test(value) && /[a-z]/.test(value) && /\d/.test(value) && /[^A-Za-z0-9]/.test(value);
+    }
+
+    function validateIdentifierChoice(showErrors = true) {
+        const email = String(form.elements.email?.value || "").trim();
+        const mobile = String(form.elements.mobile?.value || "").trim();
+        const message = !email && !mobile ? "Enter either an email address or mobile number." : "";
+
+        if (showErrors) {
+            setFieldError("email", message);
+            setFieldError("mobile", message);
+        }
+
+        return !message;
     }
 
     function validateField(field) {
@@ -273,13 +284,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     function getAccountFields() {
-        return ["fullName", "email", "mobile", "password", "confirmPassword"]
+        return ["email", "mobile", "password", "confirmPassword"]
             .map((name) => form.elements[name])
             .filter(Boolean);
-    }
-
-    function getRequiredProfileFields() {
-        return Array.from(form.querySelectorAll("input[required], select[required]"));
     }
 
     function getAdditionalProfileFields() {
@@ -340,10 +347,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             if (Object.keys(draft).length) {
-                accountCompleted = validateFields(getAccountFields(), false);
-                profileCompleted = accountCompleted && validateFields(getAdditionalProfileFields(), false);
-                profileSection.dataset.stepHidden = String(!accountCompleted);
-                professionSection.dataset.stepHidden = String(!profileCompleted);
+                validateIdentifierChoice(false);
+                validateFields(getAccountFields(), false);
                 draftStatus.textContent = "Draft restored";
             }
         } catch (error) {
@@ -385,7 +390,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         input.id = `dynamic-${field.name}`;
         input.name = `profession_${field.name}`;
-        input.required = !field.optional;
+        input.required = false;
         wrapper.appendChild(input);
 
         const error = document.createElement("p");
@@ -441,34 +446,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     function updateProgress() {
-        const fields = getRequiredProfileFields().filter((field) => !field.closest("[data-step-hidden='true']"));
-        const completed = fields.filter((field) => !validateField(field)).length;
-        const percent = fields.length ? Math.round((completed / fields.length) * 100) : 0;
-
-        progressCopy.textContent = `${percent}%`;
-        progressBar.style.width = `${percent}%`;
-        registerSubmit.disabled = !accountCompleted || !profileCompleted || percent < 100;
+        progressCopy.textContent = "Optional";
+        progressBar.style.width = "100%";
     }
 
     function unlockProfileIfReady() {
-        const ready = validateFields(getAccountFields(), true);
-        accountCompleted = ready;
-        profileSection.dataset.stepHidden = String(!ready);
+        const ready = validateIdentifierChoice(true) && validateFields(getAccountFields(), true);
 
         if (ready) {
-            setMessage(messageEl, "Account details validated. Continue with Additional Profile Information.", "success");
+            profileSection.dataset.stepHidden = "false";
+            setMessage(messageEl, "Account details look good. Optional profile details are open if you want to add them now.", "success");
             profileSection.scrollIntoView({ behavior: "smooth", block: "start" });
         } else {
-            setMessage(messageEl, "Complete the account fields before continuing.", "error");
+            setMessage(messageEl, "Enter email or mobile and complete the password fields before adding profile details.", "error");
         }
 
         updateProgress();
     }
 
     function syncProfessionVisibility(showErrors = false) {
-        profileCompleted = accountCompleted && validateFields(getAdditionalProfileFields(), showErrors);
-        professionSection.dataset.stepHidden = String(!profileCompleted);
-        if (profileCompleted && professionSelect.value && !getVisibleDynamicFields().length) {
+        validateFields(getAdditionalProfileFields(), showErrors);
+        professionSection.dataset.stepHidden = String(!professionSelect.value);
+        if (professionSelect.value && !getVisibleDynamicFields().length) {
             renderProfessionFields(professionSelect.value);
         }
         updateProgress();
@@ -510,6 +509,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     form.addEventListener("input", (event) => {
         if (event.target.matches("input, select")) {
             setFieldError(event.target.name, validateField(event.target));
+            if (event.target.name === "email" || event.target.name === "mobile") {
+                validateIdentifierChoice(false);
+            }
             scheduleAutosave();
             if (getAdditionalProfileFields().includes(event.target)) {
                 syncProfessionVisibility(false);
@@ -546,14 +548,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
-        if (registerSubmit.disabled) {
-            setMessage(messageEl, "Complete all mandatory profile fields before opening the workspace.", "error");
-            return;
-        }
 
         clearFieldErrors();
-        const requiredFields = getRequiredProfileFields();
-        if (!validateFields(getAdditionalProfileFields(), true) || !validateFields(requiredFields, true)) {
+        const profileFields = getAdditionalProfileFields().concat(getVisibleDynamicFields());
+        if (!validateIdentifierChoice(true) || !validateFields(getAccountFields(), true) || !validateFields(profileFields, true)) {
             setMessage(messageEl, "Review the highlighted fields before continuing.", "error");
             return;
         }
@@ -579,7 +577,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             setMessage(messageEl, "Unable to connect to the server. Please try again.", "error");
         } finally {
             if (!messageEl.classList.contains("success")) {
-                setSubmitState(false, "Complete Profile and Continue");
+                setSubmitState(false, "Create Account and Open Dashboard");
                 updateProgress();
             }
         }

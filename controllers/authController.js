@@ -325,15 +325,17 @@ function buildRegistrationConfig() {
 
     return {
         authFlow: {
-            emailRequired: true,
+            identifierRequired: true,
+            emailRequired: false,
             passwordRequired: true,
-            mobileRequired: true,
+            mobileRequired: false,
+            profileRequired: false,
             activationCodeRequired: false
         },
         verification: {
             emailOtpRequired: false,
             mobileOtpRequired: false,
-            provider: "profile-validation",
+            provider: "optional-profile",
             otpLength: 0,
             resendCooldownSeconds: 0,
             maxAttempts: 0
@@ -395,8 +397,16 @@ function validateRegistrationPayload(body) {
         "body"
     );
 
+    const fullName = optionalString(payload.fullName, "fullName", { minLength: 2, maxLength: 120 });
+    const email = optionalString(payload.email, "email") ? requireEmail(payload.email) : undefined;
+    const mobile = optionalString(payload.mobile, "mobile") ? requireMobile(payload.mobile) : undefined;
+
+    if (!email && !mobile) {
+        throw new RequestValidationError("Enter either an email address or mobile number.");
+    }
+
     return {
-        fullName: requireString(payload.fullName, "fullName", { minLength: 2, maxLength: 120 }),
+        fullName,
         dateOfBirth: payload.dateOfBirth ? requireDateString(payload.dateOfBirth, "dateOfBirth") : null,
         gender: payload.gender ? requireEnum(payload.gender, "gender", GENDER_VALUES) : "prefer_not_to_say",
         profession: optionalString(payload.profession, "profession", { maxLength: 120, defaultValue: "" }) || "",
@@ -411,8 +421,8 @@ function validateRegistrationPayload(body) {
                     .filter(([key]) => key)
             )
             : {},
-        mobile: requireMobile(payload.mobile),
-        email: requireEmail(payload.email),
+        mobile,
+        email,
         country: optionalString(payload.country, "country", { maxLength: 120, defaultValue: "" }) || "",
         state: optionalString(payload.state, "state", { maxLength: 120, defaultValue: "" }) || "",
         district: optionalString(payload.district, "district", { maxLength: 120, defaultValue: "" }) || "",
@@ -425,6 +435,62 @@ function validateRegistrationPayload(body) {
             defaultValue: ""
         }) || "",
         password: requirePassword(payload.password)
+    };
+}
+
+function validateProfilePayload(body) {
+    const payload = assertAllowedKeys(
+        body,
+        [
+            "fullName",
+            "dateOfBirth",
+            "gender",
+            "profession",
+            "mobile",
+            "email",
+            "country",
+            "state",
+            "district",
+            "city",
+            "villageTown",
+            "pincode",
+            "professionDetails"
+        ],
+        "body"
+    );
+
+    const email = optionalString(payload.email, "email") ? requireEmail(payload.email) : undefined;
+    const mobile = optionalString(payload.mobile, "mobile") ? requireMobile(payload.mobile) : undefined;
+
+    return {
+        fullName: optionalString(payload.fullName, "fullName", { minLength: 2, maxLength: 120 }),
+        dateOfBirth: payload.dateOfBirth ? requireDateString(payload.dateOfBirth, "dateOfBirth") : null,
+        gender: payload.gender ? requireEnum(payload.gender, "gender", GENDER_VALUES) : "prefer_not_to_say",
+        profession: optionalString(payload.profession, "profession", { maxLength: 120, defaultValue: "" }) || "",
+        professionDetails: payload.professionDetails && typeof payload.professionDetails === "object" && !Array.isArray(payload.professionDetails)
+            ? Object.fromEntries(
+                Object.entries(payload.professionDetails)
+                    .slice(0, 30)
+                    .map(([key, value]) => [
+                        String(key).replace(/[^A-Za-z0-9_ -]/g, "").slice(0, 60),
+                        String(value || "").trim().slice(0, 300)
+                    ])
+                    .filter(([key]) => key)
+            )
+            : {},
+        mobile,
+        email,
+        country: optionalString(payload.country, "country", { maxLength: 120, defaultValue: "" }) || "",
+        state: optionalString(payload.state, "state", { maxLength: 120, defaultValue: "" }) || "",
+        district: optionalString(payload.district, "district", { maxLength: 120, defaultValue: "" }) || "",
+        city: optionalString(payload.city, "city", { maxLength: 120, defaultValue: "" }) || "",
+        villageTown: optionalString(payload.villageTown, "villageTown", { maxLength: 120, defaultValue: "" }) || "",
+        pincode: optionalString(payload.pincode, "pincode", {
+            maxLength: 12,
+            pattern: /^[A-Za-z0-9- ]+$/,
+            patternMessage: "pincode contains unsupported characters.",
+            defaultValue: ""
+        }) || ""
     };
 }
 
@@ -605,16 +671,19 @@ function getRegistrationConfig(req, res) {
 async function register(req, res) {
     try {
         const payload = validateRegistrationPayload(req.body);
-        const existingUser = await User.findOne({
-            $or: [
-                { email: payload.email },
-                { mobileNormalized: normalizeMobile(payload.mobile) }
-            ]
-        }).select("email mobile");
+        const duplicateClauses = [];
+        if (payload.email) {
+            duplicateClauses.push({ email: payload.email });
+        }
+        if (payload.mobile) {
+            duplicateClauses.push({ mobileNormalized: normalizeMobile(payload.mobile) });
+        }
+
+        const existingUser = await User.findOne({ $or: duplicateClauses }).select("email mobile mobileNormalized");
 
         if (existingUser) {
             return res.status(409).json({
-                message: existingUser.email === payload.email
+                message: payload.email && existingUser.email === payload.email
                     ? "An account with this email already exists."
                     : "An account with this mobile number already exists."
             });
@@ -638,15 +707,11 @@ async function register(req, res) {
             passwordHash: await bcrypt.hash(payload.password, 12),
             role: isAdminEmail(payload.email) ? (payload.email === PRIMARY_ADMIN_EMAIL ? "superadmin" : "admin") : "user",
             verificationStatus: {
-                emailVerified: true,
-                mobileVerified: true
+                emailVerified: Boolean(payload.email),
+                mobileVerified: Boolean(payload.mobile)
             },
-            emailVerification: {
-                verifiedAt: new Date()
-            },
-            mobileVerification: {
-                verifiedAt: new Date()
-            },
+            emailVerification: payload.email ? { verifiedAt: new Date() } : {},
+            mobileVerification: payload.mobile ? { verifiedAt: new Date() } : {},
             paymentCurrency: PAYMENT_CURRENCY
         });
 
@@ -684,6 +749,63 @@ async function register(req, res) {
         });
     } catch (error) {
         return handleControllerError(res, error, "Unable to complete registration right now.");
+    }
+}
+
+async function updateProfile(req, res) {
+    try {
+        const payload = validateProfilePayload(req.body);
+        const user = await User.findById(req.user.id);
+
+        if (!user) {
+            clearAuthCookie(res);
+            return res.status(404).json({ message: "User not found." });
+        }
+
+        if (payload.email && payload.email !== user.email) {
+            const existingEmailUser = await User.findOne({ email: payload.email }).select("_id");
+            if (existingEmailUser && String(existingEmailUser._id) !== String(user._id)) {
+                return res.status(409).json({ message: "An account with this email already exists." });
+            }
+
+            user.email = payload.email;
+            user.verificationStatus.emailVerified = false;
+            user.emailVerification = {};
+        }
+
+        if (payload.mobile && normalizeMobile(payload.mobile) !== normalizeMobile(user.mobile)) {
+            const existingMobileUser = await User.findOne({ mobileNormalized: normalizeMobile(payload.mobile) }).select("_id");
+            if (existingMobileUser && String(existingMobileUser._id) !== String(user._id)) {
+                return res.status(409).json({ message: "An account with this mobile number already exists." });
+            }
+
+            user.mobile = payload.mobile;
+            user.verificationStatus.mobileVerified = false;
+            user.mobileVerification = {};
+        }
+
+        user.name = payload.fullName;
+        user.fullName = payload.fullName;
+        user.dateOfBirth = payload.dateOfBirth ? new Date(`${payload.dateOfBirth}T00:00:00.000Z`) : null;
+        user.gender = payload.gender;
+        user.profession = payload.profession;
+        user.professionDetails = payload.professionDetails;
+        user.country = payload.country;
+        user.state = payload.state;
+        user.district = payload.district;
+        user.city = payload.city;
+        user.villageTown = payload.villageTown;
+        user.pincode = payload.pincode;
+
+        await user.save();
+        await logAuditEvent("auth.profile.update", req, { userId: String(user._id) });
+
+        return res.json({
+            message: "Profile updated successfully.",
+            user: sanitizeUser(user)
+        });
+    } catch (error) {
+        return handleControllerError(res, error, "Unable to update profile right now.");
     }
 }
 
@@ -893,5 +1015,6 @@ module.exports = {
     requestEmailVerification: (req, res) => requestVerificationCode(req, res, "email"),
     requestMobileVerification: (req, res) => requestVerificationCode(req, res, "mobile"),
     resetPassword,
+    updateProfile,
     verifyOtp
 };

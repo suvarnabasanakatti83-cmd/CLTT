@@ -18,9 +18,7 @@ const { Feedback, Sheet } = require("../database");
 let server;
 let baseUrl;
 let trialCookie;
-let trialActivationCode;
 let adminCookie;
-let adminActivationCode;
 
 function extractCookie(response) {
     const raw = response.headers.get("set-cookie") || "";
@@ -105,7 +103,6 @@ test.before(async () => {
 
     assert.equal(trialRegistration.response.status, 201);
     trialCookie = extractCookie(trialRegistration.response);
-    trialActivationCode = trialRegistration.body.activationCode;
 
     const adminRegistration = await registerProfileUser({
         fullName: "Admin Operator",
@@ -115,8 +112,6 @@ test.before(async () => {
     });
 
     assert.equal(adminRegistration.response.status, 201);
-    adminActivationCode = adminRegistration.body.activationCode;
-
     const adminLogin = await request("/api/auth/login", {
         method: "POST",
         body: {
@@ -135,32 +130,52 @@ test.after(async () => {
     await mongoose.disconnect().catch(() => undefined);
 });
 
-test("registers with profile validation and locks workspace until plan selection", async () => {
+test("registers with optional profile details and grants dashboard access", async () => {
     const me = await request("/api/auth/me", { cookie: trialCookie });
     assert.equal(me.response.status, 200);
-    assert.equal(me.body.user.subscription.plan, "basic_platinum");
-    assert.equal(me.body.user.subscription.trialStatus, "not_started");
-    assert.equal(me.body.user.access.accessGranted, false);
-    assert.equal(me.body.user.access.needsMembershipSelection, true);
+    assert.equal(me.body.user.access.accessGranted, true);
+    assert.equal(me.body.user.access.needsMembershipSelection, false);
     assert.equal(me.body.user.verificationStatus.mobileVerified, true);
     assert.equal(me.body.user.verificationStatus.emailVerified, true);
 
-    const trialSelection = await request("/api/auth/pay", {
+    const minimalRegistration = await request("/api/auth/register", {
         method: "POST",
-        cookie: trialCookie,
         body: {
-            planId: "basic_platinum",
-            paymentMethod: "manual"
+            email: "minimal.user@example.com",
+            password: "Password123!"
         }
     });
+    assert.equal(minimalRegistration.response.status, 201);
+    assert.equal(minimalRegistration.body.redirectTo, "/dashboard");
+    assert.equal(minimalRegistration.body.user.access.accessGranted, true);
+    assert.equal(minimalRegistration.body.user.fullName, undefined);
 
-    assert.equal(trialSelection.response.status, 200);
-    assert.equal(trialSelection.body.redirectTo, "/dashboard");
-    assert.equal(trialSelection.body.user.subscription.trialStatus, "active");
-    assert.equal(trialSelection.body.user.access.accessGranted, true);
-    assert.ok(trialSelection.body.user.subscription.daysRemaining > 0);
-    trialCookie = extractCookie(trialSelection.response);
-    trialActivationCode = trialSelection.body.activationCode;
+    const dashboard = await fetch(`${baseUrl}/dashboard`, {
+        headers: {
+            Cookie: extractCookie(minimalRegistration.response)
+        },
+        redirect: "manual"
+    });
+    assert.equal(dashboard.status, 200);
+
+    const profileUpdate = await request("/api/auth/profile", {
+        method: "PUT",
+        cookie: extractCookie(minimalRegistration.response),
+        body: {
+            fullName: "Minimal Researcher",
+            dateOfBirth: "1998-05-20",
+            gender: "prefer_not_to_say",
+            profession: "Researcher",
+            country: "India",
+            state: "Karnataka",
+            district: "Belagavi",
+            city: "Belagavi",
+            villageTown: "Belagavi",
+            pincode: "590001"
+        }
+    });
+    assert.equal(profileUpdate.response.status, 200);
+    assert.equal(profileUpdate.body.user.fullName, "Minimal Researcher");
 });
 
 test("prevents duplicate email and duplicate mobile registration", async () => {
@@ -201,7 +216,7 @@ test("logs in using email or mobile plus password", async () => {
     assert.equal(mobileLogin.response.status, 200);
 });
 
-test("blocks expired memberships and redirects renewal flow", async () => {
+test("allows users with expired or incomplete membership metadata to log in", async () => {
     const user = await User.findOne({ email: "trial.user@example.com" });
     user.subscription.trialStatus = "expired";
     user.subscription.status = "renewal_required";
@@ -219,32 +234,14 @@ test("blocks expired memberships and redirects renewal flow", async () => {
         }
     });
 
-    assert.equal(renewalLogin.response.status, 403);
-    assert.equal(renewalLogin.body.redirectTo, "/renewal");
+    assert.equal(renewalLogin.response.status, 200);
+    assert.equal(renewalLogin.body.redirectTo, "/dashboard");
 
     const renewalCookie = extractCookie(renewalLogin.response);
     const membershipMe = await request("/api/auth/me", { cookie: renewalCookie });
     assert.equal(membershipMe.response.status, 200);
-    assert.equal(membershipMe.body.user.access.needsRenewal, true);
-
-    const paidActivation = await request("/api/auth/pay", {
-        method: "POST",
-        cookie: renewalCookie,
-        body: {
-            planId: "silver",
-            paymentMethod: "manual"
-        }
-    });
-
-    assert.equal(paidActivation.response.status, 200);
-    assert.equal(paidActivation.body.redirectTo, "/dashboard");
-
-    const renewedCookie = extractCookie(paidActivation.response);
-    const renewedSession = await request("/api/auth/me", { cookie: renewedCookie });
-    assert.equal(renewedSession.response.status, 200);
-    assert.equal(renewedSession.body.user.subscription.plan, "silver");
-    trialCookie = renewedCookie;
-    trialActivationCode = paidActivation.body.activationCode;
+    assert.equal(membershipMe.body.user.access.needsRenewal, false);
+    trialCookie = renewalCookie;
 });
 
 test("restores 118 elements and keeps atomic numbers backend-only by default", async () => {
@@ -407,9 +404,9 @@ test("exposes protected admin analytics and user monitoring", async () => {
     assert.equal(overview.response.status, 200);
     assert.ok(overview.body.activeUsers >= 1);
     assert.ok(overview.body.onlineUsers >= 1);
-    assert.ok(overview.body.revenue.amount >= 999);
+    assert.ok(overview.body.revenue.amount >= 0);
 
-    const users = await request("/api/admin/users?filter=paid", { cookie: adminCookie });
+    const users = await request("/api/admin/users", { cookie: adminCookie });
     assert.equal(users.response.status, 200);
     assert.ok(users.body.items.some((entry) => entry.email === "trial.user@example.com"));
 

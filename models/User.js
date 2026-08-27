@@ -151,16 +151,12 @@ const userSchema = new mongoose.Schema(
     {
         name: {
             type: String,
-            required: true,
             trim: true,
-            minlength: 2,
             maxlength: 120
         },
         fullName: {
             type: String,
-            required: true,
             trim: true,
-            minlength: 2,
             maxlength: 120
         },
         dateOfBirth: {
@@ -184,20 +180,16 @@ const userSchema = new mongoose.Schema(
         },
         mobile: {
             type: String,
-            required: true,
             trim: true,
             maxlength: 20
         },
         mobileNormalized: {
             type: String,
-            required: true,
             maxlength: 20,
             select: false
         },
         email: {
             type: String,
-            required: true,
-            unique: true,
             trim: true,
             lowercase: true,
             maxlength: 254,
@@ -348,7 +340,16 @@ const userSchema = new mongoose.Schema(
 userSchema.index(
     { mobileNormalized: 1 },
     {
-        unique: true
+        unique: true,
+        partialFilterExpression: { mobileNormalized: { $type: "string" } }
+    }
+);
+
+userSchema.index(
+    { email: 1 },
+    {
+        unique: true,
+        partialFilterExpression: { email: { $type: "string" } }
     }
 );
 
@@ -379,13 +380,19 @@ userSchema.index(
 );
 
 userSchema.pre("validate", function normalizeUser(next) {
-    this.name = String(this.fullName || this.name || "")
+    const normalizedName = String(this.fullName || this.name || "")
         .trim()
         .replace(/\s+/g, " ");
-    this.fullName = this.name;
-    this.email = String(this.email || "").trim().toLowerCase();
-    this.mobile = String(this.mobile || "").trim();
-    this.mobileNormalized = this.mobile.replace(/\D+/g, "");
+
+    this.name = normalizedName || undefined;
+    this.fullName = normalizedName || undefined;
+
+    const normalizedEmail = String(this.email || "").trim().toLowerCase();
+    this.email = normalizedEmail || undefined;
+
+    const normalizedMobile = String(this.mobile || "").trim();
+    this.mobile = normalizedMobile || undefined;
+    this.mobileNormalized = normalizedMobile ? normalizedMobile.replace(/\D+/g, "") : undefined;
 
     this.country = String(this.country || "").trim();
     this.state = String(this.state || "").trim();

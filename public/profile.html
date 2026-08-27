@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Chemistry Lab Testing Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="auth-client.js"></script>
+    <script defer src="profile.js"></script>
+</head>
+<body>
+    <main class="auth-shell auth-shell-register">
+        <section class="auth-showcase">
+            <div class="eyebrow">Optional Profile</div>
+            <h1 class="auth-title">Keep your laboratory profile up to date.</h1>
+            <p class="auth-copy">
+                These details are optional. Your CLTT dashboard remains available whether this profile is complete or not.
+            </p>
+            <div class="hero-actions">
+                <a class="button-muted" href="/dashboard">Back to Dashboard</a>
+            </div>
+        </section>
+
+        <section class="auth-card auth-card-wide">
+            <div class="auth-card-head">
+                <div>
+                    <div class="eyebrow">My Account</div>
+                    <h2 class="panel-title">Profile Details</h2>
+                </div>
+                <span class="security-pill">Optional</span>
+            </div>
+
+            <form class="auth-form auth-form-wide" id="profile-form" novalidate>
+                <div class="form-section">
+                    <div class="section-heading">Account Contact</div>
+                    <div class="form-grid two-column">
+                        <div class="field-cluster">
+                            <label for="fullName">Full Name</label>
+                            <input id="fullName" name="fullName" type="text" autocomplete="name">
+                            <p class="field-message" data-error-for="fullName"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="email">Email Address</label>
+                            <input id="email" name="email" type="email" autocomplete="email">
+                            <p class="field-message" data-error-for="email"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="mobile">Phone Number</label>
+                            <input id="mobile" name="mobile" type="tel" autocomplete="tel">
+                            <p class="field-message" data-error-for="mobile"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-heading">Personal Details</div>
+                    <div class="form-grid two-column">
+                        <div class="field-cluster">
+                            <label for="dateOfBirth">Date of Birth</label>
+                            <input id="dateOfBirth" name="dateOfBirth" type="date">
+                            <p class="field-message" data-error-for="dateOfBirth"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender">
+                                <option value="">Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer_not_to_say">Prefer not to say</option>
+                            </select>
+                            <p class="field-message" data-error-for="gender"></p>
+                        </div>
+                        <div class="field-cluster full-span">
+                            <label for="profession">Profession</label>
+                            <input id="profession" name="profession" type="text" placeholder="Student, teacher, researcher, chemist...">
+                            <p class="field-message" data-error-for="profession"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-heading">Address</div>
+                    <div class="form-grid two-column">
+                        <div class="field-cluster">
+                            <label for="country">Country</label>
+                            <input id="country" name="country" type="text">
+                            <p class="field-message" data-error-for="country"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="state">State</label>
+                            <input id="state" name="state" type="text">
+                            <p class="field-message" data-error-for="state"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="district">District</label>
+                            <input id="district" name="district" type="text">
+                            <p class="field-message" data-error-for="district"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="city">City</label>
+                            <input id="city" name="city" type="text">
+                            <p class="field-message" data-error-for="city"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="villageTown">Village/Town</label>
+                            <input id="villageTown" name="villageTown" type="text">
+                            <p class="field-message" data-error-for="villageTown"></p>
+                        </div>
+                        <div class="field-cluster">
+                            <label for="pincode">Pincode</label>
+                            <input id="pincode" name="pincode" type="text">
+                            <p class="field-message" data-error-for="pincode"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-meta">
+                    <span class="auth-link">Profile information is optional.</span>
+                    <a class="button-muted compact-button" href="/dashboard">Cancel</a>
+                </div>
+                <button class="auth-button" id="profile-submit" type="submit">Save Profile</button>
+                <p id="profile-message" class="auth-message"></p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

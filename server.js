@@ -130,6 +130,18 @@ function createApp() {
         });
     });
 
+    app.get("/profile", (req, res) => {
+        return pageAuthMiddleware(req, res, () => {
+            res.sendFile(path.join(__dirname, "public/profile.html"));
+        });
+    });
+
+    app.get("/profile.html", (req, res) => {
+        return pageAuthMiddleware(req, res, () => {
+            res.sendFile(path.join(__dirname, "public/profile.html"));
+        });
+    });
+
     app.get("/admin", requireAdminPage, (req, res) => {
         res.sendFile(path.join(PRIVATE_ADMIN_DIR, "admin.html"));
     });

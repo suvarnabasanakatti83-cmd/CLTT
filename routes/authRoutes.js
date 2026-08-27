@@ -11,6 +11,7 @@ const {
     requestEmailVerification,
     requestMobileVerification,
     resetPassword,
+    updateProfile,
     verifyOtp
 } = require("../controllers/authController");
 const { apiAuthMiddleware, requireSessionPurpose } = require("../middleware/authMiddleware");
@@ -29,5 +30,6 @@ router.post("/verify-otp", verifyOtp);
 router.post("/reset-password", resetPassword);
 router.post("/logout", logout);
 router.get("/me", apiAuthMiddleware, requireSessionPurpose("auth"), me);
+router.put("/profile", apiAuthMiddleware, requireSessionPurpose("auth"), updateProfile);
 
 module.exports = router;
