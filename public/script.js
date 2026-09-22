@@ -112,7 +112,7 @@ function getCompoundExplanation(resolution) {
             String(compound.name || "").trim().toLowerCase() === name.toLowerCase();
     });
 
-    return matchedCompound?.process?.description || "No explanation is available for this compound in the current dataset.";
+    return matchedCompound?.process?.description || "";
 }
 
 function resolveElementCell(value) {
@@ -376,7 +376,7 @@ function collectRowInputs(rowIndex) {
                 values.push(resolved.symbol);
             } else {
                 invalidInputs.push(value);
-                cell.title = "Enter exactly one valid element name or symbol.";
+
             }
         }
     }
@@ -415,7 +415,7 @@ async function combineRow(rowIndex) {
         rowRequestTokens.delete(rowIndex);
         rowEl.cells[1].innerText = "Invalid Element";
         rowEl.cells[2].innerText = "";
-        rowEl.cells[3].innerText = "Each input box must contain exactly one valid element name or symbol.";
+        rowEl.cells[3].innerText = "";
         rowEl.cells[4].innerText = "";
         return;
     }
