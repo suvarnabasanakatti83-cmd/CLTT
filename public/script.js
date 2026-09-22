@@ -400,7 +400,7 @@ function applyRowResolution(rowIndex, resolution) {
 
     rowEl.cells[1].innerText = resolution.name || "No Match";
     rowEl.cells[2].innerText = formatFormulaForDisplay(resolution.formula || "");
-    rowEl.cells[3].innerText = resolution.matched ? getCompoundExplanation(resolution) : "No matching compound was found in the current dataset.";
+    rowEl.cells[3].innerText = resolution.compound?.process || "";
 
     const conditions = resolution.compound?.conditions || {};
     const conditionParts = [conditions.temperature, conditions.pressure].filter(Boolean);
@@ -417,7 +417,6 @@ async function combineRow(rowIndex) {
         rowEl.cells[2].innerText = "";
         rowEl.cells[3].innerText = "Each input box must contain exactly one valid element name or symbol.";
         rowEl.cells[4].innerText = "";
-        showDashboardMessage("Each input box must contain exactly one valid element name or symbol.", "error");
         return;
     }
 
@@ -426,7 +425,6 @@ async function combineRow(rowIndex) {
         for (let cellIndex = 1; cellIndex <= 4; cellIndex += 1) {
             rowEl.cells[cellIndex].innerText = "";
         }
-        showDashboardMessage("Please select an element in all input boxes.", "error");
         return;
     }
 
@@ -464,7 +462,6 @@ async function handleInput() {
     if (!resolvedInput.valid) {
         formulaOutput.innerText = "Formula: No Match";
         nameOutput.innerText = "Name: Invalid Element";
-        showDashboardMessage("Each input box must contain exactly one valid element name or symbol.", "error");
         return;
     }
 
@@ -479,7 +476,7 @@ async function handleInput() {
 
 function createHeader() {
     const tr = document.createElement("tr");
-    const headers = ["SI.NO", "Chemical Name", "Chemical Formula", "Explanation", "Conditions"];
+    const headers = ["SI.NO", "Chemical Name", "Chemical Formula", "Process", "Conditions"];
 
     headers.forEach((h, index) => {
         const td = document.createElement("td");
