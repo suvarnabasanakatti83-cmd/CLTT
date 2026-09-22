@@ -9,6 +9,7 @@ let currentSheet = "Sheet1";
 let sheets = { Sheet1: {} };
 
 let compoundData = [];
+let elementLookup = new Map();
 const rowDebouncers = new Map();
 const rowRequestTokens = new Map();
 const formulaCache = new Map();
@@ -51,6 +52,85 @@ function showDashboardMessage(message, type = "success") {
         messageEl.textContent = "";
         messageEl.className = "dashboard-message";
     }, 3600);
+}
+
+function normalizeElementToken(value) {
+    return String(value || "")
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, " ");
+}
+
+function buildElementLookup(elements) {
+    const lookup = new Map();
+
+    elements.forEach((element) => {
+        const terms = [
+            element.name,
+            element.symbol,
+            ...(Array.isArray(element.aliases) ? element.aliases : [])
+        ];
+
+        terms.forEach((term) => {
+            const normalized = normalizeElementToken(term);
+            if (normalized) {
+                lookup.set(normalized, element);
+            }
+        });
+    });
+
+    return lookup;
+}
+
+function formatFormulaForDisplay(formula) {
+    const subscriptDigits = {
+        0: "₀",
+        1: "₁",
+        2: "₂",
+        3: "₃",
+        4: "₄",
+        5: "₅",
+        6: "₆",
+        7: "₇",
+        8: "₈",
+        9: "₉"
+    };
+
+    return String(formula || "").replace(/\d/g, (digit) => subscriptDigits[digit] || digit);
+}
+
+function getCompoundExplanation(resolution) {
+    const description = resolution?.compound?.process?.description;
+    if (description) {
+        return description;
+    }
+
+    const formula = String(resolution?.formula || "").trim();
+    const name = String(resolution?.name || "").trim();
+    const matchedCompound = compoundData.find((compound) => {
+        return String(compound.formula || "").trim() === formula ||
+            String(compound.name || "").trim().toLowerCase() === name.toLowerCase();
+    });
+
+    return matchedCompound?.process?.description || "No explanation is available for this compound in the current dataset.";
+}
+
+function resolveElementCell(value) {
+    const trimmed = String(value || "").trim();
+    if (!trimmed) {
+        return { valid: false, reason: "empty" };
+    }
+
+    const element = elementLookup.get(normalizeElementToken(trimmed));
+    if (!element) {
+        return { valid: false, reason: "invalid", value: trimmed };
+    }
+
+    return {
+        valid: true,
+        symbol: element.symbol,
+        label: element.name
+    };
 }
 
 function addSheet() {
@@ -187,6 +267,32 @@ async function loadCompounds() {
     }
 }
 
+async function loadElements() {
+    try {
+        const res = await authFetch("/api/elements");
+        if (!ensureAuthorized(res)) return;
+
+        const data = await res.json();
+        const elements = Array.isArray(data) ? data : data.items || [];
+        elementLookup = buildElementLookup(elements);
+    } catch (err) {
+        console.error("Elements API load error:", err);
+    }
+
+    if (elementLookup.size > 0) {
+        return;
+    }
+
+    try {
+        const fallbackRes = await fetch("/elements.json");
+        const fallbackData = await fallbackRes.json();
+        elementLookup = buildElementLookup(fallbackData.elements || []);
+    } catch (err) {
+        console.error("Elements fallback load error:", err);
+        elementLookup = new Map();
+    }
+}
+
 async function clearSheet() {
     const confirmClear = confirm("Are you sure you want to clear this sheet?");
     if (!confirmClear) return;
@@ -256,15 +362,26 @@ async function requestFormulaResolution(inputs) {
 function collectRowInputs(rowIndex) {
     const rowEl = table.rows[rowIndex + 1];
     const values = [];
+    const invalidInputs = [];
 
     for (let j = 0; j < cols; j++) {
-        const value = rowEl.cells[j + 5].innerText.trim();
+        const cell = rowEl.cells[j + 5];
+        const value = cell.innerText.trim();
+        cell.removeAttribute("title");
+
         if (value) {
-            values.push(value);
+            const resolved = resolveElementCell(value);
+
+            if (resolved.valid) {
+                values.push(resolved.symbol);
+            } else {
+                invalidInputs.push(value);
+                cell.title = "Enter exactly one valid element name or symbol.";
+            }
         }
     }
 
-    return values;
+    return { values, invalidInputs };
 }
 
 function applyRowResolution(rowIndex, resolution) {
@@ -282,8 +399,8 @@ function applyRowResolution(rowIndex, resolution) {
     }
 
     rowEl.cells[1].innerText = resolution.name || "No Match";
-    rowEl.cells[2].innerText = resolution.formula || "";
-    rowEl.cells[3].innerText = "Combination";
+    rowEl.cells[2].innerText = formatFormulaForDisplay(resolution.formula || "");
+    rowEl.cells[3].innerText = resolution.matched ? getCompoundExplanation(resolution) : "No matching compound was found in the current dataset.";
 
     const conditions = resolution.compound?.conditions || {};
     const conditionParts = [conditions.temperature, conditions.pressure].filter(Boolean);
@@ -291,14 +408,25 @@ function applyRowResolution(rowIndex, resolution) {
 }
 
 async function combineRow(rowIndex) {
-    const inputs = collectRowInputs(rowIndex);
+    const { values: inputs, invalidInputs } = collectRowInputs(rowIndex);
     const rowEl = table.rows[rowIndex + 1];
+
+    if (invalidInputs.length > 0) {
+        rowRequestTokens.delete(rowIndex);
+        rowEl.cells[1].innerText = "Invalid Element";
+        rowEl.cells[2].innerText = "";
+        rowEl.cells[3].innerText = "Each input box must contain exactly one valid element name or symbol.";
+        rowEl.cells[4].innerText = "";
+        showDashboardMessage("Each input box must contain exactly one valid element name or symbol.", "error");
+        return;
+    }
 
     if (!inputs.length) {
         rowRequestTokens.delete(rowIndex);
         for (let cellIndex = 1; cellIndex <= 4; cellIndex += 1) {
             rowEl.cells[cellIndex].innerText = "";
         }
+        showDashboardMessage("Please select an element in all input boxes.", "error");
         return;
     }
 
@@ -332,18 +460,26 @@ async function handleInput() {
         return;
     }
 
-    const resolution = await requestFormulaResolution([inputBox.value]);
+    const resolvedInput = resolveElementCell(inputBox.value);
+    if (!resolvedInput.valid) {
+        formulaOutput.innerText = "Formula: No Match";
+        nameOutput.innerText = "Name: Invalid Element";
+        showDashboardMessage("Each input box must contain exactly one valid element name or symbol.", "error");
+        return;
+    }
+
+    const resolution = await requestFormulaResolution([resolvedInput.symbol]);
     if (!resolution) {
         return;
     }
 
-    formulaOutput.innerText = "Formula: " + (resolution.formula || "No Match");
+    formulaOutput.innerText = "Formula: " + formatFormulaForDisplay(resolution.formula || "No Match");
     nameOutput.innerText = "Name: " + (resolution.name || "No Match");
 }
 
 function createHeader() {
     const tr = document.createElement("tr");
-    const headers = ["SI.NO", "Chemical Name", "Chemical Formula", "Process", "Conditions"];
+    const headers = ["SI.NO", "Chemical Name", "Chemical Formula", "Explanation", "Conditions"];
 
     headers.forEach((h, index) => {
         const td = document.createElement("td");
@@ -443,6 +579,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         userNameEl.innerText = authClient.getUserName() || "Researcher";
     }
 
+    await loadElements();
     await loadCompounds();
     updateSheetDropdown();
     createGrid();
